@@ -1,0 +1,15 @@
+C:\Users\rmars_000\ryan-marsh\triangle\ShapesUtility\bin\Debug\ShapesUtility.dll
+C:\Users\rmars_000\ryan-marsh\triangle\ShapesUtility\bin\Debug\ShapesUtility.pdb
+C:\Users\rmars_000\ryan-marsh\triangle\ShapesUtility\obj\Debug\ShapesUtility.dll
+C:\Users\rmars_000\ryan-marsh\triangle\ShapesUtility\obj\Debug\ShapesUtility.pdb
+C:\Users\rmars_000\ryan-marsh\triangle\ShapesUtility\obj\Debug\ShapesUtility.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\Triangle-Repository\ShapesUtility\bin\Debug\ShapesUtility.dll
+C:\Users\rmars_000\Triangle-Repository\ShapesUtility\bin\Debug\ShapesUtility.pdb
+C:\Users\rmars_000\Triangle-Repository\ShapesUtility\obj\Debug\ShapesUtility.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\Triangle-Repository\ShapesUtility\obj\Debug\ShapesUtility.dll
+C:\Users\rmars_000\Triangle-Repository\ShapesUtility\obj\Debug\ShapesUtility.pdb
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\ShapesUtility\obj\Debug\ShapesUtility.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\ShapesUtility\obj\Debug\ShapesUtility.dll
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\ShapesUtility\obj\Debug\ShapesUtility.pdb
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\ShapesUtility\bin\Debug\ShapesUtility.dll
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\ShapesUtility\bin\Debug\ShapesUtility.pdb

@@ -1,0 +1,10 @@
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\Roman-Numerals\bin\Debug\Roman-Numerals.dll
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\Roman-Numerals\bin\Debug\Roman-Numerals.pdb
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\Roman-Numerals\obj\Debug\Roman-Numerals.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\Roman-Numerals\obj\Debug\Roman-Numerals.dll
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\Roman-Numerals\obj\Debug\Roman-Numerals.pdb
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\obj\Debug\Roman-Numerals.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\obj\Debug\Roman-Numerals.dll
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\obj\Debug\Roman-Numerals.pdb
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\bin\Debug\Roman-Numerals.dll
+C:\Users\rmars_000\Greater-Sum-Exercises\roman numeral exercise\Roman-Numerals\bin\Debug\Roman-Numerals.pdb

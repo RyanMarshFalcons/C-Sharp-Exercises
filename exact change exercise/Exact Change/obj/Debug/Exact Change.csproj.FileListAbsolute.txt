@@ -1,0 +1,5 @@
+C:\Users\rmars_000\Greater-Sum-Exercises\exact change exercise\Exact Change\bin\Debug\Exact Change.dll
+C:\Users\rmars_000\Greater-Sum-Exercises\exact change exercise\Exact Change\bin\Debug\Exact Change.pdb
+C:\Users\rmars_000\Greater-Sum-Exercises\exact change exercise\Exact Change\obj\Debug\Exact Change.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\Greater-Sum-Exercises\exact change exercise\Exact Change\obj\Debug\Exact Change.dll
+C:\Users\rmars_000\Greater-Sum-Exercises\exact change exercise\Exact Change\obj\Debug\Exact Change.pdb

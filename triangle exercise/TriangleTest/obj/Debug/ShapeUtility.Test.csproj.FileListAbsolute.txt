@@ -1,0 +1,27 @@
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\bin\Debug\TriangleTest.dll
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\bin\Debug\TriangleTest.pdb
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\bin\Debug\ShapesUtility.dll
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\bin\Debug\ShapesUtility.pdb
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\obj\Debug\ShapeUtility.Test.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\obj\Debug\TriangleTest.dll
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\obj\Debug\TriangleTest.pdb
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\bin\Debug\Startup.exe
+C:\Users\rmars_000\ryan-marsh\triangle\TriangleTest\bin\Debug\Startup.pdb
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\bin\Debug\TriangleTest.dll
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\bin\Debug\TriangleTest.pdb
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\bin\Debug\ShapesUtility.dll
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\bin\Debug\Startup.exe
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\bin\Debug\ShapesUtility.pdb
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\bin\Debug\Startup.pdb
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\obj\Debug\ShapeUtility.Test.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\obj\Debug\TriangleTest.dll
+C:\Users\rmars_000\Triangle-Repository\TriangleTest\obj\Debug\TriangleTest.pdb
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\obj\Debug\ShapeUtility.Test.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\obj\Debug\TriangleTest.dll
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\obj\Debug\TriangleTest.pdb
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\bin\Debug\TriangleTest.dll
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\bin\Debug\TriangleTest.pdb
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\bin\Debug\ShapesUtility.dll
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\bin\Debug\Startup.exe
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\bin\Debug\ShapesUtility.pdb
+C:\Users\rmars_000\Triangle-Repository\triangle exercise\TriangleTest\bin\Debug\Startup.pdb
