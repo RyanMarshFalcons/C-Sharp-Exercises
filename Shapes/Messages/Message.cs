@@ -8,20 +8,15 @@ namespace Messages
 {
     public static class Message
     {
-        public static void Welcome()
+        public static void SelectShapeType()
         {
-            Console.Write("Hello welcome to the shapes program. Please enter your name: " );
-        }
-
-        public static void SelectShapeType(string name)
-        {
-            Console.WriteLine($"\nHi {name}. Please select the shape you want to work with: \n(A) Square \n(B) Rectangle \n(C) Triangle");
+            Console.WriteLine($"\nPlease select the shape you want to work with: \n(A) Square \n(B) Rectangle \n(C) Triangle");
             Console.WriteLine("(D) Trapezoid \n(E) Circle");
         }
 
-        public static void InvalidShapeSelection(string name, string input)
+        public static void InvalidShapeSelection(string input)
         {
-            Console.WriteLine($"\nI'm sorry {name} but {input} was not a valid selection.");
+            Console.WriteLine($"\nI'm sorry but {input} was not a valid selection. Please try again.");
         }
 
         public static void PositiveDoubleWasNotInput(string lengthAsString)

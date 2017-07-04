@@ -3,3 +3,8 @@ C:\Users\rmars_000\Git Hub Worthy Projects\Shapes\Messages\bin\Debug\Messages.pd
 C:\Users\rmars_000\Git Hub Worthy Projects\Shapes\Messages\obj\Debug\Messages.csprojResolveAssemblyReference.cache
 C:\Users\rmars_000\Git Hub Worthy Projects\Shapes\Messages\obj\Debug\Messages.dll
 C:\Users\rmars_000\Git Hub Worthy Projects\Shapes\Messages\obj\Debug\Messages.pdb
+C:\Users\rmars_000\GitHubProjects\Shapes\Messages\bin\Debug\Messages.dll
+C:\Users\rmars_000\GitHubProjects\Shapes\Messages\bin\Debug\Messages.pdb
+C:\Users\rmars_000\GitHubProjects\Shapes\Messages\obj\Debug\Messages.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\GitHubProjects\Shapes\Messages\obj\Debug\Messages.dll
+C:\Users\rmars_000\GitHubProjects\Shapes\Messages\obj\Debug\Messages.pdb

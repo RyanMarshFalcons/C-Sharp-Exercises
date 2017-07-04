@@ -8,23 +8,20 @@ using Messages;
 
 namespace Startup
 {
-    public enum TypeOfShape { Square, Rectangle, Triangle, Trapezoid, Circle, Unknown};
+    public enum TypeOfShape { Square, Rectangle, Triangle, Trapezoid, Circle};
     class Program
     {
         static void Main(string[] args)
         {
-            Message.Welcome();
-            var name = Console.ReadLine();
-            var shapeType = GetShapeType(name);
+            var shapeType = GetShapeType();
             DisplayShapeCharacteristics(shapeType);
             Console.ReadLine();
         }
 
-        public static TypeOfShape GetShapeType(string name)
+        public static TypeOfShape GetShapeType()
         {
-            Message.SelectShapeType(name);
-            var ShapeSelection = Console.ReadLine();
-            var ShapeType = TypeOfShape.Unknown;
+            var ShapeSelection = GetValidShapeSelection();
+            var ShapeType = TypeOfShape.Square;
             switch (ShapeSelection)
             {
                 case "A":
@@ -47,11 +44,28 @@ namespace Startup
                 case "e":
                     ShapeType = TypeOfShape.Circle;
                     break;
-                default:
-                    Message.InvalidShapeSelection(name, ShapeSelection);
-                    break;
             }
             return ShapeType;
+        }
+
+        public static string GetValidShapeSelection()
+        {
+            var validSelection = false;
+            var shapeSelection = "";
+            Message.SelectShapeType();
+            do
+            {
+                shapeSelection = Console.ReadLine();
+                if ((shapeSelection == "A") || (shapeSelection == "a") || (shapeSelection == "B") || (shapeSelection == "b") || (shapeSelection == "C") || (shapeSelection == "c") || (shapeSelection == "D") || (shapeSelection == "d") || (shapeSelection == "E") || (shapeSelection == "e"))
+                {
+                    validSelection = true;
+                }
+                else
+                {
+                    Message.InvalidShapeSelection(shapeSelection);
+                }
+            } while (validSelection == false);
+            return shapeSelection;           
         }
 
         public static void DisplayShapeCharacteristics(TypeOfShape shapeType)
@@ -156,6 +170,5 @@ namespace Startup
             } while (legitimateInput == false);
             return Convert.ToDouble(sideAsString);
         }
-
     }
 }
