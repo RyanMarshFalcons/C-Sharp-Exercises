@@ -17,9 +17,9 @@ namespace Testing
         public void IdentifiesInputsOfZero()
         {
             bool ExpectedType = true;
-            var testVer = new Verification();
+            var evaluation = new Evaluation();
 
-            bool ActualType = testVer.Zero(0);
+            bool ActualType = evaluation.Zero(0);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -28,9 +28,9 @@ namespace Testing
         public void IdentifiesNegativeNumberInputs()
         {
             bool ExpectedType = true;
-            var testVer = new Verification();
+            var evaluation = new Evaluation();
 
-            bool ActualType = testVer.Negative(-1);
+            bool ActualType = evaluation.Negative(-1);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }  
@@ -39,9 +39,9 @@ namespace Testing
         public void IdentifiesEmptyStringInputs()
         {
             bool ExpectedType = true;
-            var testVer = new Verification();
+            var evaluation = new Evaluation();
 
-            bool ActualType = testVer.Empty("");
+            bool ActualType = evaluation.Empty("");
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -50,9 +50,9 @@ namespace Testing
         public void IdentifiesIfNotAnInt()
         {
             bool ExpectedType = true;
-            var testVer = new Verification();
+            var evaluation = new Evaluation();
 
-            bool ActualType = testVer.NotAnInt("4.7");
+            bool ActualType = evaluation.NotAnInt("4.7");
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -61,9 +61,9 @@ namespace Testing
         public void IdentifiesIfNotADecimal()
         {
             bool ExpectedType = true;
-            var testVer = new Verification();
+            var evaluation = new Evaluation();
 
-            bool ActualType = testVer.NotADecimal("notADecimal");
+            bool ActualType = evaluation.NotADecimal("notADecimal");
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -72,9 +72,9 @@ namespace Testing
         public void IdentifiesIfMoreThanTwoTrailingDigits()
         {
             bool ExpectedType = true;
-            var testVer = new Verification();
+            var evaluation = new Evaluation();
 
-            bool ActualType = testVer.TooManyTrailingDigits(4.789M);
+            bool ActualType = evaluation.TooManyTrailingDigits(4.789M);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -86,7 +86,7 @@ namespace Testing
 
             CashRegister cashRegister = new CashRegister();
             Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 300.00M }, { "TWENTY", 60.00M }, { "TEN", 30.00M }, { "FIVE", 15.00M }, { "ONE", 3.00M }, { "QUARTER", 0.75M }, { "DIME", 0.30M }, { "NICKEL", 0.15M }, { "PENNY", 0.03M } };
-            string ActualType = cashRegister.checkCashRegister(0.62M, 1.00M, testDictionary);
+            string ActualType = cashRegister.GiveProperChange(0.38M, testDictionary);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -98,7 +98,7 @@ namespace Testing
 
             CashRegister cashRegister = new CashRegister();
             Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 300.00M }, { "TWENTY", 60.00M }, { "TEN", 30.00M }, { "FIVE", 15.00M }, { "ONE", 3.00M }, { "QUARTER", 0.75M }, { "DIME", 0.30M }, { "NICKEL", 0.15M }, { "PENNY", 0.03M } };
-            string ActualType = cashRegister.checkCashRegister(84.24M, 100.00M, testDictionary);
+            string ActualType = cashRegister.GiveProperChange(15.76M, testDictionary);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -110,7 +110,7 @@ namespace Testing
 
             CashRegister cashRegister = new CashRegister();
             Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 100.00M }, { "TWENTY", 60.00M }, { "TEN", 20.00M }, { "FIVE", 55.00M }, { "ONE", 90.00M }, { "QUARTER", 4.25M }, { "DIME", 3.10M }, { "NICKEL", 2.05M }, { "PENNY", 1.01M }};
-            string ActualType = cashRegister.checkCashRegister(19.50M, 20.00M, testDictionary);
+            string ActualType = cashRegister.GiveProperChange(0.50M, testDictionary);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -122,7 +122,19 @@ namespace Testing
 
             CashRegister cashRegister = new CashRegister();
             Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
-            string ActualType = cashRegister.checkCashRegister(19.50M, 20.00M, testDictionary);
+            string ActualType = cashRegister.checkCashRegister(0.50M, testDictionary);
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void ReturnsSufficientFunds()
+        {
+            string ExpectedType = "Sufficient Funds";
+
+            CashRegister cashRegister = new CashRegister();
+            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 3M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
+            string ActualType = cashRegister.checkCashRegister(0.50M, testDictionary);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -134,7 +146,7 @@ namespace Testing
 
             CashRegister cashRegister = new CashRegister();
             Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.50M } };
-            string ActualType = cashRegister.checkCashRegister(19.50M, 20.00M, testDictionary);
+            string ActualType = cashRegister.checkCashRegister(0.50M, testDictionary);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -146,7 +158,7 @@ namespace Testing
 
             CashRegister cashRegister = new CashRegister();
             Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 100.00M }, { "TWENTY", 60.00M }, { "TEN", 20.00M }, { "FIVE", 55.00M }, { "ONE", 90.00M }, { "QUARTER", 4.25M }, { "DIME", 3.10M }, { "NICKEL", 2.05M }, { "PENNY", 1.01M } };
-            string ActualType = cashRegister.checkCashRegister(3.26M, 100.00M, testDictionary);
+            string ActualType = cashRegister.GiveProperChange(96.74M, testDictionary);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -158,9 +170,185 @@ namespace Testing
 
             CashRegister cashRegister = new CashRegister();
             Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 1.00M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
-            string ActualType = cashRegister.checkCashRegister(19.50M, 20.00M, testDictionary);
+            string ActualType = cashRegister.GiveProperChange(0.50M, testDictionary);
 
             Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForValidDecimal()
+        {
+            var Expected = true;
+
+            var evaluation = new Evaluation();
+            var Actual = evaluation.IsAValidDecimal("19.57");
+
+            Assert.AreEqual(Expected, Actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForInvalidDecimal()
+        {
+            var Expected = false;
+
+            var evaluation = new Evaluation();
+            var Actual = evaluation.IsAValidDecimal("nonsense");
+
+            Assert.AreEqual(Expected, Actual);
+        }
+
+        [TestMethod]
+        public void IdentifiesAValidDecimal()
+        {
+            var ExpectedType = InputType.Valid;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.GetInputTypeForDecimal("74.51");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesNotDecimal()
+        {
+            var ExpectedType = InputType.NotADecimal;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.GetInputTypeForDecimal("kablamajam");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesEmptyNotDecimal()
+        {
+            var ExpectedType = InputType.Empty;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.GetInputTypeForDecimal("");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesAcceptableDecimal()
+        {
+            var ExpectedType = InputType.Valid;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.HaveValidDecimal("12.95");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesAZeroDecimal()
+        {
+            var ExpectedType = InputType.Zero;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.HaveValidDecimal("0.00");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesANegativeDecimal()
+        {
+            var ExpectedType = InputType.Negative;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.HaveValidDecimal("-12.95");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesADecimalWithTrailing()
+        {
+            var ExpectedType = InputType.TooManyTrailingDigits;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.HaveValidDecimal("12.955");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForValidInt()
+        {
+            var Expected = true;
+
+            var evaluation = new Evaluation();
+            var Actual = evaluation.IsAValidInt("7");
+
+            Assert.AreEqual(Expected, Actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForInvalidInt()
+        {
+            var Expected = false;
+
+            var evaluation = new Evaluation();
+            var Actual = evaluation.IsAValidInt("-7");
+
+            Assert.AreEqual(Expected, Actual);
+        }
+
+        [TestMethod]
+        public void IdentifiesValidInt()
+        {
+            var ExpectedType = InputType.Valid;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.GetInputTypeForInt("4");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesEmptyInt()
+        {
+            var ExpectedType = InputType.Empty;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.GetInputTypeForInt("");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesNotAnInt()
+        {
+            var ExpectedType = InputType.NotAnInt;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.GetInputTypeForInt("Kaibeau");
+
+            Assert.AreEqual(ExpectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesAcceptableInt()
+        {
+            var ExpecectedType = InputType.Valid;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.HaveValidInt("3");
+
+            Assert.AreEqual(ExpecectedType, ActualType);
+        }
+
+        [TestMethod]
+        public void IdentifiesNegativeInt()
+        {
+            var ExpecectedType = InputType.Negative;
+
+            var evaluation = new Evaluation();
+            var ActualType = evaluation.HaveValidInt("-3");
+
+            Assert.AreEqual(ExpecectedType, ActualType);
         }
     }
 }

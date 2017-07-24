@@ -8,27 +8,28 @@ namespace Exact_Change
 {
     public class CashRegister
     {
-        public string checkCashRegister(decimal price, decimal cash, Dictionary<string, decimal> cashInDrawer)
+        public string checkCashRegister(decimal changeDue, Dictionary<string, decimal> cashInDrawer)
         {
-            var changeDue = cash - price;
-            var totalOfCashInDrawer = 0M;
-
-            foreach(KeyValuePair < string, decimal > denomination in cashInDrawer)
-            {
-                totalOfCashInDrawer += denomination.Value;
-            }
-
+            var totalOfCashInDrawer = GetTotalOfCashInDrawer(cashInDrawer);
             if (changeDue > totalOfCashInDrawer)
             {
                 return "Insufficient Funds";
             }
-
-            if (changeDue == totalOfCashInDrawer)
+            else if (changeDue == totalOfCashInDrawer)
             {
                 return "Closed";
             }
+            else
+            {
+                return "Sufficient Funds";
+            }
+        }
 
-            var denominationValues = new Dictionary<string, decimal>()
+       
+
+        public Dictionary<string, decimal> DenominationDictionary()
+        {
+            return new Dictionary<string, decimal>()
                                                                         {
                                                                             {"HUNDRED", 100M },
                                                                             {"TWENTY", 20M },
@@ -41,8 +42,28 @@ namespace Exact_Change
                                                                             {"PENNY", .01M }
 
                                                                          };
+        }
 
+        public string GiveProperChange(decimal changeDue, Dictionary<string, decimal> cashInDrawer)
+        {
+            var change = GetChange(ref changeDue, cashInDrawer);
+            
+            if (changeDue == 0)
+            {
+                var changeAsString = "";
+                foreach (var item in change)
+                {
+                    changeAsString += item;
+                }
+                return changeAsString;
+            }
+            return "Insufficient Funds";
+        }
+
+        public Dictionary<string, decimal> GetChange(ref decimal changeDue, Dictionary<string, decimal> cashInDrawer)
+        {
             var change = new Dictionary<string, decimal>();
+            var denominationValues = DenominationDictionary();
             foreach (var denomination in denominationValues)
             {
                 var tracker = 0M;
@@ -57,19 +78,27 @@ namespace Exact_Change
                     change.Add(denomination.Key, tracker);
                 }
             }
+            return change;
+        }
 
-
-            if (changeDue == 0)
+        public decimal GetTotalOfCashInDrawer(Dictionary<string, decimal> cashInDrawer)
+        {
+            var totalOfCashInDrawer = 0M;
+            foreach (KeyValuePair<string, decimal> denomination in cashInDrawer)
             {
-                var changeAsString = "";
-                foreach (var item in change)
-                {
-                    changeAsString += item;
-                }
-                return changeAsString;
+                totalOfCashInDrawer += denomination.Value;
             }
-            
-            return "Insufficient Funds";
+            return totalOfCashInDrawer;
+        }
+
+        public string GetMessageToDisplay(decimal changeDue, Dictionary<string, decimal> cashInDrawer)
+        {
+            var displayMessage = checkCashRegister(changeDue, cashInDrawer);
+            if (displayMessage == "Sufficient Funds")
+            {
+                displayMessage = GiveProperChange(changeDue, cashInDrawer);
+            }
+            return displayMessage;
         }
     }
 }
