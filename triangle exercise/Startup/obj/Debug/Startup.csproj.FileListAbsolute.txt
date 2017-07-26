@@ -28,3 +28,6 @@ C:\Users\rmars_000\Triangle-Repository\triangle exercise\Startup\obj\Debug\Start
 C:\Users\rmars_000\Greater-Sum-Exercises\triangle exercise\Startup\bin\Debug\Startup.exe.config
 C:\Users\rmars_000\Greater-Sum-Exercises\triangle exercise\Startup\obj\Debug\Startup.exe
 C:\Users\rmars_000\Greater-Sum-Exercises\triangle exercise\Startup\obj\Debug\Startup.pdb
+C:\Users\rmars_000\GitHubProjects\triangle exercise\Startup\bin\Debug\Startup.exe.config
+C:\Users\rmars_000\GitHubProjects\triangle exercise\Startup\obj\Debug\Startup.exe
+C:\Users\rmars_000\GitHubProjects\triangle exercise\Startup\obj\Debug\Startup.pdb
