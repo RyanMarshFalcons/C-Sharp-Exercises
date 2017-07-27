@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Messages;
 
-namespace Palindrome
+namespace Anagrams
 {
-    public class Manipulation
+    public class Utility
     {
-        public string GetUserInput()
+        public string GetUserInput(string firstOrSecond)
         {
             var userInput = "";
-            Message.RequestUserInput();
+            Message.RequestString(firstOrSecond);
             while (userInput == "")
             {
                 userInput = Console.ReadLine();
@@ -24,10 +24,10 @@ namespace Palindrome
             return userInput;
         }
 
-        public string InputInReverse(string userInput)
+        public string InputSorted(string userInput)
         {
             var userInputAsArray = userInput.ToCharArray();
-            Array.Reverse(userInputAsArray);
+            Array.Sort(userInputAsArray);
             return new string(userInputAsArray);
         }
 
@@ -45,20 +45,20 @@ namespace Palindrome
             return adjusted.ToLower();
         }
 
-        public bool FindOutIfPalindrome(string input, string reversedInput)
+        public bool FindOutIfAnagram(string sortedFirstInput, string sortedSecondInput)
         {
-            return input == reversedInput;
+            return sortedFirstInput == sortedSecondInput;
         }
 
-        public void DisplayResults(string input, bool isPalindrome)
+        public void DisplayResults(string firstInput, string secondInput, bool areAnagrams)
         {
-            if (isPalindrome)
+            if (areAnagrams)
             {
-                Message.IsAPalindrome(input);
+                Message.AreAnagrams(firstInput, secondInput);
             }
             else
             {
-                Message.IsNotAPalindrome(input);
+                Message.AreNotAnagrams(firstInput, secondInput);
             }
         }
     }

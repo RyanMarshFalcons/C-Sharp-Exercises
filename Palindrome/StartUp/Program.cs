@@ -13,13 +13,13 @@ namespace StartUp
         static void Main(string[] args)
         {
             Message.Welcome();
-            var manipulation = new Manipulation();
-            var input = manipulation.GetUserInput();
-            var reversedInput = manipulation.InputInReverse(input);
-            var adjustedInput = manipulation.AdjustString(input);
-            var adjustedReverse = manipulation.AdjustString(reversedInput);
-            var isPalindrome = manipulation.FindOutIfPalindrome(adjustedInput, adjustedReverse);
-            manipulation.DisplayResults(input, isPalindrome);
+            var utility = new Utility();
+            var input = utility.GetUserInput();
+            var reversedInput = utility.InputInReverse(input);
+            var adjustedInput = utility.AdjustString(input);
+            var adjustedReverse = utility.AdjustString(reversedInput);
+            var isPalindrome = utility.FindOutIfPalindrome(adjustedInput, adjustedReverse);
+            utility.DisplayResults(input, isPalindrome);
             Console.ReadLine();
         }
     }

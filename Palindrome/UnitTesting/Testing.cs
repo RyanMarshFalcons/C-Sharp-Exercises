@@ -16,8 +16,8 @@ namespace UnitTesting
         {
             var expected = "namtaB";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.InputInReverse("Batman");
+            var utility = new Utility();
+            var actual = utility.InputInReverse("Batman");
 
             Assert.AreEqual(expected, actual);
         }
@@ -27,8 +27,8 @@ namespace UnitTesting
         {
             var expected = "racecar";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.InputInReverse("racecar");
+            var utility = new Utility();
+            var actual = utility.InputInReverse("racecar");
 
             Assert.AreEqual(expected, actual);
         }
@@ -38,8 +38,8 @@ namespace UnitTesting
         {
             var expected = "ryanisacoolguy";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.AdjustString("Ryan, is: A cool guy!");
+            var utility = new Utility();
+            var actual = utility.AdjustString("Ryan, is: A cool guy!");
 
             Assert.AreEqual(expected, actual);
         }
@@ -49,8 +49,8 @@ namespace UnitTesting
         {
             var expected = "abc123dontrainonmyparade";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.AdjustString("AbC123Don'tRainonMYpaRaDe!!!!");
+            var utility = new Utility();
+            var actual = utility.AdjustString("AbC123Don'tRainonMYpaRaDe!!!!");
 
             Assert.AreEqual(expected, actual);
         }
@@ -60,8 +60,8 @@ namespace UnitTesting
         {
             var expected = true;
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.FindOutIfPalindrome("madam", "madam");
+            var utility = new Utility();
+            var actual = utility.FindOutIfPalindrome("madam", "madam");
 
             Assert.AreEqual(expected, actual);
         }
@@ -71,8 +71,8 @@ namespace UnitTesting
         {
             var expected = false;
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.FindOutIfPalindrome("weasel", "lesaew");
+            var utility = new Utility();
+            var actual = utility.FindOutIfPalindrome("weasel", "lesaew");
 
             Assert.AreEqual(expected, actual);
         }

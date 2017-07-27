@@ -16,8 +16,8 @@ namespace UnitTesting
         {
             var expected = "abcdefg";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.InputSorted("fgdebac");
+            var utility = new Utility();
+            var actual = utility.InputSorted("fgdebac");
 
             Assert.AreEqual(expected, actual);
         }
@@ -27,8 +27,8 @@ namespace UnitTesting
         {
             var expected = "123456789";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.InputSorted("864297531");
+            var utility = new Utility();
+            var actual = utility.InputSorted("864297531");
 
             Assert.AreEqual(expected, actual);
         }
@@ -38,8 +38,8 @@ namespace UnitTesting
         {
             var expected = "   Raaaaillnnrssty";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.InputSorted("Ryan is an allstar");
+            var utility = new Utility();
+            var actual = utility.InputSorted("Ryan is an allstar");
 
             Assert.AreEqual(expected, actual);
         }
@@ -49,8 +49,8 @@ namespace UnitTesting
         {
             var expected = "alovelywalkincentralpark";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.AdjustString("A lovely walk in Central Park.");
+            var utility = new Utility();
+            var actual = utility.AdjustString("A lovely walk in Central Park.");
 
             Assert.AreEqual(expected, actual);
         }
@@ -60,8 +60,8 @@ namespace UnitTesting
         {
             var expected = "onetwoskiptomylou";
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.AdjustString("One, two: skip to my Lou!");
+            var utility = new Utility();
+            var actual = utility.AdjustString("One, two: skip to my Lou!");
 
             Assert.AreEqual(expected, actual);
         }
@@ -71,8 +71,8 @@ namespace UnitTesting
         {
             var expected = true;
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.FindOutIfAnagram("lollipop", "lollipop");
+            var utility = new Utility();
+            var actual = utility.FindOutIfAnagram("lollipop", "lollipop");
 
             Assert.AreEqual(expected, actual);
         }
@@ -82,8 +82,8 @@ namespace UnitTesting
         {
             var expected = false;
 
-            var manipulation = new Manipulation();
-            var actual = manipulation.FindOutIfAnagram("chocolate", "vanilla");
+            var utility = new Utility();
+            var actual = utility.FindOutIfAnagram("chocolate", "vanilla");
 
             Assert.AreEqual(expected, actual);
         }

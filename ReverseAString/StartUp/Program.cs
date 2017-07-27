@@ -15,8 +15,8 @@ namespace StartUp
             Message.Welcome();
             Message.EnterString();
             var userInput = Console.ReadLine();
-            var manipulation = new Manipulation();
-            var reversedInput = manipulation.inputInReverse(userInput);
+            var utility = new Utility();
+            var reversedInput = utility.inputInReverse(userInput);
             Message.DisplayStringInReverse(reversedInput);
             Console.ReadLine();
         }

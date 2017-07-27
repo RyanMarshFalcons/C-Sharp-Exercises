@@ -13,15 +13,15 @@ namespace StartUp
         static void Main(string[] args)
         {
             Message.Welcome();
-            var manipulation = new Manipulation();
-            var firstString = manipulation.GetUserInput("first");
-            var adjustedFirstString = manipulation.AdjustString(firstString);
-            var sortedFirstString = manipulation.InputSorted(adjustedFirstString);
-            var secondString = manipulation.GetUserInput("second");
-            var adjustedSecondString = manipulation.AdjustString(secondString);
-            var sortedSecondString = manipulation.InputSorted(adjustedSecondString);
-            var areAnagrams = manipulation.FindOutIfAnagram(sortedFirstString, sortedSecondString);
-            manipulation.DisplayResults(firstString, secondString, areAnagrams);
+            var utility = new Utility();
+            var firstString = utility.GetUserInput("first");
+            var adjustedFirstString = utility.AdjustString(firstString);
+            var sortedFirstString = utility.InputSorted(adjustedFirstString);
+            var secondString = utility.GetUserInput("second");
+            var adjustedSecondString = utility.AdjustString(secondString);
+            var sortedSecondString = utility.InputSorted(adjustedSecondString);
+            var areAnagrams = utility.FindOutIfAnagram(sortedFirstString, sortedSecondString);
+            utility.DisplayResults(firstString, secondString, areAnagrams);
             Console.ReadLine();
         }
     }

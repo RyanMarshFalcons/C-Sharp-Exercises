@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReverseAString
 {
-    public class Manipulation
+    public class Utility
     {
         public string inputInReverse(string userInput)
         {
