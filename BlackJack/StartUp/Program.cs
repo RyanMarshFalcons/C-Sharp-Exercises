@@ -17,7 +17,7 @@ namespace StartUp
         {
             Message.Welcome();
             var walletAmount = 250.00;
-            while ((walletAmount >= 5) && (walletAmount <= 500))
+            while ((walletAmount >= 5) && (walletAmount < 500))
             {
                 PlayAHand(ref walletAmount);
             }
