@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SquareRoot_Messages;
+using Sine_Messages;
 
-namespace SquareRoot
+namespace Sine
 {
     public class Utility
     {
@@ -35,14 +35,9 @@ namespace SquareRoot
             return Double.TryParse(input, out num);
         }
 
-        public bool CheckIfNegative(double num)
+        public double GetSine(double num)
         {
-            return num < 0;
-        }
-
-        public double GetSquareRoot(double num)
-        {
-            return Math.Round(Math.Sqrt(num), 2);
+            return Math.Round(Math.Sin(num), 2);
         }
     }
 }

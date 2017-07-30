@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SquareRoot_Messages;
+using Cubed_Messages;
 
-namespace SquareRoot
+namespace Cubed
 {
     public class Utility
     {
-        public double GetValidEntry()
+        public int GetValidEntry()
         {
             Message.EnterNumber();
             var isValidInput = false;
@@ -17,7 +17,7 @@ namespace SquareRoot
             while (isValidInput == false)
             {
                 input = Console.ReadLine();
-                if (CheckIfDouble(input) == false)
+                if (CheckIfInt(input) == false)
                 {
                     Message.NotANumber(input);
                 }
@@ -26,23 +26,18 @@ namespace SquareRoot
                     isValidInput = true;
                 }
             }
-            return Double.Parse(input);
+            return Int32.Parse(input);
         }
 
-        public bool CheckIfDouble(string input)
+        public bool CheckIfInt(string input)
         {
-            var num = 0.0;
-            return Double.TryParse(input, out num);
+            var num = 0;
+            return Int32.TryParse(input, out num);
         }
 
-        public bool CheckIfNegative(double num)
+        public int GetNumberCubed(int num)
         {
-            return num < 0;
-        }
-
-        public double GetSquareRoot(double num)
-        {
-            return Math.Round(Math.Sqrt(num), 2);
+            return num * num * num;
         }
     }
 }

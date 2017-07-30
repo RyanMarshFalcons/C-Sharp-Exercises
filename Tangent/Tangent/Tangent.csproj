@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39A3E224-CC6D-4E4F-9021-87C820ECDA22}</ProjectGuid>
+    <ProjectGuid>{DDB19977-6131-4EA3-9727-CDE36CB98EE7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cubed</RootNamespace>
-    <AssemblyName>Cubed</AssemblyName>
+    <RootNamespace>Tangent</RootNamespace>
+    <AssemblyName>Tangent</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cubed_Messages\Cubed_Messages.csproj">
-      <Project>{3fcc8885-fc38-4b59-8c84-dfc654ef8b59}</Project>
-      <Name>Cubed_Messages</Name>
+    <ProjectReference Include="..\Tangent_Messages\Tangent_Messages.csproj">
+      <Project>{05b0b58f-1200-483b-a4b8-19c707eede68}</Project>
+      <Name>Tangent_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

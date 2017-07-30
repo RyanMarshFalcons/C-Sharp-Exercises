@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39A3E224-CC6D-4E4F-9021-87C820ECDA22}</ProjectGuid>
+    <ProjectGuid>{91437F34-BF16-4CF3-9083-A7296F75BBFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cubed</RootNamespace>
-    <AssemblyName>Cubed</AssemblyName>
+    <RootNamespace>Cosine</RootNamespace>
+    <AssemblyName>Cosine</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cubed_Messages\Cubed_Messages.csproj">
-      <Project>{3fcc8885-fc38-4b59-8c84-dfc654ef8b59}</Project>
-      <Name>Cubed_Messages</Name>
+    <ProjectReference Include="..\Cosine_Messages\Cosine_Messages.csproj">
+      <Project>{45055481-1a2b-4d84-8275-f22aa451c5ec}</Project>
+      <Name>Cosine_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

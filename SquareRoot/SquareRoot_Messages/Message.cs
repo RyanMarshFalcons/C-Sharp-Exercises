@@ -31,7 +31,7 @@ namespace SquareRoot_Messages
 
         public static void SquareRootOfNum(double num, double sqrrootOfNum)
         {
-            Console.WriteLine($"\nThe square root of {num} is {sqrrootOfNum}.");
+            Console.WriteLine($"\nThe square root of {num} is {sqrrootOfNum}");
         }
     }
 }
