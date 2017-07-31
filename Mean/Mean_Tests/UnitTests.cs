@@ -13,7 +13,7 @@ namespace Mean_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void returnsFalseFordog()
+        public void ReturnsFalseFordog()
         {
             var expected = false;
 
@@ -24,7 +24,7 @@ namespace Mean_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFor7point38()
+        public void ReturnsTrueFor7point38()
         {
             var expected = true;
 
@@ -35,7 +35,7 @@ namespace Mean_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFory()
+        public void ReturnsTrueFory()
         {
             var expected = true;
 
@@ -46,7 +46,7 @@ namespace Mean_Tests
         }
 
         [TestMethod]
-        public void returnsTrueForn()
+        public void ReturnsTrueForn()
         {
             var expected = true;
 
@@ -57,7 +57,7 @@ namespace Mean_Tests
         }
 
         [TestMethod]
-        public void returnsFalseForx()
+        public void ReturnsFalseForx()
         {
             var expected = false;
 
@@ -68,7 +68,7 @@ namespace Mean_Tests
         }
 
         [TestMethod]
-        public void returns30For252639()
+        public void Returns30For252639()
         {
             var expected = 30;
 
@@ -79,7 +79,7 @@ namespace Mean_Tests
         }
 
         [TestMethod]
-        public void returns6point33For6point277point882point468point72()
+        public void Returns6point33For6point277point882point468point72()
         {
             var expected = 6.33;
 

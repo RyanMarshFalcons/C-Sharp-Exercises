@@ -12,7 +12,7 @@ namespace Median_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void returnsFalseForcat()
+        public void ReturnsFalseForcat()
         {
             var expected = false;
 
@@ -23,7 +23,7 @@ namespace Median_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFor6point28()
+        public void ReturnsTrueFor6point28()
         {
             var expected = true;
 
@@ -34,7 +34,7 @@ namespace Median_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFory()
+        public void ReturnsTrueFory()
         {
             var expected = true;
 
@@ -45,7 +45,7 @@ namespace Median_Tests
         }
 
         [TestMethod]
-        public void returnsTrueForn()
+        public void ReturnsTrueForn()
         {
             var expected = true;
 
@@ -56,7 +56,7 @@ namespace Median_Tests
         }
 
         [TestMethod]
-        public void returnsFalseForm()
+        public void ReturnsFalseForm()
         {
             var expected = false;
 
@@ -67,7 +67,7 @@ namespace Median_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFor2()
+        public void ReturnsTrueFor2()
         {
             var expected = true;
 
@@ -78,7 +78,7 @@ namespace Median_Tests
         }
 
         [TestMethod]
-        public void returnsFalseFor3()
+        public void ReturnsFalseFor3()
         {
             var expected = false;
 
@@ -89,7 +89,7 @@ namespace Median_Tests
         }
 
         [TestMethod]
-        public void returns4For7413652()
+        public void Returns4For7413652()
         {
             var expected = 4;
 
@@ -100,7 +100,7 @@ namespace Median_Tests
         }
 
         [TestMethod]
-        public void returns5point5For1point12point23point34point45point56point67point78point89point9()
+        public void Returns5point5For1point12point23point34point45point56point67point78point89point9()
         {
             var expected = 5.5;
 

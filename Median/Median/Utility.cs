@@ -90,7 +90,6 @@ namespace Median
             {
                 return numbers[((counter + 1) / 2) - 1];
             }
-
         }
     }
 }
