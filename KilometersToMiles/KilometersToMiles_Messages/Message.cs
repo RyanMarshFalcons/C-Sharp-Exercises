@@ -17,7 +17,7 @@ namespace KilometersToMiles_Messages
 
         public static void EnterDistance()
         {
-            Console.Write("\nPlease enter the number of kilometers: ");
+            Console.Write("Please enter the number of kilometers: ");
         }
 
         public static void NotADistance(string input)

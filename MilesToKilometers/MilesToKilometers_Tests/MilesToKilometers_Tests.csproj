@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49B21574-3352-42C1-9811-417624C49FBC}</ProjectGuid>
+    <ProjectGuid>{C9DBA4AB-A68D-4627-9689-B7ECEBF20FCA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MilesToKilometers</RootNamespace>
-    <AssemblyName>MilesToKilometers</AssemblyName>
+    <RootNamespace>MilesToKilometers_Tests</RootNamespace>
+    <AssemblyName>MilesToKilometers_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="UnitTesting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Miles_ToKilometers_Distances\MilesToKilometers_Messages.csproj">
-      <Project>{dd3ff4e1-0ec4-4332-8765-2d3a7c7460c6}</Project>
-      <Name>MilesToKilometers_Messages</Name>
+    <ProjectReference Include="..\MilesToKilometers\MilesToKilometers.csproj">
+      <Project>{49b21574-3352-42c1-9811-417624c49fbc}</Project>
+      <Name>MilesToKilometers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
