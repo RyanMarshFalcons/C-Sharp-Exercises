@@ -12,7 +12,7 @@ namespace Reverse_A_Number_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void returnsFalseforT()
+        public void ReturnsFalseforT()
         {
             var expected = false;
 
@@ -23,7 +23,7 @@ namespace Reverse_A_Number_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFor5()
+        public void ReturnsTrueFor5()
         {
             var expected = true;
 
@@ -34,7 +34,7 @@ namespace Reverse_A_Number_Tests
         }
 
         [TestMethod]
-        public void returns8642For2468()
+        public void Returns8642For2468()
         {
             var expected = "8642";
 
@@ -45,7 +45,7 @@ namespace Reverse_A_Number_Tests
         }
 
         [TestMethod]
-        public void returns521776For677125()
+        public void Returns521776For677125()
         {
             var expected = "521776";
 
@@ -56,7 +56,7 @@ namespace Reverse_A_Number_Tests
         }
 
         [TestMethod]
-        public void returns30180For08103()
+        public void Returns30180For08103()
         {
             var expected = "30180";
 

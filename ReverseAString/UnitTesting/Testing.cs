@@ -12,7 +12,7 @@ namespace UnitTesting
     public class Testing
     {
         [TestMethod]
-        public void returnsNAYR()
+        public void ReturnsNAYR()
         {
             var expected = "NAYR";
 
@@ -23,7 +23,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void returns987654321cba()
+        public void Returns987654321cba()
         {
             var expected = "9 8 7 6 5 4 3 2 1 c b a";
 
@@ -34,7 +34,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void returnssemitfotsrowehtsawtIsemitfotsebehtsawtI()
+        public void ReturnssemitfotsrowehtsawtIsemitfotsebehtsawtI()
         {
             var expected = ".semit fo tsrow eht saw tI .semit fo tseb eht saw tI";
 
@@ -43,8 +43,5 @@ namespace UnitTesting
 
             Assert.AreEqual(expected, actual);
         }
-         
-
-
     }
 }
