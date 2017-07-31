@@ -12,7 +12,7 @@ namespace Addition_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void returnsFalseForhouse()
+        public void ReturnsFalseForhouse()
         {
             var expected = false;
 
@@ -23,7 +23,7 @@ namespace Addition_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFor7point38()
+        public void ReturnsTrueFor7point38()
         {
             var expected = true;
 
@@ -34,7 +34,7 @@ namespace Addition_Tests
         }
 
         [TestMethod]
-        public void returns21For14And7()
+        public void Returns21For14And7()
         {
             var expected = 21;
 
@@ -45,7 +45,18 @@ namespace Addition_Tests
         }
 
         [TestMethod]
-        public void returns10point25ForNegative2point5And12point75()
+        public void Returns44For33And11()
+        {
+            var expected = 44;
+
+            var utility = new Utility();
+            var actual = utility.GetSum(33, 11);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns10point25ForNegative2point5And12point75()
         {
             var expected = 10.25;
 

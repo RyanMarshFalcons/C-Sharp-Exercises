@@ -13,7 +13,7 @@ namespace Subtraction_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void returnsFalseFormouse()
+        public void ReturnsFalseFormouse()
         {
             var expected = false;
 
@@ -24,7 +24,7 @@ namespace Subtraction_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFor4point36()
+        public void ReturnsTrueFor4point36()
         {
             var expected = true;
 
@@ -35,7 +35,7 @@ namespace Subtraction_Tests
         }
 
         [TestMethod]
-        public void returns16For24And8()
+        public void Returns16For24And8()
         {
             var expected = 16;
 
@@ -46,7 +46,18 @@ namespace Subtraction_Tests
         }
 
         [TestMethod]
-        public void returnsNegative3point4For7point9And11point3()
+        public void Returns86For100And14()
+        {
+            var expected = 86;
+
+            var utility = new Utility();
+            var actual = utility.GetDifference(100, 14);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsNegative3point4For7point9And11point3()
         {
             var expected = -3.4;
 

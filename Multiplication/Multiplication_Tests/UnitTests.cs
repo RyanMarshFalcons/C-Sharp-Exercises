@@ -45,6 +45,17 @@ namespace Multiplication_Tests
         }
 
         [TestMethod]
+        public void Returns32For2And16()
+        {
+            var expected = 32;
+
+            var utility = new Utility();
+            var actual = utility.GetProduct(2, 16);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void Returns18point74For3point895And4point812()
         {
             var expected = 18.74;

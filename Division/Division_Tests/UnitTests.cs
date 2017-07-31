@@ -45,6 +45,17 @@ namespace Division_Tests
         }
 
         [TestMethod]
+        public void Returns8For56And7()
+        {
+            var expected = 8;
+
+            var utility = new Utility();
+            var actual = utility.GetQuotient(56, 7);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void Returns3point71For4point56And1point23()
         {
             var expected = 3.71;
