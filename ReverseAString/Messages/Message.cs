@@ -10,7 +10,7 @@ namespace Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my reverse a string program where you enter any string of\ncharacters and I reverse them for you.\nPress enter to continue.");
+            Console.WriteLine("Hello and welcome to my reverse a string program where you enter any string of\ncharacters and I reverse them for you. Press enter to continue.");
             Console.ReadLine();
         }
 
