@@ -10,7 +10,7 @@ namespace Word_Sorter_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my word sorting program where you will enter a series of words and I will sort them for you.\nPress enter to continue.");
+            Console.WriteLine("Hello and welcome to my word sorting program where you will enter a series of\nwords and I will sort them for you. Press enter to continue.");
             Console.ReadLine();
         }
 

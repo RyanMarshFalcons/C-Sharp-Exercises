@@ -12,7 +12,7 @@ namespace NumberSorterTesting
     public class UnitTesting
     {
         [TestMethod]
-        public void returnsFalseforA()
+        public void ReturnsFalseforA()
         {
             var expected = false;
 
@@ -23,7 +23,7 @@ namespace NumberSorterTesting
         }
 
         [TestMethod]
-        public void returnsTrueFor5()
+        public void ReturnsTrueFor5()
         {
             var expected = true;
 
@@ -34,7 +34,7 @@ namespace NumberSorterTesting
         }
 
         [TestMethod]
-        public void returnsTrueFory()
+        public void ReturnsTrueFory()
         {
             var expected = true;
 
@@ -45,7 +45,7 @@ namespace NumberSorterTesting
         }
 
         [TestMethod]
-        public void returnsTrueForn()
+        public void ReturnsTrueForn()
         {
             var expected = true;
 
@@ -56,7 +56,7 @@ namespace NumberSorterTesting
         }
 
         [TestMethod]
-        public void returnsFalseForj()
+        public void ReturnsFalseForj()
         {
             var expected = false;
 
@@ -67,7 +67,7 @@ namespace NumberSorterTesting
         }
 
         [TestMethod]
-        public void returns246810()
+        public void Returns246810()
         {
             var expectedList = new List<int>() { 2, 4, 6, 8, 10 };
             
@@ -80,7 +80,7 @@ namespace NumberSorterTesting
         }
 
         [TestMethod]
-        public void returns51015202530()
+        public void Returns51015202530()
         {
             var expectedList = new List<int>() { 5, 10, 15, 20, 25, 30 };
 

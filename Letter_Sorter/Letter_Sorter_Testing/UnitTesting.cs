@@ -12,7 +12,7 @@ namespace Letter_Sorter_Testing
     public class UnitTesting
     {
         [TestMethod]
-        public void returnsTrueForComma()
+        public void ReturnsTrueForComma()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void returnsFalseForFF()
+        public void ReturnsFalseForFF()
         {
             var expected = false;
 
@@ -34,7 +34,7 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void returnsFalseForSeimColon()
+        public void ReturnsFalseForSeimColon()
         {
             var expected = false;
 
@@ -45,7 +45,7 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void returnsTrueForQ()
+        public void ReturnsTrueForQ()
         {
             var expected = true;
 
@@ -56,7 +56,7 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void returnsTrueFory()
+        public void ReturnsTrueFory()
         {
             var expected = true;
 
@@ -67,7 +67,7 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void returnsTrueForn()
+        public void ReturnsTrueForn()
         {
             var expected = true;
 
@@ -78,7 +78,7 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void returnsFalseForp()
+        public void ReturnsFalseForp()
         {
             var expected = false;
 
@@ -89,7 +89,7 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void returnsacegi()
+        public void Returnsacegi()
         {
             var expectedList = new List<char>() { 'a', 'c', 'e', 'g', 'i'};
 
@@ -102,7 +102,7 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void returnsBDQaeiou()
+        public void ReturnsBDQaeiou()
         {
             var expectedList = new List<char>() { 'B', 'D', 'Q', 'a', 'e', 'i', 'o', 'u' };
 

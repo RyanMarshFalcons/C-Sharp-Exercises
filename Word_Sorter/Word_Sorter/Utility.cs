@@ -33,7 +33,6 @@ namespace Word_Sorter
             return input;
         }
 
-
         public bool CheckIfWord(string input)
         {
             var isAWord = true;
@@ -50,7 +49,6 @@ namespace Word_Sorter
             }
             return isAWord;
         }
-
 
         public bool AskToContinue()
         {

@@ -10,7 +10,7 @@ namespace Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my letter sorting program where you will enter a series of letters and I will sort them for you.\nPress enter to continue.");
+            Console.WriteLine("Hello and welcome to my letter sorting program where you will enter a series of letters and I will sort them for you. Press enter to continue.");
             Console.ReadLine();
         }
 

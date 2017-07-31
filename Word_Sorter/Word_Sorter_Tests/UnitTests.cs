@@ -12,7 +12,7 @@ namespace Word_Sorter_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void returnsTrueForCant()
+        public void ReturnsTrueForCant()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace Word_Sorter_Tests
         }
 
         [TestMethod]
-        public void returnsFalseForSuperMan()
+        public void ReturnsFalseForSuperMan()
         {
             var expected = false;
 
@@ -34,7 +34,7 @@ namespace Word_Sorter_Tests
         }
 
         [TestMethod]
-        public void returnsTrueFory()
+        public void ReturnsTrueFory()
         {
             var expected = true;
 
@@ -45,7 +45,7 @@ namespace Word_Sorter_Tests
         }
 
         [TestMethod]
-        public void returnsTrueForn()
+        public void ReturnsTrueForn()
         {
             var expected = true;
 
@@ -56,7 +56,7 @@ namespace Word_Sorter_Tests
         }
 
         [TestMethod]
-        public void returnsFalseForz()
+        public void ReturnsFalseForz()
         {
             var expected = false;
 
@@ -67,7 +67,7 @@ namespace Word_Sorter_Tests
         }
 
         [TestMethod]
-        public void returnsAppleBananaCarrotDoughnutEgg()
+        public void ReturnsAppleBananaCarrotDoughnutEgg()
         {
             var expectedList = new List<string>() { "apple", "banana", "carrot", "doughnut", "egg" };
 
@@ -80,7 +80,7 @@ namespace Word_Sorter_Tests
         }
 
         [TestMethod]
-        public void returnsCantDontMustntShouldntWontWouldnt()
+        public void ReturnsCantDontMustntShouldntWontWouldnt()
         {
             var expectedList = new List<string>() { "can't", "don't", "mustn't", "shouldn't", "won't", "wouldn't" };
 
