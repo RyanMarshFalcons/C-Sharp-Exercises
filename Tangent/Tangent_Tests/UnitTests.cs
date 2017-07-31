@@ -12,7 +12,7 @@ namespace Tangent_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueForDouble()
+        public void ReturnsTrueForNegative8point72()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace Tangent_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForNotDouble()
+        public void ReturnsFalseForhouse()
         {
             var expected = false;
 

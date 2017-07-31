@@ -12,7 +12,7 @@ namespace Sine_Tests
     public class UnitTesting
     {
         [TestMethod]
-        public void ReturnsTrueForDouble()
+        public void ReturnsTrueFor6point24()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace Sine_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForNotDouble()
+        public void ReturnsFalseForNotstairs()
         {
             var expected = false;
 

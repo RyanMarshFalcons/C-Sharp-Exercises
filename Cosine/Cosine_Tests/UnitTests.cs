@@ -12,7 +12,7 @@ namespace Cosine_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueForDouble()
+        public void ReturnsTrueFor9point45()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace Cosine_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForNotDouble()
+        public void ReturnsFalseForcat()
         {
             var expected = false;
 
