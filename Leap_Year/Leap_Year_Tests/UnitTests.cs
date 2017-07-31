@@ -12,7 +12,7 @@ namespace Leap_Year_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueForInt()
+        public void ReturnsTrueFor1999()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace Leap_Year_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForNotInt()
+        public void ReturnsFalseForNot19point99()
         {
             var expected = false;
 

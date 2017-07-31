@@ -10,7 +10,7 @@ namespace SquaredMessages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Squared program. Enter a number and I will tell you what that\nnumber squared is.\nPress enter to contine.");
+            Console.WriteLine("Welcome to my Squared program. Enter a number and I will tell you what that\nnumber squared is. Press enter to contine.");
             Console.ReadLine();
         }
 

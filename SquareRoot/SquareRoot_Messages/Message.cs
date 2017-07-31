@@ -10,7 +10,7 @@ namespace SquareRoot_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Square Root program. Enter a number and I will tell you what that number's square root is.\nPress enter to contine.");
+            Console.WriteLine("Welcome to my Square Root program. Enter a number and I will tell you what that number's square root is. Press enter to contine.");
             Console.ReadLine();
         }
 

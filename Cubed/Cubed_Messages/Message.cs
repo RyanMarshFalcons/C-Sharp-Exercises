@@ -10,7 +10,7 @@ namespace Cubed_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Cubed program. Enter a number and I will tell you what that numbercubed is.\nPress enter to contine.");
+            Console.WriteLine("Welcome to my Cubed program. Enter a number and I will tell you what that numbercubed is. Press enter to contine.");
             Console.ReadLine();
         }
 
