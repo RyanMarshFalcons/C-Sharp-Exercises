@@ -12,7 +12,7 @@ namespace UnitTesting
     public class Testing
     {
         [TestMethod]
-        public void returnsabcdefg()
+        public void Returnsabcdefg()
         {
             var expected = "abcdefg";
 
@@ -23,7 +23,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void returns123456789()
+        public void Returns123456789()
         {
             var expected = "123456789";
 
@@ -34,7 +34,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void returnsRaaaaillnnrssty()
+        public void ReturnsRaaaaillnnrssty()
         {
             var expected = "   Raaaaillnnrssty";
 
@@ -45,7 +45,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void returnsalovelywalkincentralpark()
+        public void Returnsalovelywalkincentralpark()
         {
             var expected = "alovelywalkincentralpark";
 
@@ -56,7 +56,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void returnsonetwoskiptomylou()
+        public void Returnsonetwoskiptomylou()
         {
             var expected = "onetwoskiptomylou";
 
@@ -67,7 +67,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void returnstrue()
+        public void Returnstrue()
         {
             var expected = true;
 
@@ -78,7 +78,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void returnsfalse()
+        public void Returnsfalse()
         {
             var expected = false;
 
