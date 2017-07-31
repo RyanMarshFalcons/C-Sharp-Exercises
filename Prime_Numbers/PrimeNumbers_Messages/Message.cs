@@ -10,7 +10,7 @@ namespace PrimeNumbers_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my prime numbers program. Input a number and I will tell you whether or not it is a prime number and give your the reason why as well.\nPress enter to continue.");
+            Console.WriteLine("Welcome to my prime numbers program. Input a number and I will tell you whether or not it is a prime number and give your the reason why as well. Press enter tocontinue.");
             Console.ReadLine();
         }
 

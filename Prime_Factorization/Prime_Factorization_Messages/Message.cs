@@ -10,7 +10,7 @@ namespace Prime_Factorization_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my prime factorization program. Input a number and I will tell you\nwhat all of its prime number factors are.\nPress enter to continue.");
+            Console.WriteLine("Welcome to my prime factorization program. Input a number and I will tell you\nwhat all of its prime number factors are. Press enter to continue.");
             Console.ReadLine();
         }
 
