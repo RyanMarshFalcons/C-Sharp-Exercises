@@ -3,76 +3,76 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MilesToKilometers;
+using CentimetersToInches;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MilesToKilometers_Tests
+namespace CentimetersToInches_Tests
 {
     [TestClass]
-    public class UnitTesting
+    public class UnitTests
     {
         [TestMethod]
-        public void ReturnsFalseForFlorida()
+        public void ReturnsFalseForAlaska()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("Florida");
+            var actual = utility.CheckIfDouble("Alaska");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFor78point142()
+        public void ReturnsTrueFor44point55()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("78.142");
+            var actual = utility.CheckIfDouble("44.55");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueForNegative12point75()
+        public void ReturnsTrueForNegative11point487()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfNegative("-12.75");
+            var actual = utility.CheckIfNegative("-11.487");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseFor12point75()
+        public void ReturnsFalseFor11point487()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfNegative("12.75");
+            var actual = utility.CheckIfNegative("11.487");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns8point05For5()
+        public void Returns3point15For8()
         {
-            var expected = 8.05;
+            var expected = 3.15;
 
             var utility = new Utility();
-            var actual = utility.GetKilometers(5);
+            var actual = utility.GetInches(8);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns150point65For93point612()
+        public void Returns40point38For102point564()
         {
-            var expected = 150.65;
+            var expected = 40.38;
 
             var utility = new Utility();
-            var actual = utility.GetKilometers(93.612);
+            var actual = utility.GetInches(102.564);
 
             Assert.AreEqual(expected, actual);
         }
