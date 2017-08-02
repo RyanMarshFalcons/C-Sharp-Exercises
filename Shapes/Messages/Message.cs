@@ -10,7 +10,7 @@ namespace Messages
     {
         public static void SelectShapeType()
         {
-            Console.WriteLine($"\nPlease select the shape you want to work with: \n(A) Square \n(B) Rectangle \n(C) Triangle");
+            Console.WriteLine($"Please select the shape you want to work with: \n(A) Square \n(B) Rectangle \n(C) Triangle");
             Console.WriteLine("(D) Trapezoid \n(E) Circle");
         }
 
