@@ -10,7 +10,7 @@ namespace Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my anagrams program. An anagram is a word or phrase that is formed byrearranging the letters of another word or phrase. \nPress enter to continue.");
+            Console.WriteLine("Welcome to my anagrams program. An anagram is a word or phrase that is formed byrearranging the letters of another word or phrase. Press enter to continue.");
             Console.ReadLine();
         }
 

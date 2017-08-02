@@ -10,7 +10,7 @@ namespace Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my palindrome program. A palindrome is a word or phrase\nthat reads the same backwards and forwards.\nPress enter to continue.");
+            Console.WriteLine("Hello and welcome to my palindrome program. A palindrome is a word or phrase\nthat reads the same backwards and forwards. Press enter to continue.");
             Console.ReadLine();
         }
 
