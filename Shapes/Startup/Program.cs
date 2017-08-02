@@ -108,12 +108,14 @@ namespace Startup
             double.TryParse(input, out inputAsDouble);
             return inputAsDouble > 0;
         }
+
         public static Square BuildASquare()
         {
             var square = new Square();
             square.side = GetLegitimateInput("side", "square");
             return square;
         }
+
         public static Rectangle BuildARectangle()
         {
             var rectangle = new Rectangle();
