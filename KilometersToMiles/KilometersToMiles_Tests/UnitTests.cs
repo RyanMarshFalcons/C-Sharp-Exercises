@@ -34,23 +34,23 @@ namespace KilometersToMiles_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForNegative3()
+        public void ReturnsTrueForNegative9()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfNegative("-3");
+            var actual = utility.CheckIfNegative("-9");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseFor3()
+        public void ReturnsFalseFor9()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfNegative("3");
+            var actual = utility.CheckIfNegative("9");
 
             Assert.AreEqual(expected, actual);
         }

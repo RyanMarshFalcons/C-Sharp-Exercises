@@ -10,7 +10,7 @@ namespace MilesToKilometers_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Miles to Kilometers promgram. Enter a distance in miles and I willtell you how far that distance is in kilometers. Press enter to continue.");
+            Console.WriteLine("Welcome to my Miles to Kilometers program. Enter a distance in miles and I will\ntell you how far that distance is in kilometers. Press enter to continue.");
             Console.ReadLine();
         }
 

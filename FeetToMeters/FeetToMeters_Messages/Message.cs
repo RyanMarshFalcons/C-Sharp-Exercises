@@ -10,7 +10,7 @@ namespace FeetToMeters_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Feet to Meters promgram. Enter a distance in feet and I will tell you how far that distance is in meters. Press enter to continue.");
+            Console.WriteLine("Welcome to my Feet to Meters program. Enter a distance in feet and I will tell you how far that distance is in meters. Press enter to continue.");
             Console.ReadLine();
         }
 

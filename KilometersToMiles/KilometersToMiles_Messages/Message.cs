@@ -11,7 +11,7 @@ namespace KilometersToMiles_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Kilometers to Miles promgram. Enter a distance in kilometers and Iwill tell you how far that distance is in miles. Press enter to continue.");
+            Console.WriteLine("Welcome to my Kilometers to Miles program. Enter a distance in kilometers and I\nwill tell you how far that distance is in miles. Press enter to continue.");
             Console.ReadLine();
         }
 

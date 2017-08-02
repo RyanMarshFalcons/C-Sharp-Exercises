@@ -10,7 +10,7 @@ namespace InchesToCentimeters_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Inches to Centimeters promgram. Enter a distance in inches and I\nwill tell you how far that distance is in centimeters. Press enter to continue.");
+            Console.WriteLine("Welcome to my Inches to Centimeters program. Enter a distance in inches and I\nwill tell you how far that distance is in centimeters. Press enter to continue.");
             Console.ReadLine();
         }
 
