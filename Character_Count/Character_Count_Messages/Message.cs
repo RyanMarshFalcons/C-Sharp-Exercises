@@ -10,18 +10,18 @@ namespace Character_Count_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my character count program where I will count the number of characters that you input.\nPress enter to continue.");
+            Console.WriteLine("Hello and welcome to my character count program where I will count the number ofcharacters that you input. Press enter to continue.");
             Console.ReadLine();
         }
 
         public static void RequestUserInput()
         {
-            Console.Write("Please input as many words, numbers, spaces, symbols as you please and I will tell you how many characters you there are: ");
+            Console.Write("Please input as many words, numbers, spaces, and symbols as you please and I\nwill tell you how many characters there are: ");
         }
 
         public static void NoEmptyStrings()
         {
-            Console.Write("\nYou must input at least one character for me to perform a count of the characters. Please try again: ");
+            Console.Write("\nYou must input at least one character for me to perform a count of the\ncharacters. Please try again: ");
         }
 
         public static void DisplayCount(int count)

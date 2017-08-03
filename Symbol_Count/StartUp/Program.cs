@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Character_Count;
-using Character_Count_Messages;
+using Symbol_Count;
+using Symbol_Count_Messages;
 
 namespace StartUp
 {
@@ -16,8 +16,8 @@ namespace StartUp
             var utility = new Utility();
             var input = utility.GetUserInput();
             var inputArr = utility.ConvertToCharArray(input);
-            var charCount = utility.CountCharsInArray(inputArr);
-            Message.DisplayCount(charCount);
+            var symbolCount = utility.CountSymbolsInArray(inputArr);
+            Message.DisplayCount(symbolCount);
             Console.ReadLine();
         }
     }
