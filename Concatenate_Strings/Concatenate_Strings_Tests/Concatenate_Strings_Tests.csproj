@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{593DD6CF-6372-4EDD-93D4-666A291B7C3B}</ProjectGuid>
+    <ProjectGuid>{CDD53FE1-0DEF-42DD-9F61-7DF7051A8570}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Symbol_Count_Tests</RootNamespace>
-    <AssemblyName>Symbol_Count_Tests</AssemblyName>
+    <RootNamespace>Concatenate_Strings_Tests</RootNamespace>
+    <AssemblyName>Concatenate_Strings_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Symbol_Count\Symbol_Count.csproj">
-      <Project>{1ca374d1-91a6-4fcd-9e11-51872da6e5bb}</Project>
-      <Name>Symbol_Count</Name>
+    <ProjectReference Include="..\Concatenate_Strings\Concatenate_Strings.csproj">
+      <Project>{634dec64-e314-499e-8438-a07a8bb5a227}</Project>
+      <Name>Concatenate_Strings</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

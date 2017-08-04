@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{593DD6CF-6372-4EDD-93D4-666A291B7C3B}</ProjectGuid>
+    <ProjectGuid>{255F8883-0E7B-41C2-8FC1-53A813377A05}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Symbol_Count_Tests</RootNamespace>
-    <AssemblyName>Symbol_Count_Tests</AssemblyName>
+    <RootNamespace>ToUpperCase_Tests</RootNamespace>
+    <AssemblyName>ToUpperCase_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Symbol_Count\Symbol_Count.csproj">
-      <Project>{1ca374d1-91a6-4fcd-9e11-51872da6e5bb}</Project>
-      <Name>Symbol_Count</Name>
+    <ProjectReference Include="..\ToUpperCase\ToUpperCase.csproj">
+      <Project>{1aab5cea-e3f4-4635-8a16-dbec1287a212}</Project>
+      <Name>ToUpperCase</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
