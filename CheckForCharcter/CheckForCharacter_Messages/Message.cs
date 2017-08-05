@@ -10,7 +10,7 @@ namespace CheckForCharacter_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my to Check For Character program where you enter text and then I check if that text contains a specific character for you. Press enter to continue.");
+            Console.WriteLine("Hello and welcome to my Check For Character program where you enter text and\nthen I check if that text contains a specific character for you. Press enter to continue.");
             Console.ReadLine();
         }
 
