@@ -13,7 +13,6 @@ namespace Bank_Account
         public Selection GetSelection()
         {
             var isValidSelection = false;
-            var selection = new Selection();
             var input = "";
             Message.Selections();
             while (isValidSelection == false)
