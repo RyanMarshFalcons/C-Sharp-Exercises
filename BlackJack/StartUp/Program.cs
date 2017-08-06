@@ -32,11 +32,8 @@ namespace StartUp
                 Message.Reached500(walletAmount);
             }
             Console.ReadLine();
-
         }
-
         
-
         public static List<Card> CreateDeck()
         {
             var deck = new List<Card>();
@@ -53,8 +50,6 @@ namespace StartUp
             return deck;
         }
 
-        
-
         public static Card GetRandomCard(int randomInt, ref List<Card> deck)
         {
 
@@ -62,7 +57,6 @@ namespace StartUp
             deck.Remove(card);
             return card;
         }
-        
 
         public static void PlayAHand(ref double walletAmount)
         {

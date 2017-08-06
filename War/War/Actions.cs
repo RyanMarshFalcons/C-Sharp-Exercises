@@ -8,7 +8,6 @@ using Messages;
 namespace War
 {
     public enum RoundResult { RyanWins, PlayerWins, WarIsDeclard, GameIsOver };
-
     public enum WarResult { RyanWins, PlayerWins, RyanOutOfCards, PlayerOutOfCards, BothOutOfCards, WarIsDeclaredAgain};
     public class Actions
     {
