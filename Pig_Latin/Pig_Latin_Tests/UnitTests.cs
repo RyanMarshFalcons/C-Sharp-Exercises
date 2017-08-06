@@ -17,7 +17,7 @@ namespace Pig_Latin_Tests
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfHasSpaces("hello there");
+            var actual = utility.CheckIfHasSpaces("hi there");
 
             Assert.AreEqual(expected, actual);
         }
@@ -28,7 +28,7 @@ namespace Pig_Latin_Tests
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfHasSpaces("hellothere");
+            var actual = utility.CheckIfHasSpaces("hithere");
 
             Assert.AreEqual(expected, actual);
         }
