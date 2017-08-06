@@ -67,12 +67,12 @@ namespace Dice_Tests
         }
 
         [TestMethod]
-        public void Returns50For33512452232612342()
+        public void Returns50For3351245223261236()
         {
             var expected = 50;
 
             var utility = new Utility();
-            var actual = utility.GetSum(new List<int>() { 3, 3, 5, 1, 2, 4, 5, 2, 2, 3, 2, 6, 1, 2, 3, 4, 2 });
+            var actual = utility.GetSum(new List<int>() { 3, 3, 5, 1, 2, 4, 5, 2, 2, 3, 2, 6, 1, 2, 3, 6 });
 
             Assert.AreEqual(expected, actual);
         }

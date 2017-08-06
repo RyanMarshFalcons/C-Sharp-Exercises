@@ -144,15 +144,5 @@ namespace Guessing_Games_Tests
 
             Assert.AreEqual(expectedDayGuess, actualDayGuess);
         }
-
-
-
-
-
-
-
-
-
-
     }
 }
