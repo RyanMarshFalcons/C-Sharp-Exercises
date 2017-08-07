@@ -58,6 +58,5 @@ namespace Bank_Account_Messages
         {
             Console.WriteLine($"\nIt was a pleasure doing business with you. Here is the ${Math.Round(balance, 2)} that was\nin your accout. Press enter to continue.");
         }
-        
     }
 }
