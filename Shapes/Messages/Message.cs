@@ -26,7 +26,7 @@ namespace Messages
 
         public static void ProgramFlowIsIncorrect()
         {
-            Console.WriteLine("If you're reading this message than something in the program design is incredibly flawed.");
+            Console.WriteLine("If you're reading this message than something in the program design is way off.");
         }
 
         public static void DisplayResult(string typeOfShape, double area, double perimeter)
