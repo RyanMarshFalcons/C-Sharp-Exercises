@@ -14,8 +14,8 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var numList = new List<int>();
-            var num = 0;
+            var numList = new List<double>();
+            var num = 0.0;
             var counter = 0;
             var continueAsking = true;
             while (continueAsking == true)

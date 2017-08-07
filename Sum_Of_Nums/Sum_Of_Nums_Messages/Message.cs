@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messages
+namespace Sum_Of_Nums_Messages
 {
     public class Message
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my number sorting program where you will enter a series of numbers and I will sort them for you. Press enter to continue.");
+            Console.WriteLine("Hello and welcome to my Sum Of Numbers program where you will enter a series of numbers and I will find the sum of them for you. Press enter to continue.");
             Console.ReadLine();
         }
 
@@ -26,7 +26,7 @@ namespace Messages
 
         public static void AddAnotherNum()
         {
-            Console.Write("\nWould you like to enter another number to be sorted? y/n: ");
+            Console.Write("\nWould you like to enter another number to be summed? y/n: ");
         }
 
         public static void NotyOrn()
@@ -34,9 +34,9 @@ namespace Messages
             Console.Write($"\nSorry but you must input a y or an n. Please input y or n to procede: ");
         }
 
-        public static void NumbersSortedBelow(int counter)
+        public static void DisplaySum(double sum)
         {
-            Console.WriteLine($"\nThe {counter} numbers that you entered have been sorted as follows: ");
+            Console.WriteLine($"\nThe sum of the numbers that you entered is: {sum}");
         }
     }
 }

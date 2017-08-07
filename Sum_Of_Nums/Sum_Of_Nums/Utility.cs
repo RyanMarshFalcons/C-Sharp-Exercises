@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Messages;
+using Sum_Of_Nums_Messages;
 
-
-
-namespace Number_Sorter
+namespace Sum_Of_Nums
 {
     public class Utility
     {
@@ -76,19 +74,10 @@ namespace Number_Sorter
             }
         }
 
-        public List<double> SortTheNumbers(List<double> numbers)
+        public List<int> SortTheNumbers(List<int> numbers)
         {
             numbers.Sort();
             return numbers;
-        }
-
-        public void DisplaySortedNumbers(List<double> numbers, int counter)
-        {
-            Message.NumbersSortedBelow(counter);
-            foreach (var num in numbers)
-            {
-                Console.WriteLine(num);
-            }
         }
     }
 }

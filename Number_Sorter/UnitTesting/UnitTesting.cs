@@ -17,18 +17,18 @@ namespace NumberSorterTesting
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfInt("A");
+            var actual = utility.CheckIfDouble("A");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFor5()
+        public void ReturnsTrueFor5point2()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfInt("5");
+            var actual = utility.CheckIfDouble("5.2");
 
             Assert.AreEqual(expected, actual);
         }
@@ -67,26 +67,26 @@ namespace NumberSorterTesting
         }
 
         [TestMethod]
-        public void Returns246810()
+        public void Returns2point14point26point38point410point5()
         {
-            var expectedList = new List<int>() { 2, 4, 6, 8, 10 };
+            var expectedList = new List<double>() { 2.1, 4.2, 6.3, 8.4, 10.5 };
             
 
             var utility = new Utility();
-            var actualList = new List<int>() { 6, 10, 2, 8, 4 };
+            var actualList = new List<double>() { 6.3, 10.5, 2.1, 8.4, 4.2 };
             actualList = utility.SortTheNumbers(actualList);
 
             CollectionAssert.AreEqual(expectedList, actualList);
         }
 
         [TestMethod]
-        public void Returns51015202530()
+        public void Returns5point710point415point120point725point230point7()
         {
-            var expectedList = new List<int>() { 5, 10, 15, 20, 25, 30 };
+            var expectedList = new List<double>() { 5.7, 10.4, 15.1, 20.7, 25.2, 30.7 };
 
 
             var utility = new Utility();
-            var actualList = new List<int>() { 15, 25, 5, 30, 10, 20 };
+            var actualList = new List<double>() { 15.1, 25.2, 5.7, 30.7, 10.4, 20.7 };
             actualList = utility.SortTheNumbers(actualList);
 
             CollectionAssert.AreEqual(expectedList, actualList);
