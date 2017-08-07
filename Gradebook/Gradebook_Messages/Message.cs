@@ -31,12 +31,12 @@ namespace Gradebook_Messages
 
         public static void NotAGrade(string input)
         {
-            Console.Write($"\nSorry but {input} is not a grade. Pease enter the number of points that you\nrecieved on the assignment: ");
+            Console.Write($"\nSorry but {input} is not a grade. Please enter the number of points that you\nrecieved on the assignment: ");
         }
 
         public static void MustBeBetween0and100()
         {
-            Console.Write($"\nGrades can only be between 0 and 100. Pease enter the number of points that you recieved on the assignment: ");
+            Console.Write($"\nGrades can only be between 0 and 100. Please enter the number of points that you recieved on the assignment: ");
         }
 
         public static void DisplayGrade(double grade, string letterGrade)
