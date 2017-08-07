@@ -16,7 +16,7 @@ namespace Messages
 
         public static void InvalidShapeSelection(string input)
         {
-            Console.WriteLine($"\nI'm sorry but {input} was not a valid selection. Please try again.");
+            Console.WriteLine($"\nI'm sorry but {input} is not a valid selection. Please try again.");
         }
 
         public static void PositiveDoubleWasNotInput(string lengthAsString)

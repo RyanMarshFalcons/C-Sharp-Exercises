@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf_ScoreCard", "Golf_ScoreCard\Golf_ScoreCard.csproj", "{E1F90205-783F-411C-A527-5BCE2C7B8E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{A6BE20A6-1B5D-471C-9664-529B8A8535BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf_ScoreCard_Messages", "Golf_ScoreCard_Messages\Golf_ScoreCard_Messages.csproj", "{97884A41-F497-457D-8C98-BD5F67BAA17A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1F90205-783F-411C-A527-5BCE2C7B8E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F90205-783F-411C-A527-5BCE2C7B8E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F90205-783F-411C-A527-5BCE2C7B8E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F90205-783F-411C-A527-5BCE2C7B8E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6BE20A6-1B5D-471C-9664-529B8A8535BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6BE20A6-1B5D-471C-9664-529B8A8535BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6BE20A6-1B5D-471C-9664-529B8A8535BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6BE20A6-1B5D-471C-9664-529B8A8535BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97884A41-F497-457D-8C98-BD5F67BAA17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97884A41-F497-457D-8C98-BD5F67BAA17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97884A41-F497-457D-8C98-BD5F67BAA17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97884A41-F497-457D-8C98-BD5F67BAA17A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
