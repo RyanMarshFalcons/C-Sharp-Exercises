@@ -23,12 +23,12 @@ namespace Gradebook_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueFor4point321()
+        public void ReturnsTrueFor4point322()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("4.321");
+            var actual = utility.CheckIfDouble("4.322");
 
             Assert.AreEqual(expected, actual);
         }
