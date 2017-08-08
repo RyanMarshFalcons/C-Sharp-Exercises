@@ -74,10 +74,14 @@ namespace Sum_Of_Nums
             }
         }
 
-        public List<int> SortTheNumbers(List<int> numbers)
+        public double SumTheNumbers(List<double> numbers)
         {
-            numbers.Sort();
-            return numbers;
+            var sum = 0.0;
+            foreach (var num in numbers)
+            {
+                sum += num;
+            }
+            return sum;
         }
     }
 }

@@ -34,9 +34,9 @@ namespace Sum_Of_Nums_Messages
             Console.Write($"\nSorry but you must input a y or an n. Please input y or n to procede: ");
         }
 
-        public static void DisplaySum(double sum)
+        public static void DisplaySum(int count, double sum)
         {
-            Console.WriteLine($"\nThe sum of the numbers that you entered is: {sum}");
+            Console.WriteLine($"\nThe sum of the {count} numbers that you entered is: {sum}");
         }
     }
 }

@@ -12,6 +12,20 @@ namespace StartUp
     {
         static void Main(string[] args)
         {
+            Message.Welcome();
+            var utility = new Utility();
+            var numList = new List<double>();
+            var num = 0.0;
+            var continueAsking = true;
+            while (continueAsking == true)
+            {
+                num = utility.GetValidEntry();
+                numList.Add(num);
+                continueAsking = utility.AskToContinue();
+            }
+            var sum = utility.SumTheNumbers(numList);
+            Message.DisplaySum(numList.Count, sum);
+            Console.ReadLine();
         }
     }
 }
