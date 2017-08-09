@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Square_Sequence", "Square_Sequence\Square_Sequence.csproj", "{576937D6-A5FB-4452-B33D-C0D0D26BF16A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{4AFE2F44-331A-46C2-BD2B-FE84082EDD6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{576937D6-A5FB-4452-B33D-C0D0D26BF16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576937D6-A5FB-4452-B33D-C0D0D26BF16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576937D6-A5FB-4452-B33D-C0D0D26BF16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576937D6-A5FB-4452-B33D-C0D0D26BF16A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AFE2F44-331A-46C2-BD2B-FE84082EDD6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AFE2F44-331A-46C2-BD2B-FE84082EDD6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AFE2F44-331A-46C2-BD2B-FE84082EDD6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AFE2F44-331A-46C2-BD2B-FE84082EDD6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

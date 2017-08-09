@@ -3,65 +3,65 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Cubed;
+using Tesseracted;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Cubed_Tests
+namespace Tesseracted_Tests
 {
     [TestClass]
     public class UnitTesting
     {
         [TestMethod]
-        public void ReturnsTrueForInt()
+        public void ReturnsTrueFor11()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfInt("9");
+            var actual = utility.CheckIfInt("11");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseForNotInt()
+        public void ReturnsFalseForI()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfInt("g");
+            var actual = utility.CheckIfInt("I");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsNegative8ForNegative2()
+        public void Returns16ForNegative2()
         {
-            var expected = -8;
+            var expected = 16;
 
             var utility = new Utility();
-            var actual = utility.GetNumberCubed(-2);
+            var actual = utility.GetNumberTesseracted(-2);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns125For5()
+        public void Returns625For5()
         {
-            var expected = 125;
+            var expected = 625;
 
             var utility = new Utility();
-            var actual = utility.GetNumberCubed(5);
+            var actual = utility.GetNumberTesseracted(5);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns64For4()
+        public void Returns256For4()
         {
-            var expected = 64;
+            var expected = 256;
 
             var utility = new Utility();
-            var actual = utility.GetNumberCubed(4);
+            var actual = utility.GetNumberTesseracted(4);
 
             Assert.AreEqual(expected, actual);
         }

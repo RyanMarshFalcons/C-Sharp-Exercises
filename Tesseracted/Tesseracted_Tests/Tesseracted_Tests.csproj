@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21B7DDD4-B687-48E7-997A-6CE8CADEC96E}</ProjectGuid>
+    <ProjectGuid>{3CBD0DE4-05DC-471B-AED0-83DCEA563D5E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pluto_Tests</RootNamespace>
-    <AssemblyName>Pluto_Tests</AssemblyName>
+    <RootNamespace>Tesseracted_Tests</RootNamespace>
+    <AssemblyName>Tesseracted_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pluto\Pluto.csproj">
-      <Project>{ce9c9183-c070-460b-bfab-e4b54e6abaa8}</Project>
-      <Name>Pluto</Name>
+    <ProjectReference Include="..\Tesseracted\Tesseracted.csproj">
+      <Project>{f7d42563-36b9-4551-b9ab-b52f97f29ce4}</Project>
+      <Name>Tesseracted</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
