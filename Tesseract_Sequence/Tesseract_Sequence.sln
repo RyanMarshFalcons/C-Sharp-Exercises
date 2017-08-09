@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesseract_Sequence", "Tesseract_Sequence\Tesseract_Sequence.csproj", "{135AE806-E661-421A-8BC1-40D8069C569A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{3C6D58AA-CCAC-482A-ACC9-20E8AAE41EC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesseract_Messages", "Tesseract_Messages\Tesseract_Messages.csproj", "{E931A165-DD8C-4521-B493-4CC4B4507DE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesseract_Tests", "Tesseract_Tests\Tesseract_Tests.csproj", "{94F0F570-4F10-4F6C-A454-DD87EB5E48B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{135AE806-E661-421A-8BC1-40D8069C569A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{135AE806-E661-421A-8BC1-40D8069C569A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{135AE806-E661-421A-8BC1-40D8069C569A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{135AE806-E661-421A-8BC1-40D8069C569A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6D58AA-CCAC-482A-ACC9-20E8AAE41EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6D58AA-CCAC-482A-ACC9-20E8AAE41EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6D58AA-CCAC-482A-ACC9-20E8AAE41EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6D58AA-CCAC-482A-ACC9-20E8AAE41EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E931A165-DD8C-4521-B493-4CC4B4507DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E931A165-DD8C-4521-B493-4CC4B4507DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E931A165-DD8C-4521-B493-4CC4B4507DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E931A165-DD8C-4521-B493-4CC4B4507DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F0F570-4F10-4F6C-A454-DD87EB5E48B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F0F570-4F10-4F6C-A454-DD87EB5E48B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F0F570-4F10-4F6C-A454-DD87EB5E48B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F0F570-4F10-4F6C-A454-DD87EB5E48B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

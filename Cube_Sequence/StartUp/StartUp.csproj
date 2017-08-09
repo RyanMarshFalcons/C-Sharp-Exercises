@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{576937D6-A5FB-4452-B33D-C0D0D26BF16A}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{BEAB250A-B743-4DEC-929F-6B2814B9E2A1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Square_Sequence</RootNamespace>
-    <AssemblyName>Square_Sequence</AssemblyName>
+    <RootNamespace>StartUp</RootNamespace>
+    <AssemblyName>StartUp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,13 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Square_Sequence_Messages\Square_Sequence_Messages.csproj">
-      <Project>{5e9950d7-cc3c-4a83-a141-c713df43d2e2}</Project>
-      <Name>Square_Sequence_Messages</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cube_Sequence\Cube_Sequence.csproj">
+      <Project>{c140ff10-20c5-4a77-8fb8-bdd3a9d142c7}</Project>
+      <Name>Cube_Sequence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cube_Sequence_Messages\Cube_Sequence_Messages.csproj">
+      <Project>{f83f7ef1-5403-4b7a-9fcf-0dc22dc4e66e}</Project>
+      <Name>Cube_Sequence_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -49,6 +49,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Square_Sequence\Square_Sequence.csproj">
+      <Project>{576937d6-a5fb-4452-b33d-c0d0d26bf16a}</Project>
+      <Name>Square_Sequence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Square_Sequence_Messages\Square_Sequence_Messages.csproj">
+      <Project>{5e9950d7-cc3c-4a83-a141-c713df43d2e2}</Project>
+      <Name>Square_Sequence_Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

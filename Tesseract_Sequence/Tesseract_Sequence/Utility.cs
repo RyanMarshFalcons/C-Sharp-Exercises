@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Square_Sequence_Messages;
+using Tesseract_Messages;
 
-namespace Square_Sequence
+namespace Tesseract_Sequence
 {
     public class Utility
     {
         public int GetNextNumber(int num)
         {
-            return num * num;
+            return num * num * num * num;
         }
     }
 }

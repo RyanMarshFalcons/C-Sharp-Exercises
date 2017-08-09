@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{576937D6-A5FB-4452-B33D-C0D0D26BF16A}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{3C6D58AA-CCAC-482A-ACC9-20E8AAE41EC3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Square_Sequence</RootNamespace>
-    <AssemblyName>Square_Sequence</AssemblyName>
+    <RootNamespace>StartUp</RootNamespace>
+    <AssemblyName>StartUp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,13 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Square_Sequence_Messages\Square_Sequence_Messages.csproj">
-      <Project>{5e9950d7-cc3c-4a83-a141-c713df43d2e2}</Project>
-      <Name>Square_Sequence_Messages</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tesseract_Messages\Tesseract_Messages.csproj">
+      <Project>{e931a165-dd8c-4521-b493-4cc4b4507de2}</Project>
+      <Name>Tesseract_Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tesseract_Sequence\Tesseract_Sequence.csproj">
+      <Project>{135ae806-e661-421a-8bc1-40d8069c569a}</Project>
+      <Name>Tesseract_Sequence</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

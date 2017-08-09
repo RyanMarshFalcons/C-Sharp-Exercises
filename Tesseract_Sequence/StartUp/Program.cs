@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Square_Sequence;
-using Square_Sequence_Messages;
+using Tesseract_Sequence;
+using Tesseract_Messages;
 
 namespace StartUp
 {
@@ -16,7 +16,7 @@ namespace StartUp
             var utility = new Utility();
             var num = 0;
             var listOfNums = new List<int>() { 0, 1 };
-            for (int i = 0; i < 296; i++)
+            for (int i = 0; i < 216; i++)
             {
                 num = utility.GetNextNumber(i);
                 listOfNums.Add(num);
