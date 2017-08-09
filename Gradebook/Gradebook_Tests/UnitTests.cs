@@ -122,6 +122,39 @@ namespace Gradebook_Tests
         }
 
         [TestMethod]
+        public void ReturnsBminus()
+        {
+            var expected = "B-";
+
+            var utility = new Utility();
+            var actual = utility.GetLetterGrade(82.4);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsC()
+        {
+            var expected = "C";
+
+            var utility = new Utility();
+            var actual = utility.GetLetterGrade(76.8);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsDplus()
+        {
+            var expected = "D+";
+
+            var utility = new Utility();
+            var actual = utility.GetLetterGrade(69.7);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsF()
         {
             var expected = "F";

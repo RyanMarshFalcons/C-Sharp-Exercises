@@ -24,19 +24,19 @@ namespace Gradebook_Messages
             Console.Write($"\nSorry but you must input a y or an n. Please input y or n to procede: ");
         }
 
-        public static void EnterGrade()
+        public static void EnterGrade(int assignmentNumber)
         {
-            Console.Write("\nPlease enter the number of points that you recieved on the assignment: ");
+            Console.Write($"\nPlease enter the number of points out of 100 that you recieved on assignment\nnumber {assignmentNumber}: ");
         }
 
-        public static void NotAGrade(string input)
+        public static void NotAGrade(string input, int assignmentNumber)
         {
-            Console.Write($"\nSorry but {input} is not a grade. Please enter the number of points that you\nrecieved on the assignment: ");
+            Console.Write($"\nSorry but {input} is not a grade. Please enter the number of points that you\nrecieved on assignment number {assignmentNumber}: ");
         }
 
-        public static void MustBeBetween0and100()
+        public static void MustBeBetween0and100(int assignmentNumber)
         {
-            Console.Write($"\nGrades can only be between 0 and 100. Please enter the number of points that you recieved on the assignment: ");
+            Console.Write($"\nGrades can only be between 0 and 100. Please enter the number of points that yourecieved on assignment number {assignmentNumber}: ");
         }
 
         public static void DisplayGrade(double grade, string letterGrade)

@@ -19,7 +19,7 @@ namespace StartUp
             var addMoreGrades = true;
             do
             {
-                grade = utility.GetValidEntry();
+                grade = utility.GetValidEntry(gradebook.Count + 1);
                 gradebook.Add(grade);
                 addMoreGrades = utility.AskToContinue();
             } while (addMoreGrades == true);

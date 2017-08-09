@@ -9,9 +9,9 @@ namespace Gradebook
 {
     public class Utility
     {
-        public double GetValidEntry()
+        public double GetValidEntry(int assignmentNumber)
         {
-            Message.EnterGrade();
+            Message.EnterGrade(assignmentNumber);
             var isValidInput = false;
             var input = "";
             while (isValidInput == false)
@@ -19,13 +19,13 @@ namespace Gradebook
                 input = Console.ReadLine();
                 if (CheckIfDouble(input) == false)
                 {
-                    Message.NotAGrade(input);
+                    Message.NotAGrade(input, assignmentNumber);
                 }
                 else
                 {
                     if (CheckIfWithinRange(input) == false)
                     {
-                        Message.MustBeBetween0and100();
+                        Message.MustBeBetween0and100(assignmentNumber);
                     }
                     else
                     {
@@ -151,6 +151,5 @@ namespace Gradebook
                 return "F";
             }
         }
-
     }
 }
