@@ -12,12 +12,12 @@ namespace Sine_Tests
     public class UnitTesting
     {
         [TestMethod]
-        public void ReturnsTrueFor6point24()
+        public void ReturnsTrueFor6point23()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("6.24");
+            var actual = utility.CheckIfDouble("6.23");
 
             Assert.AreEqual(expected, actual);
         }

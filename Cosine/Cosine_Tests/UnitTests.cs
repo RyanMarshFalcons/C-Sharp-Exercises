@@ -12,12 +12,12 @@ namespace Cosine_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueFor9point45()
+        public void ReturnsTrueFor9point46()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("9.45");
+            var actual = utility.CheckIfDouble("9.46");
 
             Assert.AreEqual(expected, actual);
         }

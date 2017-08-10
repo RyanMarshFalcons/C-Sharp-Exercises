@@ -12,12 +12,12 @@ namespace Tangent_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueForNegative8point72()
+        public void ReturnsTrueForNegative8point71()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("-8.72");
+            var actual = utility.CheckIfDouble("-8.71");
 
             Assert.AreEqual(expected, actual);
         }
