@@ -96,6 +96,7 @@ namespace Gradebook
             return Math.Round(sum / gradebook.Count, 1);
         }
 
+
         public string GetLetterGrade(double finalGrade)
         {
             if (finalGrade >= 97)
