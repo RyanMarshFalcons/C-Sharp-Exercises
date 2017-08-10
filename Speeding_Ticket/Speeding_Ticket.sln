@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speeding_Ticket", "Speeding_Ticket\Speeding_Ticket.csproj", "{D3B46D90-AD64-488B-80D6-8003E7C5C483}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{69280947-B89D-4A22-A80D-BD1B6DE3A0B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speeding_Ticket_Messages", "Speeding_Ticket_Messages\Speeding_Ticket_Messages.csproj", "{A88C4D99-06F1-493E-83BB-6A480790E092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speeding_Ticket_Tests", "Speeding_Ticket_Tests\Speeding_Ticket_Tests.csproj", "{B7D64632-F97C-4086-8116-76ECE201600F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3B46D90-AD64-488B-80D6-8003E7C5C483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B46D90-AD64-488B-80D6-8003E7C5C483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B46D90-AD64-488B-80D6-8003E7C5C483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B46D90-AD64-488B-80D6-8003E7C5C483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69280947-B89D-4A22-A80D-BD1B6DE3A0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69280947-B89D-4A22-A80D-BD1B6DE3A0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69280947-B89D-4A22-A80D-BD1B6DE3A0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69280947-B89D-4A22-A80D-BD1B6DE3A0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88C4D99-06F1-493E-83BB-6A480790E092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88C4D99-06F1-493E-83BB-6A480790E092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88C4D99-06F1-493E-83BB-6A480790E092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88C4D99-06F1-493E-83BB-6A480790E092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D64632-F97C-4086-8116-76ECE201600F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D64632-F97C-4086-8116-76ECE201600F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D64632-F97C-4086-8116-76ECE201600F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D64632-F97C-4086-8116-76ECE201600F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
