@@ -18,7 +18,7 @@ namespace BlackJackTests
             var expectedResult = false;
 
             var bet = new Bet();
-            var actualResult = bet.IsBetMakable(3.00, 150.00);
+            var actualResult = bet.IsBetMakable(2.00, 150.00);
 
             Assert.AreEqual(expectedResult, actualResult);
         }

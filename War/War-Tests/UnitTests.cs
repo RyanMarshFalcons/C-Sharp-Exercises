@@ -13,13 +13,13 @@ namespace War_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsJackOfDiamonds()
+        public void ReturnsJackOfSpades()
         {
-            var expectedResult = "Jack of Diamonds";
+            var expectedResult = "Jack of Spades";
 
             var card = new Card();
             card.face = Face.Jack;
-            card.suit = Suit.Diamonds;
+            card.suit = Suit.Spades;
             var actualResult = card.ToString();
 
             Assert.AreEqual(expectedResult, actualResult);
