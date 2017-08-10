@@ -28,5 +28,6 @@ namespace Symbol_Count_Messages
         {
             Console.WriteLine($"\nAccording to my calculations there are {count} symbols in your input.");
         }
+
     }
 }
