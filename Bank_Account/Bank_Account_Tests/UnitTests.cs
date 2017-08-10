@@ -12,12 +12,12 @@ namespace Bank_Account_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsFalseForlog()
+        public void ReturnsFalseForhog()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("log");
+            var actual = utility.CheckIfDouble("hog");
 
             Assert.AreEqual(expected, actual);
         }
