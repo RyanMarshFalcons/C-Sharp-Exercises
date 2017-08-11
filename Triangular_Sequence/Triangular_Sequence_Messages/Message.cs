@@ -18,5 +18,6 @@ namespace Triangular_Sequence_Messages
         {
             Console.WriteLine("\nThank you for taking the time to view these numbers in the Triangular Sequence.\nPress enter to end the program.");
         }
+
     }
 }

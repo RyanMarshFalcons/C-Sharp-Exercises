@@ -38,5 +38,6 @@ namespace CheckForCharacter_Messages
         {
             Console.WriteLine($"\n{entireInput} contains {count} instances of {specificChar}");
         }
+
     }
 }

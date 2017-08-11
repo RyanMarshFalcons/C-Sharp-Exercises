@@ -18,5 +18,6 @@ namespace Lazy_Caterer_Sequence_Messages
         {
             Console.WriteLine("\nThank you for taking the time to view these numbers in the Lazy Caterer\nSequence. Press enter to end the program.");
         }
+
     }
 }

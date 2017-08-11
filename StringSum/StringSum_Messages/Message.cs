@@ -28,5 +28,6 @@ namespace StringSum_Messages
         {
             Console.WriteLine($"\nThe sum of the {count} number characters that you input is {sum}");
         }
+
     }
 }
