@@ -10,7 +10,7 @@ namespace Difference63_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Difference 63 program. Enter a number and I will tell you the\nabsolute difference between your number and the number 63, except if your numberis greater than 63 in which case I will double the difference. Press enter to\ncontine.");
+            Console.WriteLine("Welcome to my Difference 63 program. Enter a number and I will tell you the\nabsolute difference between your number and the number 63, except if your numberis greater than 63 in which case I will double the difference. Press enter to\ncontinue.");
             Console.ReadLine();
         }
 
