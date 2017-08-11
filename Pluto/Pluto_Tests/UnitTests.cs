@@ -56,12 +56,12 @@ namespace Pluto_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForK()
+        public void ReturnsFalseForO()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsABCD("K");
+            var actual = utility.IsABCD("O");
 
             Assert.AreEqual(expected, actual);
         }

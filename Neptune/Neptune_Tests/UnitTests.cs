@@ -56,12 +56,12 @@ namespace Neptune_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForJ()
+        public void ReturnsFalseForN()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsABCD("J");
+            var actual = utility.IsABCD("N");
 
             Assert.AreEqual(expected, actual);
         }

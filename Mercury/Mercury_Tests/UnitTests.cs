@@ -56,12 +56,12 @@ namespace Mercury_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForE()
+        public void ReturnsFalseForM()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsABCD("E");
+            var actual = utility.IsABCD("M");
 
             Assert.AreEqual(expected, actual);
         }

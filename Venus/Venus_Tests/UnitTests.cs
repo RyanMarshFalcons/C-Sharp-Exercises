@@ -56,12 +56,12 @@ namespace Venus_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForF()
+        public void ReturnsFalseForR()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsABCD("F");
+            var actual = utility.IsABCD("R");
 
             Assert.AreEqual(expected, actual);
         }

@@ -56,12 +56,12 @@ namespace Mars_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForG()
+        public void ReturnsFalseForL()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsABCD("G");
+            var actual = utility.IsABCD("L");
 
             Assert.AreEqual(expected, actual);
         }

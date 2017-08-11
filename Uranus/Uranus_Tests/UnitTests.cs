@@ -56,12 +56,12 @@ namespace Uranus_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForE()
+        public void ReturnsFalseForQ()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsABCD("I");
+            var actual = utility.IsABCD("Q");
 
             Assert.AreEqual(expected, actual);
         }

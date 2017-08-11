@@ -56,12 +56,12 @@ namespace Jupiter_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForG()
+        public void ReturnsFalseForK()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsABCD("G");
+            var actual = utility.IsABCD("K");
 
             Assert.AreEqual(expected, actual);
         }

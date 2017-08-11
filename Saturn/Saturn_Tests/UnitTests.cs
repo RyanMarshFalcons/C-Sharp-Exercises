@@ -56,12 +56,12 @@ namespace Saturn_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForH()
+        public void ReturnsFalseForP()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsABCD("H");
+            var actual = utility.IsABCD("P");
 
             Assert.AreEqual(expected, actual);
         }
