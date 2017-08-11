@@ -12,7 +12,7 @@ namespace PrimeNumbers_Tests
     public class UnitTesting
     {
         [TestMethod]
-        public void ReturnsTrueForInt()
+        public void ReturnsTrueFor5()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace PrimeNumbers_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForNotInt()
+        public void ReturnsFalseFore()
         {
             var expected = false;
 

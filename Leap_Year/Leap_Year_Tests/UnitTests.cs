@@ -12,23 +12,23 @@ namespace Leap_Year_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueFor1999()
+        public void ReturnsTrueFor1998()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfYear("1999");
+            var actual = utility.CheckIfYear("1998");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseForNot19point99()
+        public void ReturnsFalseForNot19point98()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfYear("19.99");
+            var actual = utility.CheckIfYear("19.98");
 
             Assert.AreEqual(expected, actual);
         }

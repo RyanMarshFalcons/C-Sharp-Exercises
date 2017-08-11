@@ -12,12 +12,12 @@ namespace Remainder_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueFor17()
+        public void ReturnsTrueFor18()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfInt("17");
+            var actual = utility.CheckIfInt("18");
 
             Assert.AreEqual(expected, actual);
         }

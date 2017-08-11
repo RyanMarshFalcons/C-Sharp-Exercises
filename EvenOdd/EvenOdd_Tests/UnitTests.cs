@@ -13,7 +13,7 @@ namespace EvenOdd_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueForInt()
+        public void ReturnsTrueFor12()
         {
             var expected = true;
 
@@ -24,7 +24,7 @@ namespace EvenOdd_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForNotInt()
+        public void ReturnsFalseForq()
         {
             var expected = false;
 
