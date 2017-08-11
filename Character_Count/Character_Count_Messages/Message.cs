@@ -28,5 +28,6 @@ namespace Character_Count_Messages
         {
             Console.WriteLine($"\nAccording to my calculations there are {count} characters in your input.");
         }
+
     }
 }

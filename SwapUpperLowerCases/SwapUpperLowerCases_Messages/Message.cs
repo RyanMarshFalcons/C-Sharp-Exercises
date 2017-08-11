@@ -28,5 +28,6 @@ namespace SwapUpperLowerCases_Messages
         {
             Console.WriteLine($"\n{userInput} with cases swapped is {swappedCases}");
         }
+
     }
 }

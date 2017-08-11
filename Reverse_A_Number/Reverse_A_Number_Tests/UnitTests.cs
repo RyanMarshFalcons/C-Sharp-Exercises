@@ -12,12 +12,12 @@ namespace Reverse_A_Number_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsFalseforT()
+        public void ReturnsFalseforS()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfInt("T");
+            var actual = utility.CheckIfInt("S");
 
             Assert.AreEqual(expected, actual);
         }

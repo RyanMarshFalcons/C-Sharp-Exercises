@@ -38,5 +38,6 @@ namespace Pig_Latin_Messages
         {
             Console.WriteLine($"\n{input} translated into pig Latin is {inputAsPigLatin}.");
         }
+
     }
 }
