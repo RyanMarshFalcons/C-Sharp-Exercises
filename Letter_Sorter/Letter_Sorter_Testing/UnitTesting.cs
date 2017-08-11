@@ -23,12 +23,12 @@ namespace Letter_Sorter_Testing
         }
 
         [TestMethod]
-        public void ReturnsFalseForGG()
+        public void ReturnsFalseForFF()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfChar("GG");
+            var actual = utility.CheckIfChar("FF");
 
             Assert.AreEqual(expected, actual);
         }

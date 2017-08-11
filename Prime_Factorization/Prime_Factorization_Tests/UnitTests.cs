@@ -12,7 +12,7 @@ namespace Prime_Factorization_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueForInt()
+        public void ReturnsTrueFor3()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace Prime_Factorization_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForNotInt()
+        public void ReturnsFalseForc()
         {
             var expected = false;
 

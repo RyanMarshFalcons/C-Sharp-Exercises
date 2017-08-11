@@ -13,12 +13,12 @@ namespace Mean_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsFalseFordog()
+        public void ReturnsFalseForowl()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("dog");
+            var actual = utility.CheckIfDouble("owl");
 
             Assert.AreEqual(expected, actual);
         }

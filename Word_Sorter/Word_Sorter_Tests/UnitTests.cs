@@ -23,12 +23,12 @@ namespace Word_Sorter_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForSuperMan()
+        public void ReturnsFalseForBatMan()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfWord("Super Man");
+            var actual = utility.CheckIfWord("Bat Man");
 
             Assert.AreEqual(expected, actual);
         }

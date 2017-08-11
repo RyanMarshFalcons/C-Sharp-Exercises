@@ -12,12 +12,12 @@ namespace Sum_Of_Num_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsFalseforL()
+        public void ReturnsFalseforR()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("L");
+            var actual = utility.CheckIfDouble("R");
 
             Assert.AreEqual(expected, actual);
         }

@@ -12,12 +12,12 @@ namespace Median_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsFalseForcat()
+        public void ReturnsFalseFordog()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDouble("cat");
+            var actual = utility.CheckIfDouble("dog");
 
             Assert.AreEqual(expected, actual);
         }
