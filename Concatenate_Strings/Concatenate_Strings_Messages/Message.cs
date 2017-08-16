@@ -26,7 +26,7 @@ namespace Concatenate_Strings_Messages
 
         public static void DisplayResult(string firstInput, string secondInput, string combinedInput)
         {
-            Console.WriteLine($"\nThe concatenated strings of {firstInput} and {secondInput} are:\n{combinedInput}");
+            Console.WriteLine($"\nThe concatenated strings of {firstInput} and {secondInput} are:\n{combinedInput}\nPress enter to close the program.");
         }
     }
 }

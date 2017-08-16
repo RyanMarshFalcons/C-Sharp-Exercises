@@ -26,12 +26,12 @@ namespace Messages
 
         public static void IsAPalindrome(string userInput)
         {
-            Console.WriteLine($"\nCongratulations {userInput} is indeed a palindrome.");
+            Console.WriteLine($"\nCongratulations {userInput} is indeed a palindrome.\nPress enter to close the program.");
         }
 
         public static void IsNotAPalindrome(string userInput)
         {
-            Console.WriteLine($"\nSorry but {userInput} is not a palindrome.");
+            Console.WriteLine($"\nSorry but {userInput} is not a palindrome.\nPress enter to close the program.");
         }
     }
 }

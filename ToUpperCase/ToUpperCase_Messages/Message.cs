@@ -26,7 +26,7 @@ namespace ToUpperCase_Messages
 
         public static void DisplayResult(string userInput, string allUperCase)
         {
-            Console.WriteLine($"\n{userInput} to all uppercase is {allUperCase}");
+            Console.WriteLine($"\n{userInput} to all uppercase is {allUperCase}\nPress enter to close the program.");
         }
     }
 }

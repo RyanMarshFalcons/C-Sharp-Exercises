@@ -26,12 +26,12 @@ namespace Messages
 
         public static void AreAnagrams(string firstInput, string secondInput)
         {
-            Console.WriteLine($"\nCongratulations {firstInput} and {secondInput} are anagrams!");
+            Console.WriteLine($"\nCongratulations {firstInput} and {secondInput} are anagrams!\nPress enter to close the program.");
         }
 
         public static void AreNotAnagrams(string firstInput, string secondInput)
         {
-            Console.WriteLine($"\nI'm sorry but {firstInput} and {secondInput} are not anagrams.");
+            Console.WriteLine($"\nI'm sorry but {firstInput} and {secondInput} are not anagrams.\nPress enter to close the program.");
         }
     }
 }

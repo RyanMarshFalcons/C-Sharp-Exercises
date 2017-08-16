@@ -26,7 +26,7 @@ namespace ToLowerCase_Messages
 
         public static void DisplayResult(string userInput, string allLowerCase)
         {
-            Console.WriteLine($"\n{userInput} to all lowercase is {allLowerCase}");
+            Console.WriteLine($"\n{userInput} to all lowercase is {allLowerCase}\nPress enter to close the program.");
         }
     }
 }

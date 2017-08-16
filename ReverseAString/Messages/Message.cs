@@ -21,7 +21,7 @@ namespace Messages
 
         public static void DisplayStringInReverse(string reversedString)
         {
-            Console.WriteLine($"\nThe reverse of what you input is: {reversedString}");
+            Console.WriteLine($"\nThe reverse of what you input is: {reversedString}\nPress enter to close the program.");
         }
 
     }
