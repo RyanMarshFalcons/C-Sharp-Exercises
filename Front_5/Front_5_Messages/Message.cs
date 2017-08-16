@@ -21,7 +21,7 @@ namespace Front_5_Messages
 
         public static void AtLeastFive()
         {
-            Console.Write("\nYou must input at least five characters to create a valid atring. Please try\nagain: ");
+            Console.Write("\nYou must input at least five characters to create a valid string. Please try\nagain: ");
         }
 
         public static void DisplayNewString(string newString)

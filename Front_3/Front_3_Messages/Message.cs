@@ -21,7 +21,7 @@ namespace Front_3_Messages
 
         public static void AtLeastThree()
         {
-            Console.Write("\nYou must input at least three characters to create a valid atring. Please try\nagain: ");
+            Console.Write("\nYou must input at least three characters to create a valid string. Please try\nagain: ");
         }
 
         public static void DisplayNewString(string newString)

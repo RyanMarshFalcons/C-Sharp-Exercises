@@ -21,7 +21,7 @@ namespace Insert_Character_Messages
 
         public static void NoEmptyStrings()
         {
-            Console.Write("\nYou must input at least one character to create a valid atring. Please try\nagain: ");
+            Console.Write("\nYou must input at least one character to create a valid string. Please try\nagain: ");
         }
 
         public static void EnterCharacter()

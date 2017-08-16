@@ -21,7 +21,7 @@ namespace Front_4_Messages
 
         public static void AtLeastFour()
         {
-            Console.Write("\nYou must input at least four characters to create a valid atring. Please try\nagain: ");
+            Console.Write("\nYou must input at least four characters to create a valid string. Please try\nagain: ");
         }
 
         public static void DisplayNewString(string newString)

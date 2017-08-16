@@ -21,7 +21,7 @@ namespace Middle_Around_Messages
 
         public static void AtLeastThreeCharacters()
         {
-            Console.Write("\nSorry but you must input at least three characters to create a valid atring.\nPlease try again: ");
+            Console.Write("\nSorry but you must input at least three characters to create a valid string.\nPlease try again: ");
         }
 
         public static void DisplayNewString(string newString)

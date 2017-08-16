@@ -21,7 +21,7 @@ namespace Front_And_Back_Messages
 
         public static void AtLeastTwoCharacters()
         {
-            Console.Write("\nSorry but you must input at least two characters to create a valid atring.\nPlease try again: ");
+            Console.Write("\nSorry but you must input at least two characters to create a valid string.\nPlease try again: ");
         }
 
         public static void DisplayNewString (string newString)

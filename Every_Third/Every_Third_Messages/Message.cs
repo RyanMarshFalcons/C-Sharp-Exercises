@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Back_Around_Messages
+namespace Every_Third_Messages
 {
     public class Message
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my Back Around program where you will enter a string and\nthen I will add on the last character of your string to both the front and the\nback of your string. Press enter to continue.");
+            Console.WriteLine("Hello and welcome to my Every Third program where you will enter a string and\nthen I will make a new string from every third character of your string. Press\nenter to continue.");
             Console.ReadLine();
         }
 
@@ -26,7 +26,7 @@ namespace Back_Around_Messages
 
         public static void DisplayNewString(string newString)
         {
-            Console.WriteLine($"\nAfter adding the last character back around your old string your new string is: {newString}\nPress enter to close the program.");
+            Console.WriteLine($"\nAfter forming a new string from every third character your new string is:\n{newString}\nPress enter to close the program.");
         }
     }
 }

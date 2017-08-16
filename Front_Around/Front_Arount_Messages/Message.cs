@@ -21,7 +21,7 @@ namespace Front_Around_Messages
 
         public static void AtLeastOneCharacter()
         {
-            Console.Write("\nSorry but you must input at least one character to create a valid atring. Pleasetry again: ");
+            Console.Write("\nSorry but you must input at least one character to create a valid string. Pleasetry again: ");
         }
 
         public static void DisplayNewString(string newString)
