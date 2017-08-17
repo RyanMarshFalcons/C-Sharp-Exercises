@@ -10,7 +10,7 @@ namespace EvenOdd_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Even Odd program. Enter a number and I will tell you whether that number is an even or an odd number. Press enter to contine.");
+            Console.WriteLine("Welcome to my Even Odd program. Enter a number and I will tell you whether that number is an even or an odd number. Press enter to continue.");
             Console.ReadLine();
         }
 
