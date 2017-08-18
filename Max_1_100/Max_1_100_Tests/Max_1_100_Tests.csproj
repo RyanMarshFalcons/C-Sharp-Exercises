@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2E6B4F4-DF9F-4FB8-A331-AA8685597FDE}</ProjectGuid>
+    <ProjectGuid>{62E88309-DE7B-4A8B-8238-28D06C2925B2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Same_First_Digit_Tests</RootNamespace>
-    <AssemblyName>Same_First_Digit_Tests</AssemblyName>
+    <RootNamespace>Max_1_100_Tests</RootNamespace>
+    <AssemblyName>Max_1_100_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,13 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Same_First_Digit\Same_First_Digit.csproj">
-      <Project>{3fdcb0cb-1f59-40f0-a295-680cdd75eb2d}</Project>
-      <Name>Same_First_Digit</Name>
+    <ProjectReference Include="..\Max_1_100\Max_1_100.csproj">
+      <Project>{dc9ea2e0-b6c7-424a-b808-f91c9a5a3707}</Project>
+      <Name>Max_1_100</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

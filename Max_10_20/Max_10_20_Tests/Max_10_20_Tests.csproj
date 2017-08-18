@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2E6B4F4-DF9F-4FB8-A331-AA8685597FDE}</ProjectGuid>
+    <ProjectGuid>{1D6615AA-D800-4DE3-84B5-97006ECEC6E4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Same_First_Digit_Tests</RootNamespace>
-    <AssemblyName>Same_First_Digit_Tests</AssemblyName>
+    <RootNamespace>Max_10_20_Tests</RootNamespace>
+    <AssemblyName>Max_10_20_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Same_First_Digit\Same_First_Digit.csproj">
-      <Project>{3fdcb0cb-1f59-40f0-a295-680cdd75eb2d}</Project>
-      <Name>Same_First_Digit</Name>
+    <ProjectReference Include="..\Max_10_20\Max_10_20.csproj">
+      <Project>{507a69c2-deb5-4ee3-9530-0e99374641be}</Project>
+      <Name>Max_10_20</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
