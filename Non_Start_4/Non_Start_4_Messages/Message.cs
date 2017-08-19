@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Non_Start_2_Messages
+namespace Non_Start_4_Messages
 {
     public class Message
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my Non Start 2 program where you will input two strings andI will make a new string out of deleting their first characters and combining\nthem. Press enter to continue.");
+            Console.WriteLine("Hello and welcome to my Non Start 4 program where you will input four strings\nand I will make a new string out of deleting their first characters and\ncombining them. Press enter to continue.");
             Console.ReadLine();
         }
 

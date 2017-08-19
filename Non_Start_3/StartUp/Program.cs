@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Non_Start_2;
-using Non_Start_2_Messages;
+using Non_Start_3;
+using Non_Start_3_Messages;
 
 namespace Startup
 {
@@ -15,7 +15,7 @@ namespace Startup
             Message.Welcome();
             var utility = new Utility();
             var userStrings = new List<string>();
-            for (int i = 1; i < 3; i++)
+            for (int i = 1; i < 4; i++)
             {
                 userStrings.Add(utility.GetValidString(i));
             }
