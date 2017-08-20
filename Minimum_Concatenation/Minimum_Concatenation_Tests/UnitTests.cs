@@ -3,76 +3,76 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Front_Again_2;
+using Minimum_Concatenation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Front_Again_2_Tests
+namespace Minimum_Concatenation_Tests
 {
     [TestClass]
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsFalseFormet()
+        public void ReturnsFalseForEmptyString()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfLongEnough("met");
+            var actual = utility.CheckIfLongEnough("");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFormeet()
+        public void ReturnsTrueForW()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfLongEnough("meet");
+            var actual = utility.CheckIfLongEnough("W");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsRyForRyan()
+        public void Returns3ForHamSandwich()
         {
-            var expected = "Ry";
+            var expected = 3;
 
             var utility = new Utility();
-            var actual = utility.GetBegining("Ryan");
+            var actual = utility.GetMinimum("Ham", "Sandwich");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsCaForCalifornia()
+        public void Returns4ForApplePear()
         {
-            var expected = "Ca";
+            var expected = 4;
 
             var utility = new Utility();
-            var actual = utility.GetBegining("California");
+            var actual = utility.GetMinimum("Apple", "Pear");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsanForRyan()
+        public void ReturnscofcupForcoffeecup()
         {
-            var expected = "an";
+            var expected = "cofcup";
 
             var utility = new Utility();
-            var actual = utility.GetEnding("Ryan");
+            var actual = utility.CreateNewString("coffee", "cup", 3);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsiaForCalifornia()
+        public void ReturnsbowlocerealForbowlofcereal()
         {
-            var expected = "ia";
+            var expected = "bowl ocereal";
 
             var utility = new Utility();
-            var actual = utility.GetEnding("California");
+            var actual = utility.CreateNewString("bowl of ", "cereal", 6);
 
             Assert.AreEqual(expected, actual);
         }

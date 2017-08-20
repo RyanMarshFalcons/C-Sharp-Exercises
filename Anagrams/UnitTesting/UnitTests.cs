@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Anagrams;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTesting
+namespace Anagrams_Tests
 {
     [TestClass]
-    public class Testing
+    public class UnitTests
     {
         [TestMethod]
         public void Returnsabcdefg()

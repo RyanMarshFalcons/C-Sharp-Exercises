@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Messages\Messages.csproj">
+    <ProjectReference Include="..\Messages\Anagrams_Messages.csproj">
       <Project>{1b47a772-440a-4dc7-8747-0daf260c4c7a}</Project>
-      <Name>Messages</Name>
+      <Name>Anagrams_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

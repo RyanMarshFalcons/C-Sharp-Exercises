@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64966ECC-DE8D-4AB5-9B97-761970432188}</ProjectGuid>
+    <ProjectGuid>{0A6253C6-0EF2-4A1E-B94D-A620A673C1BB}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StartUp</RootNamespace>
@@ -50,13 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Anagrams\Anagrams.csproj">
-      <Project>{09594b4a-8713-4bda-a483-d7afaa8e8655}</Project>
-      <Name>Anagrams</Name>
+    <ProjectReference Include="..\Minimum_Concatenation\Minimum_Concatenation.csproj">
+      <Project>{2b100e5f-93af-4922-938c-d18431dc1dd3}</Project>
+      <Name>Minimum_Concatenation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Messages\Anagrams_Messages.csproj">
-      <Project>{1b47a772-440a-4dc7-8747-0daf260c4c7a}</Project>
-      <Name>Anagrams_Messages</Name>
+    <ProjectReference Include="..\Minimum_Concatenation_Messages\Minimum_Concatenation_Messages.csproj">
+      <Project>{7643c904-f09e-4908-aba3-5168b7c95356}</Project>
+      <Name>Minimum_Concatenation_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagrams", "Anagrams\Anagra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{64966ECC-DE8D-4AB5-9B97-761970432188}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{1B47A772-440A-4DC7-8747-0DAF260C4C7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagrams_Messages", "Messages\Anagrams_Messages.csproj", "{1B47A772-440A-4DC7-8747-0DAF260C4C7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{0CDBB1E6-8FAD-4227-916C-4CC67A27AE47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagrams_Tests", "UnitTesting\Anagrams_Tests.csproj", "{0CDBB1E6-8FAD-4227-916C-4CC67A27AE47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
