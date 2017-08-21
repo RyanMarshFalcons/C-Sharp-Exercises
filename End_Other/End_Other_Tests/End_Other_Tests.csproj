@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0523422-A195-4816-AE2E-643B27F2504C}</ProjectGuid>
+    <ProjectGuid>{18FBD807-3490-4B7B-AB6B-5155FF2638AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Frog_Bird_Tests</RootNamespace>
-    <AssemblyName>Frog_Bird_Tests</AssemblyName>
+    <RootNamespace>End_Other_Tests</RootNamespace>
+    <AssemblyName>End_Other_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Frog_Bird\Frog_Bird.csproj">
-      <Project>{ad6414c6-71a4-427a-85e3-0c957379ef8d}</Project>
-      <Name>Frog_Bird</Name>
+    <ProjectReference Include="..\End_Other\End_Other.csproj">
+      <Project>{a581dc9d-8e71-4025-8f67-06b3b0b9bd0b}</Project>
+      <Name>End_Other</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
