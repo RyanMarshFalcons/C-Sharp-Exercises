@@ -53,6 +53,7 @@ namespace Frog_Bird_Tests
             var actual = utility.GetCount("birdfrogasdfjfrogaweruhwefrogasdje3aefrogasdclkjh", "frog");
 
             Assert.AreEqual(expected, actual);
+
         }
     }
 }
