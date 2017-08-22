@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperature_Conversions", "Temperature_Conversions\Temperature_Conversions.csproj", "{0421F686-20F1-4469-B3BA-53171A99A7C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{4598E660-A98F-483C-AFBA-872C965C1ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperature_Conversions_Messages", "Temperature_Conversions_Messages\Temperature_Conversions_Messages.csproj", "{78A9637B-7D98-482B-A14F-2713962120E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperature_Conversions_Tests", "Temperature_Conversions_Tests\Temperature_Conversions_Tests.csproj", "{88EF3C35-55E9-4C5B-9C23-999AC749CC5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0421F686-20F1-4469-B3BA-53171A99A7C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0421F686-20F1-4469-B3BA-53171A99A7C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0421F686-20F1-4469-B3BA-53171A99A7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0421F686-20F1-4469-B3BA-53171A99A7C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4598E660-A98F-483C-AFBA-872C965C1ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4598E660-A98F-483C-AFBA-872C965C1ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4598E660-A98F-483C-AFBA-872C965C1ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4598E660-A98F-483C-AFBA-872C965C1ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A9637B-7D98-482B-A14F-2713962120E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A9637B-7D98-482B-A14F-2713962120E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A9637B-7D98-482B-A14F-2713962120E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A9637B-7D98-482B-A14F-2713962120E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88EF3C35-55E9-4C5B-9C23-999AC749CC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88EF3C35-55E9-4C5B-9C23-999AC749CC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88EF3C35-55E9-4C5B-9C23-999AC749CC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88EF3C35-55E9-4C5B-9C23-999AC749CC5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
