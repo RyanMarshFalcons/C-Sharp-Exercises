@@ -36,12 +36,12 @@ namespace Double_Characters
 
         public string CreateNewString(string userString)
         {
-            var newString = "";
+            var newString = new StringBuilder();
             for (int i = 0; i < userString.Length; i++)
             {
-                newString += (userString.Substring(i, 1) + userString.Substring(i, 1));
+                newString.Append(userString.Substring(i, 1) + userString.Substring(i, 1));
             }
-            return newString;
+            return newString.ToString();
         }
     }
 }
