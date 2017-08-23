@@ -36,12 +36,13 @@ namespace Every_Fifth
 
         public string FormStringFromEveryFifthChar(string userString)
         {
-            var newString = userString.Substring(0, 1);
+            var newString = new StringBuilder();
+            newString.Append(userString.Substring(0, 1));
             for (int i = 5; i < userString.Length; i += 5)
             {
-                newString += userString.Substring(i, 1);
+                newString.Append(userString.Substring(i, 1));
             }
-            return newString;
+            return newString.ToString();
         }
     }
 }

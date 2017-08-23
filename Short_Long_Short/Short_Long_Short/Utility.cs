@@ -41,14 +41,20 @@ namespace Short_Long_Short
 
         public string MakeNewString(string userString1, string userString2)
         {
+            var newString = new StringBuilder();
             if (userString1.Length > userString2.Length)
             {
-                return userString2 + userString1 + userString2;
+                newString.Append(userString2);
+                newString.Append(userString1);
+                newString.Append(userString2);
             }
             else
             {
-                return userString1 + userString2 + userString1;
+                newString.Append(userString1);
+                newString.Append(userString2);
+                newString.Append(userString1);
             }
+            return newString.ToString();
         }
     }
 }

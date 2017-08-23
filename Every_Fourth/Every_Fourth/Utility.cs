@@ -36,12 +36,13 @@ namespace Every_Fourth
 
         public string FormStringFromEveryFourthChar(string userString)
         {
-            var newString = userString.Substring(0, 1);
+            var newString = new StringBuilder();
+            newString.Append(userString.Substring(0, 1));
             for (int i = 4; i < userString.Length; i += 4)
             {
-                newString += userString.Substring(i, 1);
+                newString.Append(userString.Substring(i, 1));
             }
-            return newString;
+            return newString.ToString();
         }
     }
 }

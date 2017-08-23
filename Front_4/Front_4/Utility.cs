@@ -36,8 +36,12 @@ namespace Front_4
 
         public string CreateNewString(string userString)
         {
-            var first4Chars = userString.Substring(0, 4);
-            return first4Chars + first4Chars + first4Chars + first4Chars;
+            var newString = new StringBuilder();
+            for (int i = 0; i < 4; i++)
+            {
+                newString.Append(userString.Substring(0, 4));
+            }
+            return newString.ToString();
         }
     }
 }

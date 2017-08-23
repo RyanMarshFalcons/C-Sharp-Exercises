@@ -36,12 +36,13 @@ namespace Every_Third
 
         public string FormStringFromEveryThirdChar (string userString)
         {
-            var newString = userString.Substring(0, 1);
+            var newString = new StringBuilder();
+            newString.Append(userString.Substring(0, 1));
             for (int i = 3; i < userString.Length; i+=3)
             {
-                newString += userString.Substring(i, 1);
+                newString.Append(userString.Substring(i, 1));
             }
-            return newString;
+            return newString.ToString();
         }
     }
 }

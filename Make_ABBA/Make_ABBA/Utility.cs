@@ -36,7 +36,12 @@ namespace Make_ABBA
 
         public string MakeNewString(string userString1, string userString2)
         {
-            return userString1 + userString2 + userString2 + userString1;
+            var newString = new StringBuilder();
+            newString.Append(userString1);
+            newString.Append(userString2);
+            newString.Append(userString2);
+            newString.Append(userString1);
+            return newString.ToString();
         }
     }
 }

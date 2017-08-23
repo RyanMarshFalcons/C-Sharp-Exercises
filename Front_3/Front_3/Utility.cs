@@ -36,8 +36,12 @@ namespace Front_3
 
         public string CreateNewString (string userString)
         {
-            var first3Chars = userString.Substring(0, 3);
-            return first3Chars + first3Chars + first3Chars;
+            var newString = new StringBuilder();
+            for (int i = 0; i < 3; i++)
+            {
+                newString.Append(userString.Substring(0, 3));
+            }
+            return newString.ToString();
         }
     }
 }

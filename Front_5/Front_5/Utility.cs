@@ -36,8 +36,12 @@ namespace Front_5
 
         public string CreateNewString(string userString)
         {
-            var first5Chars = userString.Substring(0, 5);
-            return first5Chars + first5Chars + first5Chars + first5Chars + first5Chars;
+            var newString = new StringBuilder();
+            for (int i = 0; i < 5; i++)
+            {
+                newString.Append(userString.Substring(0, 5));
+            }
+            return newString.ToString();
         }
     }
 }
