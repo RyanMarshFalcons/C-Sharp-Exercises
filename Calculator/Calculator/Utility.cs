@@ -35,17 +35,17 @@ namespace Calculator
             return Double.TryParse(input, out num);
         }
 
-        public string GetValidOperator()
+        public string GetValidOperatorSelection()
         {
-            Message.EnterOperator();
+            Message.SelectOperator();
             var isValidInput = false;
             var input = "";
             while (isValidInput == false)
             {
                 input = Console.ReadLine();
-                if (CheckIfOperator(input) == false)
+                if (CheckIfValidSelection(input) == false)
                 {
-                    Message.NotAnOperator(input);
+                    Message.NotAValidSelection(input);
                 }
                 else
                 {
@@ -55,9 +55,9 @@ namespace Calculator
             return input;
         }
 
-        public bool CheckIfOperator(string input)
+        public bool CheckIfValidSelection(string input)
         {
-            return ((input == "+") || (input == "-") || (input == "*") || (input == "/"));
+            return ((input == "A") || (input == "B") || (input == "C") || (input == "D") || (input == "E") || (input == "F") || (input == "G") || (input == "H"));
         }
 
         public double GetSum(double num1, double num2)
@@ -78,6 +78,26 @@ namespace Calculator
         public double GetQuotient(double num1, double num2)
         {
             return Math.Round(num1 / num2, 2);
+        }
+
+        public double GetNumberSquared(double num)
+        {
+            return Math.Round(num * num, 2);
+        }
+
+        public double GetNumberCubed(double num)
+        {
+            return Math.Round(num * num * num, 2);
+        }
+
+        public double GetNumberTesseracted(double num)
+        {
+            return Math.Round(num * num * num * num, 2);
+        }
+
+        public double GetSquareRoot(double num)
+        {
+            return Math.Round(Math.Sqrt(num), 2);
         }
     }
 }

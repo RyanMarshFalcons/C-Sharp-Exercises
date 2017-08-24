@@ -15,25 +15,45 @@ namespace StartUp
             Message.Welcome();
             var utility = new Utility();
             var num1 = utility.GetValidNumber();
-            var operatorType = utility.GetValidOperator();
-            var num2 = utility.GetValidNumber();
-            switch (operatorType)
+            var operatorSelection = utility.GetValidOperatorSelection();
+            var num2 = 0.0;
+            if ((operatorSelection == "A") || (operatorSelection == "B") || (operatorSelection == "C") || (operatorSelection == "D"))
             {
-                case "+":
+                num2 = utility.GetValidNumber();
+            }
+            switch (operatorSelection)
+            {
+                case "A":
                     var sum = utility.GetSum(num1, num2);
                     Message.DisplaySum(num1, num2, sum);
                     break;
-                case "-":
+                case "B":
                     var difference = utility.GetDifference(num1, num2);
                     Message.DisplayDifference(num1, num2, difference);
                     break;
-                case "*":
+                case "C":
                     var product = utility.GetProduct(num1, num2);
                     Message.DisplayProduct(num1, num2, product);
                     break;
-                case "/":
+                case "D":
                     var quotient = utility.GetQuotient(num1, num2);
                     Message.DisplayQuotient(num1, num2, quotient);
+                    break;
+                case "E":
+                    var squared = utility.GetNumberSquared(num1);
+                    Message.DisplayNumberSquared(num1, squared);
+                    break;
+                case "F":
+                    var cubed = utility.GetNumberCubed(num1);
+                    Message.DisplayNumberCubed(num1, cubed);
+                    break;
+                case "G":
+                    var tesseracted = utility.GetNumberTesseracted(num1);
+                    Message.DisplayNumberTesseracted(num1, tesseracted);
+                    break;
+                case "H":
+                    var squareRoot = utility.GetSquareRoot(num1);
+                    Message.DisplaySquareRootOfNum(num1, squareRoot);
                     break;
                 default:
                     break;
