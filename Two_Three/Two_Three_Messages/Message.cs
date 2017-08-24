@@ -26,7 +26,7 @@ namespace Two_Three_Messages
 
         public static void DisplayResult(string newString)
         {
-            Console.WriteLine($"\nYour new string is: {newString}");
+            Console.WriteLine($"\nYour new string is: {newString}\nPress enter to close the program.");
         }
     }
 }
