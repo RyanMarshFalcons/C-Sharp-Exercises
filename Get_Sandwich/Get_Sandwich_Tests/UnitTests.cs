@@ -45,7 +45,7 @@ namespace Get_Sandwich_Tests
         }
 
         [TestMethod]
-        public void Returns0ForCharlieisthebreadwinner()
+        public void Returns12ForCharlieisthebreadwinner()
         {
             var expected = 12;
 
@@ -84,6 +84,28 @@ namespace Get_Sandwich_Tests
 
             var utility = new Utility();
             var actual = utility.GetIndexOfSecondSlice("breadcheesebreadmeatbreadmayobread");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnscheesemeatmayopickleonionForbreadcheesemeatmayopickleonionbread()
+        {
+            var expected = "cheesemeatmayopickleonion";
+
+            var utility = new Utility();
+            var actual = utility.CreateNewString("breadcheesemeatmayopickleonionbread", 0, 30);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnscheesebreadmeatmayobreadpickleonionForwhitebreadcheesebreadmeatmayobreadpickleonionbreads()
+        {
+            var expected = "cheesebreadmeatmayobreadpickleonion";
+
+            var utility = new Utility();
+            var actual = utility.CreateNewString("whitebreadcheesebreadmeatmayobreadpickleonionbreads", 5, 45);
 
             Assert.AreEqual(expected, actual);
         }
