@@ -28,5 +28,6 @@ namespace Less_By_30_Messages
         {
             Console.WriteLine($"\n{count} of your numbers are at least thirty less than another one of your numbers.\nPress enter to close the program.");
         }
+
     }
 }
