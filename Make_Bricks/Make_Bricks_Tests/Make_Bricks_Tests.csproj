@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B87DDC88-131F-40A4-977C-E88CCDB32162}</ProjectGuid>
+    <ProjectGuid>{ED9D8A04-2B98-499A-B043-2DCD5CCF72FA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Less_By_30_Tests</RootNamespace>
-    <AssemblyName>Less_By_30_Tests</AssemblyName>
+    <RootNamespace>Make_Bricks_Tests</RootNamespace>
+    <AssemblyName>Make_Bricks_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Less_By_30\Less_By_30.csproj">
-      <Project>{45a7952b-fcac-4062-b710-0c2b0adee6cc}</Project>
-      <Name>Less_By_30</Name>
+    <ProjectReference Include="..\Make_Bricks\Make_Bricks.csproj">
+      <Project>{8a9150e1-fe4e-47c2-908a-3b8fe4e979ee}</Project>
+      <Name>Make_Bricks</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
