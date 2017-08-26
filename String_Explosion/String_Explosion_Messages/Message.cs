@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Front_3_Messages
+namespace String_Explosion_Messages
 {
     public class Message
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my Front 3 program where you will enter a string and then Iwill form a new string of three copies of the first three characters of your\nstring. Press enter to continue.");
+            Console.WriteLine("Hello and welcome to my String Explosion program where you will enter a string\nand then I will form a new string by exploding out your string 1, 2, 3, etc.\ncharacters at a time. Press enter to continue.");
             Console.ReadLine();
         }
 
@@ -26,7 +26,7 @@ namespace Front_3_Messages
 
         public static void DisplayNewString(string newString)
         {
-            Console.WriteLine($"\nThe Front 3 string that I formed from the first three letters of your string is:{newString}\nPress enter to close the program.");
+            Console.WriteLine($"\nYour string exploded out is:\n{newString}\nPress enter to close the program.");
         }
     }
 }

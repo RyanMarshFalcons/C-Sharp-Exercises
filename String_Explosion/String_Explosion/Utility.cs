@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Front_3_Messages;
+using String_Explosion_Messages;
 
-namespace Front_3
+namespace String_Explosion
 {
     public class Utility
     {
-        public string GetString ()
+        public string GetString()
         {
             var isValid = false;
             var userInput = "";
@@ -29,17 +29,17 @@ namespace Front_3
             return userInput;
         }
 
-        public bool CheckIfValidString (string input)
+        public bool CheckIfValidString(string input)
         {
             return input.Length >= 3;
         }
 
-        public string CreateNewString (string userString)
+        public string CreateNewString(string userString)
         {
             var newString = new StringBuilder();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < userString.Length; i++)
             {
-                newString.Append(userString.Substring(0, 3));
+                newString.Append(userString.Substring(0, i +1));
             }
             return newString.ToString();
         }
