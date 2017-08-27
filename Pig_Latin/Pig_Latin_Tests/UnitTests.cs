@@ -56,23 +56,12 @@ namespace Pig_Latin_Tests
         }
 
         [TestMethod]
-        public void ConvertsWordToCharArray()
-        {
-            var expected = new char[] { 'R', 'y', 'a', 'n' };
-
-            var utility = new Utility();
-            var actual = utility.ConvertToCharArray("Ryan");
-
-            CollectionAssert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
         public void ReturnsTrueIfBeginsWithVowel()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfBeginsWithVowel(new char[] { 'a', 'p', 'p', 'l', 'e' });
+            var actual = utility.CheckIfBeginsWithVowel("apple");
 
             Assert.AreEqual(expected, actual);
         }
@@ -83,7 +72,7 @@ namespace Pig_Latin_Tests
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfBeginsWithVowel(new char[] { 'p', 'i', 'n', 'e', 'a', 'p', 'p', 'l', 'e' });
+            var actual = utility.CheckIfBeginsWithVowel("pineapple");
 
             Assert.AreEqual(expected, actual);
         }
@@ -111,40 +100,40 @@ namespace Pig_Latin_Tests
         }
 
         [TestMethod]
-        public void ReturnsIdahoyay()
+        public void ReturnsIdahoyayForIdaho()
         {
             var expected = "Idahoyay";
 
             var utility = new Utility();
-            var actual = utility.AddYayToTheEnd(new char[] { 'I', 'd', 'a', 'h', 'o' });
+            var actual = utility.AddYayToTheEnd("Idaho");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsEersch()
+        public void ReturnsEerschForcheers()
         {
             var expected = "eersch";
 
             var utility = new Utility();
-            var actual = utility.MoveConsonantsToTheEnd(new char[] { 'c', 'h', 'e', 'e', 'r', 's' });
+            var actual = utility.MoveConsonantsToTheEnd("cheers");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns3()
+        public void Returns3Forsplat()
         {
             var expected = 3;
 
             var utility = new Utility();
-            var actual = utility.ConsonantCounter(new char[] { 's', 'p', 'l', 'a', 't' });
+            var actual = utility.ConsonantCounter("splat");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsIckay()
+        public void ReturnsIckayForick()
         {
             var expected = "ickay";
 

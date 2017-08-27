@@ -13,32 +13,42 @@ namespace SwapUpperLowerCases
         {
             var userInput = "";
             Message.RequestUserInput();
-            while (userInput == "")
+            var validInput = false;
+            while (validInput == false)
             {
                 userInput = Console.ReadLine();
-                if (userInput == "")
+                if (IsToShort(userInput))
                 {
-                    Message.NoEmptyStrings();
+                    Message.NotLongEnough();
+                }
+                else
+                {
+                    validInput = true;
                 }
             }
             return userInput;
         }
 
+        public bool IsToShort(string input)
+        {
+            return input.Length < 1;
+        }
+
         public string SwapCases(string userInput)
         {
-            var arrUserInput = userInput.ToCharArray();
-            for (int i = 0; i < arrUserInput.Length; i++)
+            var newString = new StringBuilder();
+            for (int i = 0; i < userInput.Length; i++)
             {
-                if (Char.IsLower(arrUserInput[i]))
+                if (Char.IsLower(userInput[i]))
                 {
-                    arrUserInput[i] = Char.ToUpper(arrUserInput[i]);
+                    newString.Append(Char.ToUpper(userInput[i]));
                 }
                 else
                 {
-                    arrUserInput[i] = Char.ToLower(arrUserInput[i]);
+                    newString.Append(Char.ToLower(userInput[i]));
                 }
             }
-            return new string(arrUserInput); 
+            return newString.ToString(); 
         }
     }
 }

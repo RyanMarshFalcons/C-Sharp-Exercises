@@ -12,6 +12,28 @@ namespace SwapUpperLowerCases_Tests
     public class UnitTests
     {
         [TestMethod]
+        public void ReturnsTrueForEmptyString()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsToShort("");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseFora()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsToShort("a");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsAbCdEfG()
         {
             var expected = "AbCdEfG";

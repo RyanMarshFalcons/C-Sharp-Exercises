@@ -12,6 +12,29 @@ namespace Acronyms_Tests
     public class UnitTests
     {
         [TestMethod]
+        public void ReturnsTrueFora()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsToShort("a");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForab()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsToShort("ab");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
         public void ReturnsKFC()
         {
             var expected = "KFC";

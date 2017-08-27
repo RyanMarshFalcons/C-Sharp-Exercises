@@ -10,7 +10,7 @@ namespace Pig_Latin_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my pig Latin translator program. Enter a word in English and I will translate that word into pig Latin for you.\nPress enter to continue.");
+            Console.WriteLine("Welcome to my pig Latin translator program. Enter a word in English and I will\ntranslate that word into pig Latin for you. Press enter to continue.");
             Console.ReadLine();
         }
 

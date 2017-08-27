@@ -13,36 +13,42 @@ namespace Acronyms
         {
             var userInput = "";
             Message.RequestUserInput();
-            while (userInput == "")
+            var validInput = false;
+            while (validInput == false)
             {
                 userInput = Console.ReadLine();
-                if (userInput == "")
+                if (IsToShort(userInput))
                 {
-                    Message.NoEmptyStrings();
+                    Message.NotLongEnough();
+                }
+                else
+                {
+                    validInput = true;
                 }
             }
             return userInput;
         }
 
+        public bool IsToShort(string input)
+        {
+            return input.Length < 2;
+        }
+
         public string ConvertToAcronym(string userInput)
         {
-            var acronym = "";
-            var inputAsCharArray = userInput.ToCharArray();
-            if (Char.IsLetter(inputAsCharArray[0]))
+            var acronym = new StringBuilder();
+            if (Char.IsLetter(userInput[0]))
             {
-                acronym = inputAsCharArray[0].ToString();
+                acronym.Append(userInput[0]);
             }
-            if (inputAsCharArray.Length > 1)
+            for (int i = 1; i < userInput.Length; i++)
             {
-                for (int i = 1; i < inputAsCharArray.Length -1; i++)
+                if (userInput[i -1] == ' ' && Char.IsLetter(userInput[i]))
                 {
-                    if ((inputAsCharArray[i-1] == ' ') && (Char.IsLetter(inputAsCharArray[i])))
-                    {
-                        acronym += inputAsCharArray[i].ToString();
-                    }
+                    acronym.Append(userInput[i]);
                 }
             }
-            return acronym.ToUpper();
+            return acronym.ToString().ToUpper();
         }
 
         public void DisplayResults(string userInput, string acronym)

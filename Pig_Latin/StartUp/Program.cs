@@ -14,19 +14,18 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var input = utility.GetValidEntry();
-            var inputAsArray = utility.ConvertToCharArray(input);
-            var inputAsPigLatin = "";
-            if (utility.CheckIfBeginsWithVowel(inputAsArray) == true)
+            var userString = utility.GetValidEntry();
+            var userStringAsPigLatin = "";
+            if (utility.CheckIfBeginsWithVowel(userString) == true)
             {
-                inputAsPigLatin = utility.AddYayToTheEnd(inputAsArray);
+                userStringAsPigLatin = utility.AddYayToTheEnd(userString);
             }
             else
             {
-                inputAsPigLatin = utility.MoveConsonantsToTheEnd(inputAsArray);
-                inputAsPigLatin = utility.AddAyToTheEnd(inputAsPigLatin);
+                userStringAsPigLatin = utility.MoveConsonantsToTheEnd(userString);
+                userStringAsPigLatin = utility.AddAyToTheEnd(userStringAsPigLatin);
             }
-            Message.DisplayInPigLatin(input, inputAsPigLatin);
+            Message.DisplayInPigLatin(userString, userStringAsPigLatin);
             Console.ReadLine();
         }
     }

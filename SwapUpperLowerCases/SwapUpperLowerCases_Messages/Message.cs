@@ -19,14 +19,14 @@ namespace SwapUpperLowerCases_Messages
             Console.Write("Please input a series of letters, words, or phrases and I will swap their cases for you: ");
         }
 
-        public static void NoEmptyStrings()
+        public static void NotLongEnough()
         {
-            Console.Write("\nYou must input at least one character for me to be able to swap your text's\ncases. Please try again: ");
+            Console.Write("\nYou must input at least one character for your string to be valid. Please try\nagain: ");
         }
 
         public static void DisplayResult(string userInput, string swappedCases)
         {
-            Console.WriteLine($"\n{userInput} with cases swapped is {swappedCases}");
+            Console.WriteLine($"\n{userInput} with cases swapped is {swappedCases}\nPress enter to close the program.");
         }
 
     }

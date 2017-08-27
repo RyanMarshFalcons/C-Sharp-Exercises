@@ -39,11 +39,10 @@ namespace Pig_Latin
 
         public bool CheckIfHasSpaces(string input)
         {
-            var inputAsArray = ConvertToCharArray(input);
             bool hasSpaces = false;
-            foreach (var character in inputAsArray)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (character == ' ')
+                if (input[i] == ' ')
                 {
                     hasSpaces = true;
                 }
@@ -53,18 +52,12 @@ namespace Pig_Latin
 
         public bool CheckIfBeginsWithALetter(string input)
         {
-            var inputAsArray = ConvertToCharArray(input);
-            return Char.IsLetter(inputAsArray[0]);
+            return Char.IsLetter(input[0]);
         }
 
-        public char[] ConvertToCharArray(string word)
+        public bool CheckIfBeginsWithVowel(string userString)
         {
-            return word.ToCharArray();
-        }
-
-        public bool CheckIfBeginsWithVowel(char[] wordAsArray)
-        {
-            return CheckIfVowel(wordAsArray[0]);
+            return CheckIfVowel(userString[0]);
         }
 
         public bool CheckIfVowel(char character)
@@ -72,33 +65,23 @@ namespace Pig_Latin
             return ((character == 'a') || (character == 'e') || (character == 'i') || (character == 'o') || (character == 'u') || (character == 'y') || (character == 'A') || (character == 'E') || (character == 'I') || (character == 'O') || (character == 'U') || (character == 'Y'));
         }
 
-        public string AddYayToTheEnd(char[] wordAsArray)
+        public string AddYayToTheEnd(string userString)
         {
-            return new string(wordAsArray) + "yay";
+            return userString + "yay";
         }
 
-        public string MoveConsonantsToTheEnd(char[] wordAsArray)
+        public string MoveConsonantsToTheEnd(string userString)
         {
-            var placeHolderChar = ' ';
-            var newStringEnding = "";
-            var numConsonants = ConsonantCounter(wordAsArray);
-            for (int i = 0; i < numConsonants; i++)
-            {
-                placeHolderChar = wordAsArray[i];
-                newStringEnding += (placeHolderChar.ToString()).ToLower();
-                wordAsArray[i] = ' ';
-            }
-            var newString = new string(wordAsArray);
-            newString = newString.Replace(" ", "");
-            return newString + newStringEnding;
+            var numConsonants = ConsonantCounter(userString);
+            return userString.Substring(numConsonants) + userString.Substring(0, numConsonants);
         }
 
-        public int ConsonantCounter(char[] wordAsArray)
+        public int ConsonantCounter(string userString)
         {
             var counter = 0;
-            foreach (var character in wordAsArray)
+            for (int i = 0; i < userString.Length; i++)
             {
-                if (CheckIfVowel(character) == true)
+                if (CheckIfVowel(userString[i]) == true)
                 {
                     break;
                 }
@@ -107,9 +90,9 @@ namespace Pig_Latin
             return counter;
         }
 
-        public string AddAyToTheEnd(string input)
+        public string AddAyToTheEnd(string userString)
         {
-            return input + "ay";
+            return userString + "ay";
         }
     }
 }

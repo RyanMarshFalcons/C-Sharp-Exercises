@@ -19,9 +19,9 @@ namespace Acronyms_Messages
             Console.Write("Please input a series of words and I will transform them into an acronym for \nyou: ");
         }
 
-        public static void NoEmptyStrings()
+        public static void NotLongEnough()
         {
-            Console.Write("\nYou must input at least one character for me to be able to turn your input into an acronym. Please try again: ");
+            Console.Write("\nYou must input at least two characters for your string to be valid. Please try\nagain: ");
         }
 
         public static void NoLetters()
