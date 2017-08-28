@@ -13,39 +13,58 @@ namespace CheckForCharcter
         {
             var userInput = "";
             Message.RequestUserInput();
-            while (userInput == "")
+            var validInput = false;
+            while (validInput == false)
             {
                 userInput = Console.ReadLine();
-                if (userInput == "")
+                if (IsTooShort(userInput))
                 {
-                    Message.NoEmptyStrings();
+                    Message.NotLongEnough();
+                }
+                else
+                {
+                    validInput = true;
                 }
             }
             return userInput;
         }
 
+        public bool IsTooShort(string input)
+        {
+            return input.Length < 1;
+        }
+
         public char GetSpecificChar()
         {
             var input = "";
+            var validInput = false;
             Message.RequestCharacter();
-            while (input.Length !=1)
+            while (validInput == false)
             {
                 input = Console.ReadLine();
-                if (input.Length != 1)
+                if (IsASingleCharacter(input) == false)
                 {
                     Message.NotASingleCharacter(input);
+                }
+                else
+                {
+                    validInput = true;
                 }
             }
             return Char.Parse(input);
         }
 
+        public bool IsASingleCharacter(string input)
+        {
+            return input.Length == 1;
+        }
+
         public int SearchForCharacter(string text, char character)
         {
             var count = 0;
-            var arrInput = text.ToCharArray();
-            for (int i = 0; i < arrInput.Count(); i++)
+            for (int i = 0; i < text.Length; i++)
             {
-                if (arrInput[i] == character)
+                if (text[i] == character)
                 {
                     count += 1;
                 }

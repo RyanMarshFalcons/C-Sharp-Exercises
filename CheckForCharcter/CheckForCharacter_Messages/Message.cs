@@ -19,9 +19,9 @@ namespace CheckForCharacter_Messages
             Console.Write("Please input as much text as you please: ");
         }
 
-        public static void NoEmptyStrings()
+        public static void NotLongEnough()
         {
-            Console.Write("\nYou must input at least one character for me to be able to search through for a specific charcter later. Please try again: ");
+            Console.Write("\nYou must input at least one character for your string to be valid. Please try\nagain: ");
         }
 
         public static void RequestCharacter()
@@ -36,7 +36,7 @@ namespace CheckForCharacter_Messages
 
         public static void DisplayResults(string entireInput, char specificChar, int count)
         {
-            Console.WriteLine($"\n{entireInput} contains {count} instances of {specificChar}");
+            Console.WriteLine($"\n{entireInput} contains {count} instances of {specificChar}. Press enter to close the program.");
         }
 
     }

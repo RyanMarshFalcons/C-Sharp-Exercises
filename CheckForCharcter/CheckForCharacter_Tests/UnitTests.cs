@@ -12,6 +12,50 @@ namespace CheckForCharacter_Tests
     public class UnitTests
     {
         [TestMethod]
+        public void ReturnsTrueForEmptyString()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsTooShort("");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForc()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsTooShort("c");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueFord()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsASingleCharacter("d");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForde()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsASingleCharacter("de");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void Retruns1FortakemydogDougforawalk()
         {
             var expected = 1;
