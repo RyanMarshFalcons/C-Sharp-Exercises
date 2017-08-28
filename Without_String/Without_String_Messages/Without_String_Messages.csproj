@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5220536A-2842-4D20-9667-2406CBD7FC46}</ProjectGuid>
+    <ProjectGuid>{9CAA9B89-24F0-4C28-9CA8-E283C0B67EF3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Without_String</RootNamespace>
-    <AssemblyName>Without_String</AssemblyName>
+    <RootNamespace>Without_String_Messages</RootNamespace>
+    <AssemblyName>Without_String_Messages</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Without_String_Messages\Without_String_Messages.csproj">
-      <Project>{9caa9b89-24f0-4c28-9ca8-e283c0b67ef3}</Project>
-      <Name>Without_String_Messages</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

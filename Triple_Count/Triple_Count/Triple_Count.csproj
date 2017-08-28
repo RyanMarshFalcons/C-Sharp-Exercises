@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5220536A-2842-4D20-9667-2406CBD7FC46}</ProjectGuid>
+    <ProjectGuid>{E3379C05-8B6C-4264-9492-D9DEA9864D86}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Without_String</RootNamespace>
-    <AssemblyName>Without_String</AssemblyName>
+    <RootNamespace>Triple_Count</RootNamespace>
+    <AssemblyName>Triple_Count</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Without_String_Messages\Without_String_Messages.csproj">
-      <Project>{9caa9b89-24f0-4c28-9ca8-e283c0b67ef3}</Project>
-      <Name>Without_String_Messages</Name>
+    <ProjectReference Include="..\Triple_Count_Messages\Triple_Count_Messages.csproj">
+      <Project>{d8195995-d51c-4e13-b6b4-f5a30635f1d1}</Project>
+      <Name>Triple_Count_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
