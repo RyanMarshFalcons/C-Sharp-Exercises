@@ -26,12 +26,12 @@ namespace Calculator_Messages
 
         public static void SelectOperator()
         {
-            Console.WriteLine("\nPlease select one of the following operators:\nA) Plus\nB) Minus\nC) Times\nD) Divided By\nE) Squared\nF) Cubed\nG) Tesseracted\nH) Square Root");
+            Console.WriteLine("\nPlease select one of the following operators:\nA) Plus\nB) Minus\nC) Times\nD) Divided By\nE) Squared\nF) Cubed\nG) Tesseracted\nH) Square Root\nI) Sine\nJ) Cosine\nK) Tangent");
         }
 
         public static void NotAValidSelection(string input)
         {
-            Console.WriteLine($"\nSorry but {input} is not a valid selection. Please select one of the\nfollowing operators:\nA) Plus\nB) Minus\nC) Times\nD) Divided By\nE) Squared\nF) Cubed\nG) Tesseracted\nH) Square Root");
+            Console.WriteLine($"\nSorry but {input} is not a valid selection. Please select one of the\nfollowing operators:\nA) Plus\nB) Minus\nC) Times\nD) Divided By\nE) Squared\nF) Cubed\nG) Tesseracted\nH) Square Root\nI) Sine\nJ) Cosine\nK) Tangent");
         }
 
         public static void DisplaySum(double num1, double num2, double sum)
@@ -72,6 +72,21 @@ namespace Calculator_Messages
         public static void DisplaySquareRootOfNum(double num, double sqrRootOfNum)
         {
             Console.WriteLine($"\nThe square root of {num} is {sqrRootOfNum}\nPress enter to close the program.");
+        }
+
+        public static void DisplaySineOfNum(double num, double sineOfNum)
+        {
+            Console.WriteLine($"\nThe sine of {num} is {sineOfNum}\nPress enter to close the program.");
+        }
+
+        public static void DisplayCosineOfNum(double num, double cosineOfNum)
+        {
+            Console.WriteLine($"\nThe cosine of {num} is {cosineOfNum}\nPress enter to close the program.");
+        }
+
+        public static void DisplayTangentOfNum(double num, double tangentOfNum)
+        {
+            Console.WriteLine($"\nThe tangent of {num} is {tangentOfNum}\nPress enter to close the program.");
         }
     }
 }

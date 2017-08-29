@@ -57,7 +57,7 @@ namespace Calculator
 
         public bool CheckIfValidSelection(string input)
         {
-            return ((input == "A") || (input == "B") || (input == "C") || (input == "D") || (input == "E") || (input == "F") || (input == "G") || (input == "H"));
+            return (input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G" || input == "H" || input == "I" || input == "J" || input == "K");
         }
 
         public double GetSum(double num1, double num2)
@@ -98,6 +98,21 @@ namespace Calculator
         public double GetSquareRoot(double num)
         {
             return Math.Round(Math.Sqrt(num), 2);
+        }
+
+        public double GetSine(double num)
+        {
+            return Math.Round(Math.Sin(num), 2);
+        }
+
+        public double GetCosine(double num)
+        {
+            return Math.Round(Math.Cos(num), 2);
+        }
+
+        public double GetTangent(double num)
+        {
+            return Math.Round(Math.Tan(num), 2);
         }
     }
 }

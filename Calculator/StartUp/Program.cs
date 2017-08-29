@@ -55,6 +55,18 @@ namespace StartUp
                     var squareRoot = utility.GetSquareRoot(num1);
                     Message.DisplaySquareRootOfNum(num1, squareRoot);
                     break;
+                case "I":
+                    var sine = utility.GetSine(num1);
+                    Message.DisplaySineOfNum(num1, sine);
+                    break;
+                case "J":
+                    var cosine = utility.GetCosine(num1);
+                    Message.DisplayCosineOfNum(num1, cosine);
+                    break;
+                case "K":
+                    var tangent = utility.GetTangent(num1);
+                    Message.DisplayTangentOfNum(num1, tangent);
+                    break;
                 default:
                     break;
             }

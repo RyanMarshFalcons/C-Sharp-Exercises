@@ -122,12 +122,45 @@ namespace Calculator_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForI()
+        public void ReturnsTrueForI()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("I");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForJ()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("J");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForK()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("K");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForL()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfValidSelection("I");
+            var actual = utility.CheckIfValidSelection("L");
 
             Assert.AreEqual(expected, actual);
         }
@@ -294,6 +327,96 @@ namespace Calculator_Tests
 
             var utility = new Utility();
             var actual = utility.GetSquareRoot(11.56);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsPoint14For3()
+        {
+            var expected = .14;
+            var utility = new Utility();
+            var actual = utility.GetSine(3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsNegativePoint38For452()
+        {
+            var expected = -.38;
+            var utility = new Utility();
+            var actual = utility.GetSine(452);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsPoint75For1025()
+        {
+            var expected = .75;
+            var utility = new Utility();
+            var actual = utility.GetSine(1025);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsPoint75For7()
+        {
+            var expected = .75;
+            var utility = new Utility();
+            var actual = utility.GetCosine(7);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsNegativePoint91For9()
+        {
+            var expected = -.91;
+            var utility = new Utility();
+            var actual = utility.GetCosine(9);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsPoint53For45()
+        {
+            var expected = .53;
+            var utility = new Utility();
+            var actual = utility.GetCosine(45);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsNegative3Point38For5()
+        {
+            var expected = -3.38;
+            var utility = new Utility();
+            var actual = utility.GetTangent(5);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsNegativePoint42For75()
+        {
+            var expected = -.42;
+            var utility = new Utility();
+            var actual = utility.GetTangent(75);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns2Point35ForNegativeOneThousandOne()
+        {
+            var expected = 2.35;
+            var utility = new Utility();
+            var actual = utility.GetTangent(-1001);
 
             Assert.AreEqual(expected, actual);
         }
