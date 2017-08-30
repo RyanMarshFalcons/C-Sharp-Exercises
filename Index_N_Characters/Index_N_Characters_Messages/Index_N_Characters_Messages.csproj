@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F7A28BE4-BB9B-4CB0-9E21-3C81ADAB9B84}</ProjectGuid>
+    <ProjectGuid>{7D604B68-3C56-460B-BB4F-C03E508996D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Index_Three_Chars</RootNamespace>
-    <AssemblyName>Index_Three_Chars</AssemblyName>
+    <RootNamespace>Index_N_Characters_Messages</RootNamespace>
+    <AssemblyName>Index_N_Characters_Messages</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Index_Three_Chars_Messages\Index_Three_Chars_Messages.csproj">
-      <Project>{40b6d903-f55e-424a-9ce7-f6cc6cf4c075}</Project>
-      <Name>Index_Three_Chars_Messages</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
