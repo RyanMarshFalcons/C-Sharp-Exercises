@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Locate_Characters_Messages;
+using Remove_Characters_Messages;
 
-namespace Locate_Characters
+namespace Remove_Characters
 {
     public class Utility
     {
         public string GetValidString()
         {
             var userInput = "";
-            Message.RequestUserInput();
+            Message.EnterString();
             var validInput = false;
             while (validInput == false)
             {
@@ -34,17 +34,17 @@ namespace Locate_Characters
             return input.Length < 1;
         }
 
-        public char GetSpecificChar()
+        public char GetValidChar()
         {
             var input = "";
             var validInput = false;
-            Message.RequestCharacter();
+            Message.EnterCharacter();
             while (validInput == false)
             {
                 input = Console.ReadLine();
                 if (IsASingleCharacter(input) == false)
                 {
-                    Message.NotASingleCharacter(input);
+                    Message.NotACharacter(input);
                 }
                 else
                 {
@@ -59,24 +59,33 @@ namespace Locate_Characters
             return input.Length == 1;
         }
 
-        public int SearchForCharacter(string text, char character)
+        public string RemoveCharacter(string userString, char character)
         {
-            var count = 0;
-            for (int i = 0; i < text.Length; i++)
+            string end = "";
+            for (int i = userString.Length - 1; i > -1; i--)
             {
-                if (text[i] == character)
+                if (userString[i] == character)
                 {
-                    count += 1;
+                    if (i != userString.Length - 1)
+                    {
+                        end = userString.Substring(i + 1);
+                    }
+                    userString = userString.Substring(0, i) + end;
                 }
             }
-            return count;
+            return userString;
         }
 
-        public bool AskToContinue()
+        public bool AskToContinue(int userStringLength)
         {
+            if (userStringLength == 0)
+            {
+                Message.StringIsEmpty();
+                return false;
+            }
             var IsValidInput = false;
             var input = "";
-            Message.SearchForAnotherCharacter();
+            Message.RemoveAnotherCharacter();
             while (IsValidInput == false)
             {
                 input = Console.ReadLine();

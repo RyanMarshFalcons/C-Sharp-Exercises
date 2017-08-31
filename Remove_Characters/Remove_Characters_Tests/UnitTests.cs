@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CheckForCharcter;
+using Remove_Characters;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CheckForCharacter_Tests
+namespace Remove_Characters_Tests
 {
     [TestClass]
     public class UnitTests
@@ -23,67 +23,89 @@ namespace CheckForCharacter_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForc()
+        public void ReturnsFalseForh()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsTooShort("c");
+            var actual = utility.IsTooShort("h");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFord()
+        public void ReturnsTrueFori()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.IsASingleCharacter("d");
+            var actual = utility.IsASingleCharacter("i");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseForde()
+        public void ReturnsFalseForij()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsASingleCharacter("de");
+            var actual = utility.IsASingleCharacter("ij");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Retruns1FortakemydogDougforawalk()
+        public void ReturnsWaerboleForWaterbottlet()
         {
-            var expected = 1;
+            var expected = "Waer bole";
 
             var utility = new Utility();
-            var actual = utility.SearchForCharacter("take my dog Doug for a walk", 'd');
+            var actual = utility.RemoveCharacter("Water bottle", 't');
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Retruns4ForHaveaveryMerryChristmas()
+        public void ReturnsSoakuptheunForSoakupthesuns()
         {
-            var expected = 4;
+            var expected = "Soak up the un";
 
             var utility = new Utility();
-            var actual = utility.SearchForCharacter("Have a very Merry Christmas", 'r');
+            var actual = utility.RemoveCharacter("Soak up the sun", 's');
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Retruns0ForNolowercasePshere()
+        public void ReturnsTrueFory()
         {
-            var expected = 0;
+            var expected = true;
 
             var utility = new Utility();
-            var actual = utility.SearchForCharacter("No lowercase Ps here", 'p');
+            var actual = utility.CheckIfyOrn("y");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForn()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfyOrn("n");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForz()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfyOrn("z");
 
             Assert.AreEqual(expected, actual);
         }

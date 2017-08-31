@@ -39,7 +39,7 @@ namespace Locate_Characters_Messages
             Console.WriteLine($"\nYour string contains {count} instances of {specificChar}. Press enter to continue.");
         }
 
-        public static void AddAnotherWord()
+        public static void SearchForAnotherCharacter()
         {
             Console.Write("\nWould you like to search for another character in your string? y/n: ");
         }
@@ -51,7 +51,7 @@ namespace Locate_Characters_Messages
 
         public static void ThankYou()
         {
-            Console.WriteLine("\nThank you for using my locate characters program. I hope that you enjoyed it.\nPress enter to close the program.");
+            Console.WriteLine("\nThank you for using my Locate Characters program. I hope that you enjoyed it.\nPress enter to close the program.");
         }
     }
 }

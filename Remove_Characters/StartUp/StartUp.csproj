@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F9CD05DD-09C5-4425-9768-0C2B4226DE6A}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{216FFE8A-1BFB-4B39-AFC7-C413CCA6F2A4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CheckForCharcter</RootNamespace>
-    <AssemblyName>CheckForCharcter</AssemblyName>
+    <RootNamespace>StartUp</RootNamespace>
+    <AssemblyName>StartUp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,13 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CheckForCharacter_Messages\CheckForCharacter_Messages.csproj">
-      <Project>{4bdb7275-f1fb-45ee-aadc-b6d5946c7f3d}</Project>
-      <Name>CheckForCharacter_Messages</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Remove_Characters\Remove_Characters.csproj">
+      <Project>{fdd21d6a-1f53-44f0-adb4-03dfb00faebc}</Project>
+      <Name>Remove_Characters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Remove_Characters_Messages\Remove_Characters_Messages.csproj">
+      <Project>{803dedf8-d72f-430f-9405-8eb2ff2df835}</Project>
+      <Name>Remove_Characters_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
