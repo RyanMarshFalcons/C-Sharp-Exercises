@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A465A31-FDFA-4025-8FD3-1830683EC1F6}</ProjectGuid>
+    <ProjectGuid>{C1F6C873-BE3A-455B-A0BF-87052BA10280}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Every_Third_Tests</RootNamespace>
-    <AssemblyName>Every_Third_Tests</AssemblyName>
+    <RootNamespace>Every_Nth_Character</RootNamespace>
+    <AssemblyName>Every_Nth_Character</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,7 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,17 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTests.cs" />
+    <Compile Include="Utility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Every_Third\Every_Third.csproj">
-      <Project>{afefaed9-a1d0-4d32-a35c-b7f64bf49f76}</Project>
-      <Name>Every_Third</Name>
+    <ProjectReference Include="..\Every_Nth_Character_Messages\Every_Nth_Character_Messages.csproj">
+      <Project>{e33f0658-9ea9-468b-bd96-d975b9feb28b}</Project>
+      <Name>Every_Nth_Character_Messages</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

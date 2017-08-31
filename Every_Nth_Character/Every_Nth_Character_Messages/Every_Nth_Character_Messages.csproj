@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AFEFAED9-A1D0-4D32-A35C-B7F64BF49F76}</ProjectGuid>
+    <ProjectGuid>{E33F0658-9EA9-468B-BD96-D975B9FEB28B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Every_Third</RootNamespace>
-    <AssemblyName>Every_Third</AssemblyName>
+    <RootNamespace>Every_Nth_Character_Messages</RootNamespace>
+    <AssemblyName>Every_Nth_Character_Messages</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Every_Third_Messages\Every_Third_Messages.csproj">
-      <Project>{230c851a-a0df-4f1a-b6cd-0f18ca87e863}</Project>
-      <Name>Every_Third_Messages</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
