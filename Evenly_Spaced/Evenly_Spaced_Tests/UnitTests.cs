@@ -34,67 +34,45 @@ namespace Evenly_Spaced_Tests
         }
 
         [TestMethod]
-        public void Return357For735()
+        public void Returns3122For4712810()
         {
-            var expected = new int[] { 3, 5, 7 };
+            var expected = new int[] { 3, 1, 2, 2 };
 
             var utility = new Utility();
-            var actual = utility.SortNums(new int[] { 7, 3, 5 });
+            var actual = utility.GetDiffs(new int[] { 4, 7, 12, 8, 10 });
 
             CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Return246For642()
+        public void Returns3221For94186()
         {
-            var expected = new int[] { 2, 4, 6 };
+            var expected = new int[] { 3, 2, 2, 1 };
 
             var utility = new Utility();
-            var actual = utility.SortNums(new int[] { 6, 4, 2 });
+            var actual = utility.GetDiffs(new int[] { 9, 4, 1, 8, 6 });
 
             CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns3For710()
-        {
-            var expected = 3;
-
-            var utility = new Utility();
-            var actual = utility.GetDifference(7, 10);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void Returns4For59()
-        {
-            var expected = 4;
-
-            var utility = new Utility();
-            var actual = utility.GetDifference(5, 9);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void ReturnsTrueFor55()
+        public void ReturnsTrueFor5555()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfEvenlySpaced(5, 5);
+            var actual = utility.CheckIfEvenlySpaced(new int[] { 5, 5, 5, 5 });
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseFor56()
+        public void ReturnsFalseFor5556()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfEvenlySpaced(5, 6);
+            var actual = utility.CheckIfEvenlySpaced(new int[] { 5, 5, 5, 6 });
 
             Assert.AreEqual(expected, actual);
         }

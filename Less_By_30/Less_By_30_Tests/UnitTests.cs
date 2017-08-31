@@ -34,56 +34,56 @@ namespace Less_By_30_Tests
         }
 
         [TestMethod]
-        public void Returns85For4712()
+        public void Returns8543For471289()
         {
-            var expected = new int[] { 8, 5 };
+            var expected = new int[] { 8, 5, 4, 3 };
 
             var utility = new Utility();
-            var actual = utility.GetDiffs(new int[] { 4, 7, 12 });
+            var actual = utility.GetDiffs(new int[] { 4, 7, 12, 8, 9 });
 
             CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns85For941()
+        public void Returns8551For94184()
         {
-            var expected = new int[] { 8, 5 };
+            var expected = new int[] { 8, 5, 5, 1 };
 
             var utility = new Utility();
-            var actual = utility.GetDiffs(new int[] { 9, 4, 1});
+            var actual = utility.GetDiffs(new int[] { 9, 4, 1, 8, 4});
 
             CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns2For3042()
+        public void Returns2For23293042()
         {
             var expected = 2;
 
             var utility = new Utility();
-            var actual = utility.IsLessBy30(new int[] { 30, 42 });
+            var actual = utility.IsLessBy30(new int[] { 23, 29, 30, 42 });
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns1For1374()
-        {
-            var expected = 1;
-
-            var utility = new Utility();
-            var actual = utility.IsLessBy30(new int[] { 13, 74 });
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void Returns0For2829()
+        public void Returns1For13192528()
         {
             var expected = 0;
 
             var utility = new Utility();
-            var actual = utility.IsLessBy30(new int[] { 28, 29 });
+            var actual = utility.IsLessBy30(new int[] { 13, 19, 25, 28 });
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns4For30354758()
+        {
+            var expected = 4;
+
+            var utility = new Utility();
+            var actual = utility.IsLessBy30(new int[] { 30, 35, 47, 58 });
 
             Assert.AreEqual(expected, actual);
         }

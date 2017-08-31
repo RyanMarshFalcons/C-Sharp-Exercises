@@ -14,15 +14,15 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var nums = new int[3];
+            var nums = new int[5];
             nums[0] = utility.GetValidNumber("first");
             nums[1] = utility.GetValidNumber("second");
             nums[2] = utility.GetValidNumber("third");
-            var sortedNums = utility.SortNums(nums);
-            var difference1 = utility.GetDifference(sortedNums[0], sortedNums[1]);
-            var difference2 = utility.GetDifference(sortedNums[1], sortedNums[2]);
-            var areEvenlySpaced = utility.CheckIfEvenlySpaced(difference1, difference2);
-            utility.DisplayResults(areEvenlySpaced, sortedNums[0], sortedNums[1], sortedNums[2], difference1, difference2);
+            nums[3] = utility.GetValidNumber("fourth");
+            nums[4] = utility.GetValidNumber("fifth");
+            var differences = utility.GetDiffs(nums);
+            var areEvenlySpaced = utility.CheckIfEvenlySpaced(differences);
+            utility.DisplayResults(areEvenlySpaced);
             Console.ReadLine();
         }
     }

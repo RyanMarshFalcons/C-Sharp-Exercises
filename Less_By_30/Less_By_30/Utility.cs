@@ -9,9 +9,9 @@ namespace Less_By_30
 {
     public class Utility
     {
-        public int GetValidNumber()
+        public int GetValidNumber(string entryNum)
         {
-            Message.EnterNumber();
+            Message.EnterNumber(entryNum);
             var isValidInput = false;
             var input = "";
             while (isValidInput == false)
@@ -19,7 +19,7 @@ namespace Less_By_30
                 input = Console.ReadLine();
                 if (CheckIfInt(input) == false)
                 {
-                    Message.NotANumber(input);
+                    Message.NotANumber(input, entryNum);
                 }
                 else
                 {
@@ -38,9 +38,11 @@ namespace Less_By_30
         public int[] GetDiffs(int[] nums)
         {
             Array.Sort(nums);
-            var numsDiffs = new int[2];
-            numsDiffs[0] = nums[2] - nums[0];
-            numsDiffs[1] = nums[2] - nums[1];
+            var numsDiffs = new int[4];
+            numsDiffs[0] = nums[4] - nums[0];
+            numsDiffs[1] = nums[4] - nums[1];
+            numsDiffs[2] = nums[4] - nums[2];
+            numsDiffs[3] = nums[4] - nums[3];
             return numsDiffs;
         }
 

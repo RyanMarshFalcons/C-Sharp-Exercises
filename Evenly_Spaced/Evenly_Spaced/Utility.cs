@@ -34,31 +34,41 @@ namespace Evenly_Spaced
             var num = 0;
             return int.TryParse(input, out num);
         }
-        
-        public int[] SortNums(int[] nums)
+
+        public int[] GetDiffs(int[] nums)
         {
             Array.Sort(nums);
-            return nums;
+            var numsDiffs = new int[4];
+            numsDiffs[0] = nums[1] - nums[0];
+            numsDiffs[1] = nums[2] - nums[1];
+            numsDiffs[2] = nums[3] - nums[2];
+            numsDiffs[3] = nums[4] - nums[3];
+            return numsDiffs;
         }
 
-        public int GetDifference(int num1, int num2)
+        public bool CheckIfEvenlySpaced(int[] differences)
         {
-            return num2 - num1;
-        }
-        public bool CheckIfEvenlySpaced(int difference1, int difference2)
-        {
-            return difference1 == difference2;
+            var firstDifference = differences[0];
+            var evenlySpaced = true;
+            for (int i = 1; i < differences.Length; i++)
+            {
+                if (differences[i] != firstDifference)
+                {
+                    evenlySpaced = false;
+                }
+            }
+            return evenlySpaced;
         }
 
-        public void DisplayResults(bool areEvenlySpaced, int num1, int num2, int num3, int space1, int space2)
+        public void DisplayResults(bool areEvenlySpaced)
         {
             if (areEvenlySpaced)
             {
-                Message.AreEvenlySpaced(num1, num2, num3, space1);
+                Message.AreEvenlySpaced();
             }
             else
             {
-                Message.AreNotEvenlySpaced(num1, num2, num3, space1, space2);
+                Message.AreNotEvenlySpaced();
             }
         }
     }

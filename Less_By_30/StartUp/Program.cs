@@ -14,11 +14,12 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var nums = new int[3];
-            for (int i = 0; i < nums.Length; i++)
-            {
-                nums[i] = utility.GetValidNumber();
-            }
+            var nums = new int[5];
+            nums[0] = utility.GetValidNumber("first");
+            nums[1] = utility.GetValidNumber("second");
+            nums[2] = utility.GetValidNumber("third");
+            nums[3] = utility.GetValidNumber("fourth");
+            nums[4] = utility.GetValidNumber("fifth");
             var numsDiffs = utility.GetDiffs(nums);
             var count = utility.IsLessBy30(numsDiffs);
             Message.IsLessByThirty(count);

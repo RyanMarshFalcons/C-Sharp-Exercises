@@ -10,18 +10,18 @@ namespace Less_By_30_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my Less By 30 program where you will enter three numbers and I will\ntell you whether or not one of your numbers is at least thirty less than anotherone of your numbers. Press enter to contine.");
+            Console.WriteLine("Welcome to my Less By 30 program where you will enter five numbers and I will\ntell you whether or not one of your numbers is at least thirty less than anotherone of your numbers. Press enter to contine.");
             Console.ReadLine();
         }
 
-        public static void EnterNumber()
+        public static void EnterNumber(string entryNum)
         {
-            Console.Write("\nPlease enter a number: ");
+            Console.Write($"\nPlease enter the {entryNum} number: ");
         }
 
-        public static void NotANumber(string input)
+        public static void NotANumber(string input, string entryNum)
         {
-            Console.Write($"\nSorry but {input} is not a number. Please input a number: ");
+            Console.Write($"\nSorry but {input} is not a number. Please enter the {entryNum} number: ");
         }
 
         public static void IsLessByThirty(int count)
