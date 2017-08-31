@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{399FDC76-3E4B-4931-939D-14DC4D21C5C1}</ProjectGuid>
+    <ProjectGuid>{47CFBA64-55E3-4BE5-A87E-B56AC088C9CA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
-    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <RootNamespace>StartUp</RootNamespace>
+    <AssemblyName>StartUp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,13 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Insert_Character\Insert_Character.csproj">
-      <Project>{aa34eac7-45f0-4c78-9684-9054bf97d454}</Project>
-      <Name>Insert_Character</Name>
+    <ProjectReference Include="..\Replace_Characters\Replace_Characters.csproj">
+      <Project>{b202973b-56b7-461c-b5ff-cf8ecc6cd3ad}</Project>
+      <Name>Replace_Characters</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Insert_Character_Messages\Insert_Character_Messages.csproj">
-      <Project>{c6576cd5-c1f2-4d82-bcfd-9eab72999f20}</Project>
-      <Name>Insert_Character_Messages</Name>
+    <ProjectReference Include="..\Replace_Characters_Messages\Replace_Characters_Messages.csproj">
+      <Project>{12f786bf-dadf-4ccf-81a5-aea2492bb81e}</Project>
+      <Name>Replace_Characters_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
