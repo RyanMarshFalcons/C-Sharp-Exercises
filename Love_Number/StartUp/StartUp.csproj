@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43252ED0-4FC6-4B31-854F-06A2419935C8}</ProjectGuid>
+    <ProjectGuid>{657BE243-FFF2-4089-94D6-314922742F85}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StartUp</RootNamespace>
@@ -50,13 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Love_Six\Love_Six.csproj">
-      <Project>{847f34a3-c289-40ab-b33f-54b36271e7d0}</Project>
-      <Name>Love_Six</Name>
+    <ProjectReference Include="..\Love_Number\Love_Number.csproj">
+      <Project>{9c921e2e-9424-444f-a5c5-3681fc8edec6}</Project>
+      <Name>Love_Number</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Love_Six_Messages\Love_Six_Messages.csproj">
-      <Project>{fc1dbc70-be04-415f-bdd7-b11ef625259e}</Project>
-      <Name>Love_Six_Messages</Name>
+    <ProjectReference Include="..\Love_Number_Messages\Love_Number_Messages.csproj">
+      <Project>{c5d4e586-b4d5-4d38-8edf-c4d3a43fe586}</Project>
+      <Name>Love_Number_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Love_Six;
+using Love_Number;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Love_Six_Tests
+namespace Love_Number_Tests
 {
     [TestClass]
     public class UnitTests
@@ -34,111 +34,111 @@ namespace Love_Six_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueFor6()
+        public void ReturnsTrueFor343()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfSix(6, 4);
+            var actual = utility.CheckIfLoveNum(3, 4, 3);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseForNo6s()
+        public void ReturnsFalseFor345()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfSix(7, 3);
+            var actual = utility.CheckIfLoveNum(3, 4, 5);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFor4and2()
+        public void ReturnsTrueFor8917()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfSumIsSix(4, 2);
+            var actual = utility.CheckIfSumIsLoveNum(8, 9, 17);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseFor4and3()
+        public void ReturnsFalseFor8916()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfSumIsSix(4, 3);
+            var actual = utility.CheckIfSumIsLoveNum(8, 9, 16);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFor7and1()
+        public void ReturnsTrueFor871()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDifferenceIsSix(7, 1);
+            var actual = utility.CheckIfDifferenceIsLoveNum(8, 7, 1);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseFor7and2()
+        public void ReturnsFalseFor861()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfDifferenceIsSix(7, 2);
+            var actual = utility.CheckIfDifferenceIsLoveNum(8, 6, 1);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFor3and2()
+        public void ReturnsTrueFor3515()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfProductIsSix(3, 2);
+            var actual = utility.CheckIfProductIsLoveNum(3, 5, 15);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseFor3and1()
+        public void ReturnsFalseFor4515()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfProductIsSix(3, 1);
+            var actual = utility.CheckIfProductIsLoveNum(4, 5, 15);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFor12and2()
+        public void ReturnsTrueFor1226()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.CheckIfQuotientIsSix(12, 2);
+            var actual = utility.CheckIfQuotientIsLoveNum(12, 2, 6);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseFor12and3()
+        public void ReturnsFalseFor1236()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfQuotientIsSix(12, 3);
+            var actual = utility.CheckIfQuotientIsLoveNum(12, 3, 6);
 
             Assert.AreEqual(expected, actual);
         }
