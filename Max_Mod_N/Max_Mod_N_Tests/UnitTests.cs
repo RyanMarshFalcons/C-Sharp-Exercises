@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Max_Mod_3;
+using Max_Mod_N;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Max_Mod_3_Tests
+namespace Max_Mod_N_Tests
 {
     [TestClass]
     public class UnitTests
@@ -34,6 +34,39 @@ namespace Max_Mod_3_Tests
         }
 
         [TestMethod]
+        public void ReturnsTrueForNegative1()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfNotZero("-1");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueFor1()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfNotZero("1");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseFor0()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfNotZero("0");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsTrueFor23And23()
         {
             var expected = true;
@@ -56,23 +89,23 @@ namespace Max_Mod_3_Tests
         }
 
         [TestMethod]
-        public void Returns5For5And4()
+        public void Returns15For10154()
         {
-            var expected = 5;
+            var expected = 15;
 
             var utility = new Utility();
-            var actual = utility.DetermineMorePowerful(5, 4);
+            var actual = utility.DetermineMorePowerful(10, 15, 4);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns4For7And4()
+        public void Returns10For10155()
         {
-            var expected = 4;
+            var expected = 10;
 
             var utility = new Utility();
-            var actual = utility.DetermineMorePowerful(7, 4);
+            var actual = utility.DetermineMorePowerful(10, 15, 5);
 
             Assert.AreEqual(expected, actual);
         }

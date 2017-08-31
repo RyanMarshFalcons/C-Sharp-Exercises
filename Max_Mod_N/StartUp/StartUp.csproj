@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4906AFDF-5293-4482-A350-A2A4C44B29C8}</ProjectGuid>
+    <ProjectGuid>{3B90A245-6D62-4606-B81F-7A7E39783ABC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StartUp</RootNamespace>
@@ -50,13 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Max_Mod_3\Max_Mod_3.csproj">
-      <Project>{b204e59b-d3be-48b6-b024-7dfe3d25b103}</Project>
-      <Name>Max_Mod_3</Name>
+    <ProjectReference Include="..\Max_Mod_N\Max_Mod_N.csproj">
+      <Project>{392c3d49-b507-4e60-82e9-69dffd609d87}</Project>
+      <Name>Max_Mod_N</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Max_Mod_3_Messages\Max_Mod_3_Messages.csproj">
-      <Project>{5cb477ea-5ba2-46c6-9bbf-2454c88f8176}</Project>
-      <Name>Max_Mod_3_Messages</Name>
+    <ProjectReference Include="..\Max_Mod_N_Messages\Max_Mod_N_Messages.csproj">
+      <Project>{ae535f9d-8212-4df3-8eea-1088c6759666}</Project>
+      <Name>Max_Mod_N_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

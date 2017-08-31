@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Max_Mod_3_Messages;
+using Max_Mod_N_Messages;
 
-namespace Max_Mod_3
+namespace Max_Mod_N
 {
     public class Utility
     {
-        public int GetValidNumber()
+        public int GetValidNumber(string firstSecondModulus)
         {
-            Message.InputNumber();
+            Message.InputNumber(firstSecondModulus);
             var isValidInput = false;
             var input = "";
             while (isValidInput == false)
@@ -19,11 +19,18 @@ namespace Max_Mod_3
                 input = Console.ReadLine();
                 if (CheckIfInt(input) == false)
                 {
-                    Message.NotANumber(input);
+                    Message.NotANumber(input, firstSecondModulus);
                 }
                 else
                 {
-                    isValidInput = true;
+                    if (CheckIfNotZero(input) == false)
+                    {
+                        Message.CantBeZero(firstSecondModulus);
+                    }
+                    else
+                    {
+                        isValidInput = true;
+                    }
                 }
             }
             return int.Parse(input);
@@ -35,16 +42,20 @@ namespace Max_Mod_3
             return int.TryParse(input, out num);
         }
 
+        public bool CheckIfNotZero(string input)
+        {
+            return int.Parse(input) != 0;
+        }
         public bool CheckIfEqual(int num1, int num2)
         {
             return num1 == num2;
         }
 
-        public int DetermineMorePowerful(int num1, int num2)
+        public int DetermineMorePowerful(int num1, int num2, int mod)
         {
             if (num1 > num2)
             {
-                if ((num1 % 3) != (num2 % 3))
+                if ((num1 % mod) != (num2 % mod))
                 {
                     return num1;
                 }
@@ -55,7 +66,7 @@ namespace Max_Mod_3
             }
             else
             {
-                if ((num2 % 3) != (num1 % 3))
+                if ((num2 % mod) != (num1 % mod))
                 {
                     return num2;
                 }
