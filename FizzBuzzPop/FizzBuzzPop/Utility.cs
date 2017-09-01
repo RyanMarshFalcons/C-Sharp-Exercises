@@ -9,7 +9,64 @@ namespace FizzBuzzPop
 {
     public class Utility
     {
-        public string EvaluateNumber(int num)
+        public string GetValidGuess(int num)
+        {
+            var input = "";
+            Message.EnterGuess(num);
+            var validInput = false;
+            while (validInput == false)
+            {
+                input = Console.ReadLine();
+                if (CheckIfValidGuess(input) == false)
+                {
+                    Message.InvalidGuess(input, num);
+                }
+                else
+                {
+                    validInput = true;
+                }
+            }
+            return input;
+        }
+
+        public bool CheckIfValidGuess(string input)
+        {
+            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G" || input == "H";
+        }
+
+        public string ConvertLetterToGuess(string guessLetter, int num)
+        {
+            switch (guessLetter)
+            {
+                case "A":
+                    return num.ToString();
+                    break;
+                case "B":
+                    return "Fizz";
+                    break;
+                case "C":
+                    return "Buzz";
+                    break;
+                case "D":
+                    return "Pop";
+                    break;
+                case "E":
+                    return "FizzBuzz";
+                    break;
+                case "F":
+                    return "FizzPop";
+                    break;
+                case "G":
+                    return "BuzzPop";
+                    break;
+                case "H":
+                default:
+                    return "FizzBuzzPop";
+                    break;
+            }
+        }
+
+        public string CalculateCorrectAnswer(int num)
         {
             if ((IsFizz(num)) && (IsBuzz(num)) && (IsPop(num)))
             {

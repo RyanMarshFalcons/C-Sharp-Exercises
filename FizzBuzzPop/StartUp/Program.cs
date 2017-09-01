@@ -14,11 +14,27 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            for (int num = 1; num < 251; num++)
+            var userGuessAsLetter = "";
+            var userGuess = "";
+            var correctAnswer = "";
+            var score = 0;
+            for (int num = 1; num < 1000000; num++)
             {
-                Console.WriteLine(utility.EvaluateNumber(num));
+                userGuessAsLetter = utility.GetValidGuess(num);
+                userGuess = utility.ConvertLetterToGuess(userGuessAsLetter, num);
+                correctAnswer = utility.CalculateCorrectAnswer(num);
+                if (userGuess == correctAnswer)
+                {
+                    Message.AnsweredCorrectly(userGuess, num);
+                    score += 1;
+                }
+                else
+                {
+                    Message.AnsweredIncorrectly(userGuess, correctAnswer, num);
+                    break;
+                }
             }
-            Message.ThankYou();
+            Message.ThankYou(score);
             Console.ReadLine();
         }
     }
