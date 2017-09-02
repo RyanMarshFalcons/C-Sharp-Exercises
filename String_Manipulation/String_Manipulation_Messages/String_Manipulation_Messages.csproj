@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B844A1A2-735B-4AD3-BD3F-ECC875C1582D}</ProjectGuid>
+    <ProjectGuid>{0B892699-151F-4D1C-B7AD-8519F4A26D21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>String_Manipulation</RootNamespace>
-    <AssemblyName>String_Manipulation</AssemblyName>
+    <RootNamespace>String_Manipulation_Messages</RootNamespace>
+    <AssemblyName>String_Manipulation_Messages</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\String_Manipulation_Messages\String_Manipulation_Messages.csproj">
-      <Project>{0b892699-151f-4d1c-b7ad-8519f4a26d21}</Project>
-      <Name>String_Manipulation_Messages</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
