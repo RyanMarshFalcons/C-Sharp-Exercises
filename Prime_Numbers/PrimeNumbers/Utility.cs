@@ -86,10 +86,10 @@ namespace PrimeNumbers
             var stringOfFactors = "";
             foreach (var factor in listOfFactors)
             {
-                stringOfFactors += " ";
+                stringOfFactors += ", ";
                 stringOfFactors += factor;
             }
-            return stringOfFactors;
+            return stringOfFactors + ",";
         }
     }
 }

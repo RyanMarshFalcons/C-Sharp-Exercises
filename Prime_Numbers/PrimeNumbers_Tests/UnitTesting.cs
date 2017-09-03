@@ -100,12 +100,23 @@ namespace PrimeNumbers_Tests
         }
 
         [TestMethod]
-        public void ConvertsListToString()
+        public void Converts2346812ListToString()
         {
-            var expected = " 2 3 4 6 8 12";
+            var expected = ", 2, 3, 4, 6, 8, 12,";
 
             var utility = new Utility();
             var actual = utility.ListToString(new List<int> { 2, 3, 4, 6, 8, 12 });
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Converts23468121624ListToString()
+        {
+            var expected = ", 2, 3, 4, 6, 8, 12, 16, 24,";
+
+            var utility = new Utility();
+            var actual = utility.ListToString(new List<int> { 2, 3, 4, 6, 8, 12, 16, 24 });
 
             Assert.AreEqual(expected, actual);
         }
