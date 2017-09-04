@@ -13,6 +13,7 @@ namespace Startup
     {
         static void Main(string[] args)
         {
+            Message.Welcome();
             var shapeType = GetShapeType();
             DisplayShapeCharacteristics(shapeType);
             Console.ReadLine();

@@ -8,15 +8,19 @@ namespace Messages
 {
     public static class Message
     {
+        public static void Welcome()
+        {
+            Console.WriteLine("Welcome to my shapes program where you will select a shape and input the\nnecessary measurements so that I can calculate the area and the perimeter of\nyour shape for you. Press enter to continue.");
+            Console.ReadLine();
+        }
         public static void SelectShapeType()
         {
-            Console.WriteLine($"Please select the shape you want to work with: \n(A) Square \n(B) Rectangle \n(C) Triangle");
-            Console.WriteLine("(D) Trapezoid \n(E) Circle");
+            Console.WriteLine($"Please select the shape you want to work with:\n(A) Square \n(B) Rectangle \n(C) Triangle\n(D) Trapezoid \n(E) Circle");
         }
 
         public static void InvalidShapeSelection(string input)
         {
-            Console.WriteLine($"\nI'm sorry but {input} is not a valid selection. Please try again.");
+            Console.WriteLine($"\nI'm sorry but {input} is not a valid selection.\nPlease select the shape you want to work with:\n(A) Square \n(B) Rectangle \n(C) Triangle\n(D) Trapezoid \n(E) Circle");
         }
 
         public static void PositiveDoubleWasNotInput(string lengthAsString)
@@ -33,6 +37,7 @@ namespace Messages
         {
             Console.WriteLine($"\nThe area of your {typeOfShape} is {area}");
             Console.WriteLine($"The perimeter of your {typeOfShape} is {perimeter}");
+            Console.WriteLine("Press enter to close the progam.");
         }
 
         public static void DisplaySquareCharacteristics()
@@ -55,6 +60,5 @@ namespace Messages
         {
             Console.WriteLine("\nA circle is perfectly round. The radius is the unchanging length between any \npoint on the perimeter and the center of the circle.");
         }
-
     }
 }
