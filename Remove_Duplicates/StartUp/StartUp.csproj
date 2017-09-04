@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{388BE61C-12FE-450D-A929-06334AFBFE25}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{7C691B41-2D85-4F95-863C-4300B6D4487E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Remove_Duplicates</RootNamespace>
-    <AssemblyName>Remove_Duplicates</AssemblyName>
+    <RootNamespace>StartUp</RootNamespace>
+    <AssemblyName>StartUp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,10 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Remove_Duplicates\Remove_Duplicates.csproj">
+      <Project>{388be61c-12fe-450d-a929-06334afbfe25}</Project>
+      <Name>Remove_Duplicates</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Remove_Duplicates_Messages\Remove_Duplicates_Messages.csproj">
       <Project>{f2d3b7ae-98f5-4f57-87bd-9f5722dc7a52}</Project>
       <Name>Remove_Duplicates_Messages</Name>
