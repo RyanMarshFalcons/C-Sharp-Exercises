@@ -52,26 +52,12 @@ namespace Mean
                     IsValidInput = true;
                 }
             }
-            if (input == "y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y";
         }
 
         public bool CheckIfyOrn(string input)
         {
-            if ((input == "y") || (input == "n"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y" || input == "n";
         }
 
         public double FindTheMean(List<double> numbers)

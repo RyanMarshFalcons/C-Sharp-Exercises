@@ -36,7 +36,7 @@ namespace Median_Messages
 
         public static void OutputMedian(int counter, double median)
         {
-            Console.WriteLine($"\nThe median of the {counter} numbers that you entered is: {median}");
+            Console.WriteLine($"\nThe median of the {counter} numbers that you entered is: {median}\nPress enter to close the program.");
         }
     }
 }

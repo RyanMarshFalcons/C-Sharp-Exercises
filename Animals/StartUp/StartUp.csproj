@@ -49,6 +49,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Animals\Animals.csproj">
+      <Project>{835eb9b3-5d44-4185-b230-a888e2cd7cd1}</Project>
+      <Name>Animals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Animals_Messages\Animals_Messages.csproj">
+      <Project>{ca8f9d9b-6314-4169-8691-adaaa1562365}</Project>
+      <Name>Animals_Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

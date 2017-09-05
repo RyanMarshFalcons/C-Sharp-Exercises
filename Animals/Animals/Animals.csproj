@@ -51,6 +51,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Toadfish.cs" />
     <Compile Include="Turtle.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Animals_Messages\Animals_Messages.csproj">
+      <Project>{ca8f9d9b-6314-4169-8691-adaaa1562365}</Project>
+      <Name>Animals_Messages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

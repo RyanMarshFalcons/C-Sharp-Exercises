@@ -12,6 +12,28 @@ namespace Word_Sorter_Tests
     public class UnitTests
     {
         [TestMethod]
+        public void ReturnsTrueForEmptyString()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsTooShort("");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForb()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsTooShort("b");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsTrueForCant()
         {
             var expected = true;

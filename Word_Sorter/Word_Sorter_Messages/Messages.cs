@@ -19,6 +19,11 @@ namespace Word_Sorter_Messages
             Console.Write("\nPlease enter a word: ");
         }
 
+        public static void NotLongEnough()
+        {
+            Console.Write("\nYou must input at least one characters for your word to be valid. Please try\nagain: ");
+        }
+
         public static void NotAWord(string input)
         {
             Console.Write($"\nSorry but {input} is not a word. Please input a word: ");
@@ -37,11 +42,6 @@ namespace Word_Sorter_Messages
         public static void WordsSortedBelow(int counter)
         {
             Console.WriteLine($"\nThe {counter} words that you entered have been sorted as follows: ");
-        }
-
-        public static void NoEmptyStrings()
-        {
-            Console.Write("\nSorry but you must input at least one character for your entry to qualify as a\nword. Please input a word: ");
         }
     }
 }

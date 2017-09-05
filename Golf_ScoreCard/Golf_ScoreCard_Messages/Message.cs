@@ -31,17 +31,17 @@ namespace Golf_ScoreCard_Messages
 
         public static void OverPar(int totalShots, int shotsOverPar)
         {
-            Console.WriteLine($"\nYou shot a {totalShots} which is {shotsOverPar} shots over par. Press enter to continue.");
+            Console.WriteLine($"\nYou shot a {totalShots} which is {shotsOverPar} shots over par. Press enter to close the program.");
         }
 
         public static void UnderPar(int totalShots, int shotsUnderPar)
         {
-            Console.WriteLine($"\nCongratulations you shot a {totalShots} which is {shotsUnderPar} shots under par!!! Press enter to\ncontinue.");
+            Console.WriteLine($"\nCongratulations you shot a {totalShots} which is {shotsUnderPar} shots under par!!! Press enter to\nclose the program.");
         }
 
         public static void EvenPar()
         {
-            Console.WriteLine($"\nIt looks like this course was built with you in mind because you just shot a 72 even par my friend. Press enter to continue.");
+            Console.WriteLine($"\nIt looks like this course was built with you in mind because you just shot a 72 even par my friend. Press enter to close the program.");
         }
     }
 }

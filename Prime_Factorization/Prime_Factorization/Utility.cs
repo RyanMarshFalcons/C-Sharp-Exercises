@@ -23,21 +23,37 @@ namespace Prime_Factorization
                 }
                 else
                 {
-                    isValidInput = true;
+                    if(CheckIfNegative(input))
+                    {
+                        Message.CantBeNegative(input);
+                    }
+                    else if (CheckIfZeroOrOne(input))
+                    {
+                        Message.CantBeZeroOrOne(input);
+                    }
+                    else
+                    {
+                        isValidInput = true;
+                    }
                 }
             }
-            return Int32.Parse(input);
+            return int.Parse(input);
         }
 
         public bool CheckIfInt(string input)
         {
             var num = 0;
-            return Int32.TryParse(input, out num);
+            return int.TryParse(input, out num);
         }
 
-        public bool CheckIfNegative(int num)
+        public bool CheckIfNegative(string input)
         {
-            return num < 0;
+            return int.Parse(input) < 0;
+        }
+
+        public bool CheckIfZeroOrOne(string input)
+        {
+            return int.Parse(input) == 0 || int.Parse(input) == 1;
         }
 
         public List<int> GetPossiblePrimeFactors(int num)
@@ -82,20 +98,14 @@ namespace Prime_Factorization
 
         public void DisplayResults(int num, bool isPrime, List<int> primeFactors)
         {
-            if ((num == 0) || (num == 1))
+
+            if (isPrime == true)
             {
-                Message.CantBeZeroOrOne(num);
+                Message.IsAPrimeNumber(num);
             }
             else
             {
-                if (isPrime == true)
-                {
-                    Message.IsAPrimeNumber(num);
-                }
-                else
-                {
-                    Message.CanBeFactorized(num, ListToString(primeFactors));
-                }
+                Message.CanBeFactorized(num, ListToString(primeFactors));
             }
         }
 
@@ -104,10 +114,10 @@ namespace Prime_Factorization
             var stringOfFactors = "";
             foreach (var factor in primeFactors)
             {
-                stringOfFactors += " ";
+                stringOfFactors += " * ";
                 stringOfFactors += factor;
             }
-            return stringOfFactors;
+            return stringOfFactors.Substring(2, stringOfFactors.Length-2);
         }
     }
 }

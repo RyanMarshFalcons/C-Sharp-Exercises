@@ -10,7 +10,7 @@ namespace Prime_Factorization_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my prime factorization program. Input a number and I will tell you\nwhat all of its prime number factors are. Press enter to continue.");
+            Console.WriteLine("Welcome to my prime factorization program. Input a number and I will tell you\nwhat the smallest prime numbers that multiplied together are equal to your\nnumber. Press enter to continue.");
             Console.ReadLine();
         }
 
@@ -23,24 +23,24 @@ namespace Prime_Factorization_Messages
         {
             Console.Write($"\nSorry but {input} is not a number. Please input a number: ");
         }
-        public static void CantBeNegative(int num)
+        public static void CantBeNegative(string input)
         {
-            Console.WriteLine($"\nSorry but {num} cannot be prime factorized because all prime numbers are positive.");
+            Console.Write($"\nSorry but {input} is not a valid entry because all prime numbers are positive.\nPlease input a number: ");
         }
 
-        public static void CantBeZeroOrOne(int num)
+        public static void CantBeZeroOrOne(string input)
         { 
-            Console.WriteLine($"\n{num} cannot be prime factorized because {num} is smaller than the smallest prime number which is 2.");
+            Console.Write($"\nSory but {input} is not a valid entry because the smallest prime number is 2. Please\ninput a number: ");
         }
 
         public static void IsAPrimeNumber(int num)
         {
-            Console.WriteLine($"\n{num} cannot be prime factorized because {num} itself is a prime number.");
+            Console.WriteLine($"\nUnfortunately {num} cannot be prime factorized because {num} itself is a prime\nnumber. Press enter to close the program.");
         }
 
         public static void CanBeFactorized(int num, string primeFactors)
         {
-            Console.WriteLine($"\n{num} is primary factored into:{primeFactors}");
+            Console.WriteLine($"\n{num} is primary factored into:{primeFactors}\nPress enter to close the program.");
         }
     }
 }

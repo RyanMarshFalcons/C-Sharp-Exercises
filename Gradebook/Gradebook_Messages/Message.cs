@@ -41,7 +41,7 @@ namespace Gradebook_Messages
 
         public static void DisplayGrade(double grade, string letterGrade)
         {
-            Console.WriteLine($"\nYour final grade for the class is {grade} which translates into a {letterGrade}.\nPress enter to continue.");
+            Console.WriteLine($"\nYour final grade for the class is {grade} which translates into a {letterGrade}.\nPress enter to close the program.");
         }
     }
 }

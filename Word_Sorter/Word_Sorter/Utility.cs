@@ -17,9 +17,9 @@ namespace Word_Sorter
             while (isValidInput == false)
             {
                 input = Console.ReadLine();
-                if (input == "")
+                if (IsTooShort(input))
                 {
-                    Message.NoEmptyStrings();
+                    Message.NotLongEnough();
                 }
                 else if (CheckIfWord(input) == false)
                 {
@@ -31,6 +31,11 @@ namespace Word_Sorter
                 }
             }
             return input;
+        }
+
+        public bool IsTooShort(string input)
+        {
+            return input.Length < 1;
         }
 
         public bool CheckIfWord(string input)
@@ -67,26 +72,12 @@ namespace Word_Sorter
                     IsValidInput = true;
                 }
             }
-            if (input == "y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y";
         }
 
         public bool CheckIfyOrn(string input)
         {
-            if ((input == "y") || (input == "n"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y" || input == "n";
         }
 
         public List<string> SortTheWords(List<string> words)

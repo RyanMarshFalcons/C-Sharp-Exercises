@@ -36,7 +36,7 @@ namespace Mean_Messages
 
         public static void OutputMean(int counter, double mean)
         {
-            Console.WriteLine($"\nThe mean of the {counter} numbers that you entered is: {mean}");
+            Console.WriteLine($"\nThe mean of the {counter} numbers that you entered is: {mean}\nPress enter to close the program.");
         }
     }
 }
