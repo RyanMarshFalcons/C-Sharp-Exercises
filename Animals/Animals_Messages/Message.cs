@@ -21,7 +21,7 @@ namespace Animals_Messages
 
         public static void NotAValidSelection(string input)
         {
-            Console.WriteLine($"\nSorry but {input} is not a valid selection.\nSelect an animal:\nA) Cat\nB) Cow\nC) Crocodile\nD) Dog\nE) Goldfish\nF) Goose\nG) Parrot\nH) Toadfish\nI) Turtle");
+            Console.Write($"\nSorry but {input} is not a valid selection.\nSelect an animal:\nA) Cat\nB) Cow\nC) Crocodile\nD) Dog\nE) Goldfish\nF) Goose\nG) Parrot\nH) Toadfish\nI) Turtle");
         }
 
         public static void AddAnotherAnimal()
@@ -32,6 +32,41 @@ namespace Animals_Messages
         public static void NotyOrn()
         {
             Console.Write($"\nSorry but you must input a y or an n. Please input y or n to procede: ");
+        }
+
+        public static void AskName(string animalType)
+        {
+            Console.WriteLine($"\nPlease enter the name of your {animalType}: ");
+        }
+
+        public static void NotLongEnough(string animalType)
+        {
+            Console.Write("\nYou must input at least one character for an animal's name.\nPlease enter the name of your {animalType}: ");
+        }
+
+        public static void AskAge(string name)
+        {
+            Console.WriteLine($"\nPlease enter how many years old {name} is: ");
+        }
+
+        public static void NotANumber(string input, string name)
+        {
+            Console.Write($"\nSorry but {input} is not a number. Please enter\nhow many years old {name} is: ");
+        }
+
+        public static void CantBeNegative(string name)
+        {
+            Console.Write($"\nSorry but age cannot be negative. Please enter\nhow many years old {name} is: ");
+        }
+
+        public static void AskGender(string name, string animalType)
+        {
+            Console.WriteLine($"\nIs {name} a male or a female {animalType}:\nA) Female\nB) Male");
+        }
+
+        public static void InvalidGender(string input, string name, string animalType)
+        {
+            Console.WriteLine($"\nSorry but {input} is not a valid selection.\nIs {name} a male or a female {animalType}:\nA) Female\nB) Male");
         }
     }
 }

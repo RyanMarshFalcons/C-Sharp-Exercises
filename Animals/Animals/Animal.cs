@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
+    public enum Gender { Female, Male};
     public interface Animal
     {
         string Name { get; set; }
 
-        string Age { get; set; }
+        int Age { get; set; }
 
-        bool Female { get; set; }
+        Gender gender { get; set; }
 
         string Classification();
 

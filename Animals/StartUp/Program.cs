@@ -15,8 +15,21 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var selection = utility.GetValidAnimalSelection();
+            var AnimalSelection = "";
+            var typeOfAnimal = new TypeOfAnimal();
+            var enterAnotherAnimal = true;
+            var listOfAnimals = new List<Animal>();
+            do
+            {
+                AnimalSelection = utility.GetValidAnimalSelection();
+                typeOfAnimal = utility.ConvertLetterToAnimalType(AnimalSelection);
+                var animal = utility.MakeNewAnimal(typeOfAnimal);
+                animal.Name = utility.GetAnimalName(typeOfAnimal.ToString());
+                animal.Age = utility.GetAnimalAge(animal.Name);
+                animal.gender = utility.GetAnimalGender(animal.Name, typeOfAnimal.ToString());
 
+                enterAnotherAnimal = utility.AskToContinue();
+            } while (true);
             Console.ReadLine();
         }
     }

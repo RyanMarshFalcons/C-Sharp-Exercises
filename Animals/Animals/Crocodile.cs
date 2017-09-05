@@ -8,9 +8,9 @@ namespace Animals
 {
     public class Crocodile : Animal
     {
-        public string Age { get; set; }
+        public int Age { get; set; }
 
-        public bool Female { get; set; }
+        public Gender gender { get; set; }
 
         public string Name { get; set; }
 
