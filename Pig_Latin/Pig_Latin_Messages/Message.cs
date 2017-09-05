@@ -36,7 +36,7 @@ namespace Pig_Latin_Messages
 
         public static void DisplayInPigLatin(string input, string inputAsPigLatin)
         {
-            Console.WriteLine($"\n{input} translated into pig Latin is {inputAsPigLatin}.");
+            Console.WriteLine($"\n{input} translated into pig Latin is {inputAsPigLatin}.\nPress enter to close the program.");
         }
 
     }

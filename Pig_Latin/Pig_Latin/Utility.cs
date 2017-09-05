@@ -17,7 +17,7 @@ namespace Pig_Latin
             while (isValidInput == false)
             {
                 input = Console.ReadLine();
-                if (input == "")
+                if (IsTooShort(input))
                 {
                     Message.NoEmptyStrings();
                 }
@@ -35,6 +35,11 @@ namespace Pig_Latin
                 }
             }
             return input;
+        }
+
+        public bool IsTooShort(string input)
+        {
+            return input.Length < 1;
         }
 
         public bool CheckIfHasSpaces(string input)

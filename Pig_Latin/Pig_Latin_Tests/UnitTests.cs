@@ -12,6 +12,28 @@ namespace Pig_Latin_Tests
     public class UnitTests
     {
         [TestMethod]
+        public void ReturnsTrueForEmptyString()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsTooShort("");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForQ()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsTooShort("Q");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsTrueIfHasSpaces()
         {
             var expected = true;

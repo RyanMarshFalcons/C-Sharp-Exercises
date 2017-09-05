@@ -9,7 +9,7 @@ namespace Acronyms
 {
     public class Utility
     {
-        public string GetUserInput()
+        public string GetUserString()
         {
             var userInput = "";
             Message.RequestUserInput();
@@ -17,21 +17,44 @@ namespace Acronyms
             while (validInput == false)
             {
                 userInput = Console.ReadLine();
-                if (IsToShort(userInput))
+                if (IsTooShort(userInput))
                 {
                     Message.NotLongEnough();
                 }
                 else
                 {
-                    validInput = true;
+                    if (ContainsAWord(userInput) == false)
+                    {
+                        Message.NoWords();
+                    }
+                    else
+                    {
+                        validInput = true;
+                    }
                 }
             }
             return userInput;
         }
 
-        public bool IsToShort(string input)
+        public bool IsTooShort(string input)
         {
             return input.Length < 2;
+        }
+
+        public bool ContainsAWord(string input)
+        {
+            var hasAWord = false;
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (Char.IsLetter(input[i]))
+                {
+                    if (i == 0 || input[i - 1] == ' ')
+                    {
+                        hasAWord = true;
+                    }
+                }
+            }
+            return hasAWord;
         }
 
         public string ConvertToAcronym(string userInput)
@@ -49,18 +72,6 @@ namespace Acronyms
                 }
             }
             return acronym.ToString().ToUpper();
-        }
-
-        public void DisplayResults(string userInput, string acronym)
-        {
-            if (acronym.Length == 0)
-            {
-                Message.NoLetters();
-            }
-            else
-            {
-                Message.DisplayResult(userInput, acronym);
-            }
         }
     }
 }

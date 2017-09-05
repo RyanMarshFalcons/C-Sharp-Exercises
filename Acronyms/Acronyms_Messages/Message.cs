@@ -24,14 +24,14 @@ namespace Acronyms_Messages
             Console.Write("\nYou must input at least two characters for your string to be valid. Please try\nagain: ");
         }
 
-        public static void NoLetters()
+        public static void NoWords()
         {
-            Console.WriteLine("\nThere were no letters in your input therefore no acronym can be formed.");
+            Console.Write("\nYou must input at least one word for your string to be valid. Please try\nagain: ");
         }
 
-        public static void DisplayResult(string userInput, string acronym)
+        public static void DisplayResult(string userString, string acronym)
         {
-            Console.WriteLine($"\n{userInput} converts into the acronym {acronym}");
+            Console.WriteLine($"\n{userString} converts into the acronym {acronym}\nPress enter to close the program.");
         }
 
     }

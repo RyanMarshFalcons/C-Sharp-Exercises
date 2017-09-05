@@ -17,7 +17,7 @@ namespace Acronyms_Tests
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.IsToShort("a");
+            var actual = utility.IsTooShort("a");
 
             Assert.AreEqual(expected, actual);
         }
@@ -28,11 +28,32 @@ namespace Acronyms_Tests
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsToShort("ab");
+            var actual = utility.IsTooShort("ab");
 
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ReturnsTrueForPeterPan()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.ContainsAWord("Peter Pan");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueFor1Peter2Pan()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.ContainsAWord("1Peter 2Pan");
+
+            Assert.AreEqual(expected, actual);
+        }
 
         [TestMethod]
         public void ReturnsKFC()

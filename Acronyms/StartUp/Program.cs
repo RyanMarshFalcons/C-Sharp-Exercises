@@ -14,9 +14,9 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var input = utility.GetUserInput();
-            var acronym = utility.ConvertToAcronym(input);
-            utility.DisplayResults(input, acronym);
+            var userString = utility.GetUserString();
+            var acronym = utility.ConvertToAcronym(userString);
+            Message.DisplayResult(userString, acronym);
             Console.ReadLine();
         }
     }
