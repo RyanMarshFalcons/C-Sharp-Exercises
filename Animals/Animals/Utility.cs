@@ -7,8 +7,32 @@ using Animals_Messages;
 
 namespace Animals
 {
-    class Utility
+    public class Utility
     {
+        public string GetValidAnimalSelection()
+        {
+            Message.SelectAnimal();
+            var isValidInput = false;
+            var input = "";
+            while (isValidInput == false)
+            {
+                input = Console.ReadLine();
+                if (CheckIfValidSelection(input) == false)
+                {
+                    Message.NotAValidSelection(input);
+                }
+                else
+                {
+                    isValidInput = true;
+                }
+            }
+            return input;
+        }
+
+        public bool CheckIfValidSelection(string input)
+        {
+            return (input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G" || input == "H" || input == "I");
+        }
         public bool AskToContinue()
         {
             var IsValidInput = false;

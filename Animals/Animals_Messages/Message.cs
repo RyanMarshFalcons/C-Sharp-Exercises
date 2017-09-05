@@ -10,18 +10,18 @@ namespace Animals_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my Animals program where you will enter information about animals and then I will display even more information about them to you in a manner of your choosing. Press enter to continue.");
+            Console.WriteLine("Hello and welcome to my Animals program where you will enter information about\nanimals and then I will display even more information about them to you in a\nmanner of your choosing. Press enter to continue.");
             Console.ReadLine();
         }
 
         public static void SelectAnimal()
         {
-            Console.Write("\nSelect an animal:\nA) Cat\nB) Cow\nC) Crocodile\nD) Dog\nE) Goldfish\nF) Goose\nG) Parrot\nH) Toadfish\nI) Turtle");
+            Console.WriteLine("Select an animal:\nA) Cat\nB) Cow\nC) Crocodile\nD) Dog\nE) Goldfish\nF) Goose\nG) Parrot\nH) Toadfish\nI) Turtle");
         }
 
-        public static void NotAWord(string input)
+        public static void NotAValidSelection(string input)
         {
-            Console.Write($"\nSorry but {input} is not a word. Please input a word: ");
+            Console.WriteLine($"\nSorry but {input} is not a valid selection.\nSelect an animal:\nA) Cat\nB) Cow\nC) Crocodile\nD) Dog\nE) Goldfish\nF) Goose\nG) Parrot\nH) Toadfish\nI) Turtle");
         }
 
         public static void AddAnotherAnimal()

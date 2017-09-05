@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    interface Animal
+    public interface Animal
     {
         string Name { get; set; }
 
@@ -23,6 +23,5 @@ namespace Animals
         string NoiseMakes();
 
         bool LaysEggs();
-
     }
 }

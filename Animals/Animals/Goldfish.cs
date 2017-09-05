@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    class Goldfish : Animal 
+    public class Goldfish : Animal 
     {
         public string Age { get; set; }
 
