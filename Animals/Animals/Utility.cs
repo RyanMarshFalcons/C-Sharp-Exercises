@@ -202,7 +202,7 @@ namespace Animals
                 input = Console.ReadLine();
                 if (CheckIfValidGender(input) == false)
                 {
-                    Message.NotAValidSelection(input);
+                    Message.InvalidGender(input, name, animalType);
                 }
                 else
                 {
@@ -222,6 +222,26 @@ namespace Animals
         public bool CheckIfValidGender(string input)
         {
             return input == "A" || input == "B";
+        }
+
+        public void DisplayReslts(List<Animal> animals)
+        {
+            Message.DisplayResults();
+            for (int i = 0; i < animals.Count; i++)
+            {
+                Console.WriteLine($"Animal number {i+1}");
+                Console.WriteLine($"Type of animal: {animals[i].TypeOfAnimal()}");
+                Console.WriteLine($"Name: {animals[i].Name}");
+                Console.WriteLine($"Age: {animals[i].Age} years old");
+                Console.WriteLine($"Gender {animals[i].Gender}");
+                Console.WriteLine($"Classification: {animals[i].Classification()}");
+                Console.WriteLine($"Body temperature control: {animals[i].BodyTemperature()}");
+                Console.WriteLine($"Number of legs: {animals[i].NumberOfLegs()}");
+                Console.WriteLine($"Noise makes: {animals[i].NoiseMakes()}");
+                Console.WriteLine($"Lays eggs: { animals[i].LaysEggs()}");
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
+            }
         }
     }
 }

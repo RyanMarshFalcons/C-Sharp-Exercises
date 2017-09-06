@@ -26,10 +26,12 @@ namespace StartUp
                 var animal = utility.MakeNewAnimal(typeOfAnimal);
                 animal.Name = utility.GetAnimalName(typeOfAnimal.ToString());
                 animal.Age = utility.GetAnimalAge(animal.Name);
-                animal.gender = utility.GetAnimalGender(animal.Name, typeOfAnimal.ToString());
-
+                animal.Gender = utility.GetAnimalGender(animal.Name, typeOfAnimal.ToString());
+                listOfAnimals.Add(animal);
                 enterAnotherAnimal = utility.AskToContinue();
-            } while (true);
+            } while (enterAnotherAnimal);
+            utility.DisplayReslts(listOfAnimals);
+            Message.ThankYou();
             Console.ReadLine();
         }
     }

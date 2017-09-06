@@ -10,9 +10,14 @@ namespace Animals
     {
         public int Age { get; set; }
 
-        public Gender gender { get; set; }
+        public Gender Gender { get; set; }
 
         public string Name { get; set; }
+
+        public TypeOfAnimal TypeOfAnimal()
+        {
+            return Animals.TypeOfAnimal.Goldfish;
+        }
 
         public string Classification()
         {
@@ -26,7 +31,7 @@ namespace Animals
 
         public string NoiseMakes()
         {
-            return "kiss";
+            return "Kiss";
         }
 
         public int NumberOfLegs()
@@ -34,9 +39,9 @@ namespace Animals
             return 0;
         }
 
-        public bool WarmBlooded()
+        public Body_Temperature BodyTemperature()
         {
-            return false;
+            return Body_Temperature.Cold_Blooded;
         }
     }
 }

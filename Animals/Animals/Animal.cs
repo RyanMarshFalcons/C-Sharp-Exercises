@@ -7,17 +7,21 @@ using System.Threading.Tasks;
 namespace Animals
 {
     public enum Gender { Female, Male};
+    public enum Body_Temperature { Warm_Blooded, Cold_Blooded};
+
     public interface Animal
     {
         string Name { get; set; }
 
         int Age { get; set; }
 
-        Gender gender { get; set; }
+        Gender Gender { get; set; }
+
+        TypeOfAnimal TypeOfAnimal();
 
         string Classification();
 
-        bool WarmBlooded();
+        Body_Temperature BodyTemperature();
 
         int NumberOfLegs();
 
