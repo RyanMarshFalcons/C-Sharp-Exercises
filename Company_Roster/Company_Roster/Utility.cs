@@ -197,7 +197,7 @@ namespace Company_Roster
 
         public bool AdressIsTooShort(string input)
         {
-            return input.Length < 10;
+            return input.Length < 15;
         }
 
         public bool HasNumbers(string input)
@@ -213,8 +213,49 @@ namespace Company_Roster
             return foundNumber;
         }
 
+        public string GetPhoneNumber(string name)
+        {
+            var userInput = "";
+            Message.AskPhoneNumber(name);
+            var validInput = false;
+            while (validInput == false)
+            {
+                userInput = Console.ReadLine();
+                if (PhoneNumberIsTooShort(userInput))
+                {
+                    Message.PhoneNumberNotLongEnough(name);
+                }
+                else
+                {
+                    if (HasLetters(userInput))
+                    {
+                        Message
+                    }
+                    else
+                    {
+                        validInput = true;
+                    }
+                }
+            }
+            return userInput;
+        }
 
+        public bool PhoneNumberIsTooShort(string input)
+        {
+            return input.Length < 10;
+        }
 
-
+        public bool HasLetters(string input)
+        {
+            var foundLetter = false;
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (Char.IsLetter(input[i]))
+                {
+                    foundLetter = true;
+                }
+            }
+            return foundLetter;
+        }
     }
 }

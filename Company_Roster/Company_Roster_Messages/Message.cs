@@ -66,12 +66,27 @@ namespace Company_Roster_Messages
 
         public static void AdressNotLongEnough(string name, string homeBillingShipping)
         {
-            Console.Write($"\nYou must input at ten characters for {name}'s {homeBillingShipping} address. Please enter {name}'s {homeBillingShipping} address: ");
+            Console.Write($"\nYou must input at fifteen characters for {name}'s {homeBillingShipping} address. Please enter {name}'s {homeBillingShipping} address: ");
         }
 
         public static void AdressLacksNumbers(string name, string homeBillingShipping)
         {
             Console.Write($"\nYou did not include any numbers for {name}'s {homeBillingShipping} address. Please enter {name}'s {homeBillingShipping} address: ");
+        }
+
+        public static void AskPhoneNumber(string name)
+        {
+            Console.Write($"Please enter {name}'s phone number: ");
+        }
+
+        public static void PhoneNumberNotLongEnough(string name)
+        {
+            Console.Write($"\nYou must input at ten characters for {name}'s phone number. Please enter {name}'s phone number: ");
+        }
+
+        public static void PhoneNumberHasLetters(string name)
+        {
+            Console.Write($"\nPhone numbers cannot contain letters. Please enter {name}'s phone number: ");
         }
     }
 }
