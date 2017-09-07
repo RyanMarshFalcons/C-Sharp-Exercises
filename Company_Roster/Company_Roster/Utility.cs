@@ -7,7 +7,7 @@ using Company_Roster_Messages;
 
 namespace Company_Roster
 {
-    public enum TypeOfPerson { Customer, Employee, Manager };
+    public enum TypeOfPerson { Customer, Employee };
     public class Utility
     {
         public string GetValidPersonSelection()
@@ -20,7 +20,7 @@ namespace Company_Roster
                 input = Console.ReadLine();
                 if (CheckIfValidSelection(input) == false)
                 {
-                    Message.NotAValidSelection(input);
+                    Message.NotAValidPersonTypeSelection(input);
                 }
                 else
                 {
@@ -67,11 +67,8 @@ namespace Company_Roster
                     return TypeOfPerson.Customer;
                     break;
                 case "B":
-                    return TypeOfPerson.Employee;
-                    break;
-                case "C":
                 default:
-                    return TypeOfPerson.Manager;
+                    return TypeOfPerson.Employee;
                     break;
             }
         }
@@ -81,14 +78,15 @@ namespace Company_Roster
             switch (personType)
             {
                 case TypeOfPerson.Customer:
-                    return new Customer();
+                    var customer = new Customer();
+                    customer.Person_Type = TypeOfPerson.Customer;
+                    return customer;
                     break;
                 case TypeOfPerson.Employee:
-                    return new Employee();
-                    break;
-                case TypeOfPerson.Manager:
                 default:
-                    return new Manager();
+                    var employee = new Employee();
+                    employee.Person_Type = TypeOfPerson.Employee;
+                    return employee;
                     break;
             }
         }
@@ -116,6 +114,51 @@ namespace Company_Roster
         public bool NameIsTooShort(string input)
         {
             return input.Length < 1;
+        }
+
+        public string GetPrefixSelection(string name)
+        {
+            var userInput = "";
+            Message.AskPrefix(name);
+            var validInput = false;
+            while (validInput == false)
+            {
+                userInput = Console.ReadLine();
+                if (IsValidPrefixSelection(userInput) == false)
+                {
+                    Message.InvalidPrefixSelection(userInput, name);
+                }
+                else
+                {
+                    validInput = true;
+                }
+            }
+            return userInput;
+        }
+
+        public bool IsValidPrefixSelection(string input)
+        {
+            return input == "A" || input == "B" || input == "C" || input == "D";
+        } 
+
+        public Prefix ConvertLetterToPrefix(string prefixSelection)
+        {
+            switch (prefixSelection)
+            {
+                case "A":
+                    return Prefix.Mr;
+                    break;
+                case "B":
+                    return Prefix.Mrs;
+                    break;
+                case "C":
+                    return Prefix.Ms;
+                    break;
+                case "D":
+                default:
+                    return Prefix.Miss;
+                    break;
+            }
         }
 
         public string GetEmail(string name)
@@ -229,7 +272,7 @@ namespace Company_Roster
                 {
                     if (HasLetters(userInput))
                     {
-                        Message
+                        Message.PhoneNumberHasLetters(name);
                     }
                     else
                     {
@@ -257,5 +300,161 @@ namespace Company_Roster
             }
             return foundLetter;
         }
+
+        public int GetCreditCardNumber(string name)
+        {
+            var userInput = "";
+            Message.AskCreditCardNumber(name);
+            var validInput = false;
+            while (validInput == false)
+            {
+                userInput = Console.ReadLine();
+                if (CheckIfInt(userInput) == false)
+                {
+                    Message.CreditCardNotAllNumbers(name);
+                }
+                else
+                {
+                    if (CheckIfValidCreditCardLength(userInput))
+                    {
+                        Message.InvalidCreditCardLength(name);
+                    }
+                    else
+                    {
+                        validInput = true;
+                    }
+                }
+            }
+            return int.Parse(userInput);
+        }
+
+        public bool CheckIfInt(string input)
+        {
+            int result;
+            return int.TryParse(input, out result);
+        }
+
+        public bool CheckIfValidCreditCardLength(string input)
+        {
+            return input.Length >= 13 && input.Length <= 16;
+        }
+
+        public string GetJobTitle(string name)
+        {
+            var userInput = "";
+            Message.AskJobTitle(name);
+            var validInput = false;
+            while (validInput == false)
+            {
+                userInput = Console.ReadLine();
+                if (JobTitleIsTooShort(userInput))
+                {
+                    Message.JobTitleTooShort(name);
+                }
+                else
+                {
+                    validInput = true;
+                }
+            }
+            return userInput;
+        }
+
+        public bool JobTitleIsTooShort(string input)
+        {
+            return input.Length < 4;
+        }
+
+        public string GetDepartmentSelection(string name, string jobTitle)
+        {
+            var userInput = "";
+            Message.AskDepartment(name, jobTitle);
+            var validInput = false;
+            while (validInput == false)
+            {
+                userInput = Console.ReadLine();
+                if (IsValidDepartmentSelection(userInput) == false)
+                {
+                    Message.InvalidDepartmentSelection(userInput, name, jobTitle);
+                }
+                else
+                {
+                    validInput = true;
+                }
+            }
+            return userInput;
+        }
+
+        public bool IsValidDepartmentSelection(string input)
+        {
+            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
+        }
+
+        public Department ConvertLetterToDepartment(string departmentSelection)
+        {
+            switch (departmentSelection)
+            {
+                case "A":
+                    return Department.Accounting;
+                    break;
+                case "B":
+                    return Department.IT;
+                    break;
+                case "C":
+                    return Department.Sales;
+                    break;
+                case "D":
+                    return Department.Human_Resources;
+                    break;
+                case "E":
+                    return Department.Customer_Service;
+                    break;
+                case "F":
+                    return Department.Product_Development;
+                    break;
+                case "G":
+                default:
+                    return Department.Custodial;
+                    break;
+            }
+        }
+
+        public double GetSalary(string name, string jobTitle, Department department)
+        {
+            var userInput = "";
+            Message.AskSalary(name, jobTitle, department.ToString());
+            var validInput = false;
+            while (validInput == false)
+            {
+                userInput = Console.ReadLine();
+                if (CheckIfDouble(userInput) == false)
+                {
+                    Message.SalaryNotANumber(userInput, name, jobTitle, department.ToString());
+                }
+                else
+                {
+                    if (CheckIfValidSalary(userInput) == false)
+                    {
+                        Message.SalaryTooLow(name, jobTitle, department.ToString());
+                    }
+                    else
+                    {
+                        validInput = true;
+                    }
+                }
+            }
+            return double.Parse(userInput);
+        }
+
+        public bool CheckIfDouble(string input)
+        {
+            var result = 0.0;
+            return double.TryParse(input, out result);
+        }
+
+        public bool CheckIfValidSalary(string input)
+        {
+            return double.Parse(input) > 15000;
+        }
+
     }
 }
