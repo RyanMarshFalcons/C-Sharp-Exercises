@@ -26,7 +26,7 @@ namespace Company_Roster
 
         public string Full_Name()
         {
-            return First_Name + " " + Last_Name;
+            return Prefix.ToString() + ". " + First_Name + " " + Last_Name;
         }
     }
 }

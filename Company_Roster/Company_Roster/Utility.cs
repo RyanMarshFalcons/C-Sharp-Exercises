@@ -73,22 +73,39 @@ namespace Company_Roster
             }
         }
 
-        public Person MakeNewPerson(TypeOfPerson personType)
+        public Customer GetCustomerInfo()
         {
-            switch (personType)
-            {
-                case TypeOfPerson.Customer:
-                    var customer = new Customer();
-                    customer.Person_Type = TypeOfPerson.Customer;
-                    return customer;
-                    break;
-                case TypeOfPerson.Employee:
-                default:
-                    var employee = new Employee();
-                    employee.Person_Type = TypeOfPerson.Employee;
-                    return employee;
-                    break;
-            }
+            var customer = new Customer();
+            customer.Person_Type = TypeOfPerson.Customer;
+            customer.First_Name = GetName(customer.Person_Type.ToString(), "first");
+            customer.Last_Name = GetName(customer.Person_Type.ToString(), "last");
+            var prefixSelection = GetPrefixSelection(customer.First_Name, customer.Last_Name);
+            customer.Prefix = ConvertLetterToPrefix(prefixSelection);
+            customer.Email_Address = GetEmail(customer.Full_Name());
+            customer.Home_Address = GetAddress(customer.Full_Name(), "home");
+            customer.Phone_Number = GetPhoneNumber(customer.Full_Name());
+            customer.Credit_Card_Number = GetCreditCardNumber(customer.Full_Name());
+            customer.Billing_Address = GetAddress(customer.Full_Name(), "billing");
+            customer.Shipping_Address = GetAddress(customer.Full_Name(), "shipping");
+            return customer;
+        }
+
+        public Employee GetEmployeeInfo()
+        {
+            var employee = new Employee();
+            employee.Person_Type = TypeOfPerson.Employee;
+            employee.First_Name = GetName(employee.Person_Type.ToString(), "first");
+            employee.Last_Name = GetName(employee.Person_Type.ToString(), "last");
+            var prefixSelection = GetPrefixSelection(employee.First_Name, employee.Last_Name);
+            employee.Prefix = ConvertLetterToPrefix(prefixSelection);
+            employee.Email_Address = GetEmail(employee.Full_Name());
+            employee.Home_Address = GetAddress(employee.Full_Name(), "home");
+            employee.Phone_Number = GetPhoneNumber(employee.Full_Name());
+            employee.Job_Title = GetJobTitle(employee.Full_Name());
+            var departmentSelection = GetDepartmentSelection(employee.Full_Name(), employee.Job_Title);
+            employee.Department = ConvertLetterToDepartment(departmentSelection);
+            employee.Yearly_Salary = GetSalary(employee.Full_Name(), employee.Job_Title, employee.Department);
+            return employee;
         }
 
         public string GetName(string personType, string firstLast)
@@ -116,17 +133,17 @@ namespace Company_Roster
             return input.Length < 1;
         }
 
-        public string GetPrefixSelection(string name)
+        public string GetPrefixSelection(string firstName, string lastName)
         {
             var userInput = "";
-            Message.AskPrefix(name);
+            Message.AskPrefix(firstName, lastName);
             var validInput = false;
             while (validInput == false)
             {
                 userInput = Console.ReadLine();
                 if (IsValidPrefixSelection(userInput) == false)
                 {
-                    Message.InvalidPrefixSelection(userInput, name);
+                    Message.InvalidPrefixSelection(userInput, firstName, lastName);
                 }
                 else
                 {
@@ -309,13 +326,13 @@ namespace Company_Roster
             while (validInput == false)
             {
                 userInput = Console.ReadLine();
-                if (CheckIfInt(userInput) == false)
+                if (CheckIfOnlyNums(userInput) == false)
                 {
                     Message.CreditCardNotAllNumbers(name);
                 }
                 else
                 {
-                    if (CheckIfValidCreditCardLength(userInput))
+                    if (CheckIfValidCreditCardLength(userInput) == false)
                     {
                         Message.InvalidCreditCardLength(name);
                     }
@@ -328,10 +345,17 @@ namespace Company_Roster
             return int.Parse(userInput);
         }
 
-        public bool CheckIfInt(string input)
+        public bool CheckIfOnlyNums(string input)
         {
-            int result;
-            return int.TryParse(input, out result);
+            var justNums = true;
+            foreach (var character in input)
+            {
+                if (Char.IsNumber(character) == false)
+                {
+                    justNums = false;
+                }
+            }
+            return justNums;
         }
 
         public bool CheckIfValidCreditCardLength(string input)

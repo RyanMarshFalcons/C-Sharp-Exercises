@@ -8,7 +8,7 @@ namespace Company_Roster
 {
     public class Customer : Person
     {
-       public string Credit_Card_Number { get; set; }
+        public string Credit_Card_Number { get; set; }
 
         public string Billing_Address { get; set; }
 
