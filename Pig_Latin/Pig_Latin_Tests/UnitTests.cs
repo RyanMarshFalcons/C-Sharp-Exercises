@@ -34,28 +34,6 @@ namespace Pig_Latin_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueIfHasSpaces()
-        {
-            var expected = true;
-
-            var utility = new Utility();
-            var actual = utility.CheckIfHasSpaces("hi there");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void ReturnsFalseIfHasNoSpaces()
-        {
-            var expected = false;
-
-            var utility = new Utility();
-            var actual = utility.CheckIfHasSpaces("hithere");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
         public void ReturnsTrueIfBeginsWithALetter()
         {
             var expected = true;
@@ -161,6 +139,28 @@ namespace Pig_Latin_Tests
 
             var utility = new Utility();
             var actual = utility.AddAyToTheEnd("ick");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsyanRayisyayayayoolcayuygayForRyanisacoolguy()
+        {
+            var expected = "yanRay isyay ayay oolcay uygay";
+
+            var utility = new Utility();
+            var actual = utility.TranslateToPigLatin("Ryan is a cool guy.");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsitSayUbuyayitsayoodGayogdayForRyanSitUbusitGooddog()
+        {
+            var expected = "itSay Ubuyay itsay oodGay ogday";
+
+            var utility = new Utility();
+            var actual = utility.TranslateToPigLatin("Sit Ubu sit. Good dog.");
 
             Assert.AreEqual(expected, actual);
         }

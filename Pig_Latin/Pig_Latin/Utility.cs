@@ -9,9 +9,9 @@ namespace Pig_Latin
 {
     public class Utility
     {
-        public string GetValidEntry()
+        public string GetUserString()
         {
-            Message.EnterWord();
+            Message.EnterString();
             var isValidInput = false;
             var input = "";
             while (isValidInput == false)
@@ -19,15 +19,7 @@ namespace Pig_Latin
                 input = Console.ReadLine();
                 if (IsTooShort(input))
                 {
-                    Message.NoEmptyStrings();
-                }
-                else if (CheckIfHasSpaces(input) == true)
-                {
-                    Message.NoSpaces();
-                }
-                else if (CheckIfBeginsWithALetter(input) == false)
-                {
-                    Message.MustBeignWithALetter();
+                    Message.NotLongEnough();
                 }
                 else
                 {
@@ -42,27 +34,14 @@ namespace Pig_Latin
             return input.Length < 1;
         }
 
-        public bool CheckIfHasSpaces(string input)
+        public bool CheckIfBeginsWithALetter(string word)
         {
-            bool hasSpaces = false;
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (input[i] == ' ')
-                {
-                    hasSpaces = true;
-                }
-            }
-            return hasSpaces;
+            return Char.IsLetter(word[0]);
         }
 
-        public bool CheckIfBeginsWithALetter(string input)
+        public bool CheckIfBeginsWithVowel(string word)
         {
-            return Char.IsLetter(input[0]);
-        }
-
-        public bool CheckIfBeginsWithVowel(string userString)
-        {
-            return CheckIfVowel(userString[0]);
+            return CheckIfVowel(word[0]);
         }
 
         public bool CheckIfVowel(char character)
@@ -70,23 +49,23 @@ namespace Pig_Latin
             return ((character == 'a') || (character == 'e') || (character == 'i') || (character == 'o') || (character == 'u') || (character == 'y') || (character == 'A') || (character == 'E') || (character == 'I') || (character == 'O') || (character == 'U') || (character == 'Y'));
         }
 
-        public string AddYayToTheEnd(string userString)
+        public string AddYayToTheEnd(string word)
         {
-            return userString + "yay";
+            return word + "yay";
         }
 
-        public string MoveConsonantsToTheEnd(string userString)
+        public string MoveConsonantsToTheEnd(string word)
         {
-            var numConsonants = ConsonantCounter(userString);
-            return userString.Substring(numConsonants) + userString.Substring(0, numConsonants);
+            var numConsonants = ConsonantCounter(word);
+            return word.Substring(numConsonants) + word.Substring(0, numConsonants);
         }
 
-        public int ConsonantCounter(string userString)
+        public int ConsonantCounter(string word)
         {
             var counter = 0;
-            for (int i = 0; i < userString.Length; i++)
+            for (int i = 0; i < word.Length; i++)
             {
-                if (CheckIfVowel(userString[i]) == true)
+                if (CheckIfVowel(word[i]) == true)
                 {
                     break;
                 }
@@ -95,9 +74,47 @@ namespace Pig_Latin
             return counter;
         }
 
-        public string AddAyToTheEnd(string userString)
+        public string AddAyToTheEnd(string word)
         {
-            return userString + "ay";
+            return word + "ay";
+        }
+
+        public string TranslateToPigLatin(string userString)
+        {
+            var newString = "";
+            var word = "";
+            for (int i = 0; i < userString.Length; i++)
+            {
+                if (Char.IsLetter(userString[i]) || userString[i] == '\'')
+                {
+                    word += userString[i];
+                }
+                if (userString[i] == ' ' || i == userString.Length - 1)
+                {
+                    if (word.Length > 0)
+                    {
+                        if (CheckIfBeginsWithALetter(word))
+                        {
+                            if (CheckIfBeginsWithVowel(word))
+                            {
+                                word = AddYayToTheEnd(word);
+                            }
+                            else
+                            {
+                                word = MoveConsonantsToTheEnd(word);
+                                word = AddAyToTheEnd(word);
+                            }
+                        }
+                        newString = newString + word + " ";
+                        word = "";
+                    }
+                }
+            }
+            if (newString[newString.Length -1] == ' ' && newString.Length > 1)
+            {
+                newString = newString.Substring(0, newString.Length - 1);
+            }
+            return newString;
         }
     }
 }

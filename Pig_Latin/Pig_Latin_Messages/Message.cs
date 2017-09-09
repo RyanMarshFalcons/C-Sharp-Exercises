@@ -10,33 +10,23 @@ namespace Pig_Latin_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Welcome to my pig Latin translator program. Enter a word in English and I will\ntranslate that word into pig Latin for you. Press enter to continue.");
+            Console.WriteLine("Welcome to my Pig Latin translator program where you will enter a string in\nEnglish and then I will translate that string into Pig Latin for you. Numbers\nand symbols other than the ' that appears in words like \"can't\" will be ignored.Press enter to continue.");
             Console.ReadLine();
         }
 
-        public static void EnterWord()
+        public static void EnterString()
         {
-            Console.Write("Enter your word in English: ");
+            Console.Write("Enter your string in English: ");
         }
 
-        public static void NoEmptyStrings()
+        public static void NotLongEnough()
         {
-            Console.Write("\nSorry but you must input at least one character for your entry to qualify as a\nword. Please input a word: ");
+            Console.Write("\nYou must input at least one character for your string to be valid. Please try\nagain: ");
         }
 
-        public static void NoSpaces()
+        public static void DisplayInPigLatin(string inputAsPigLatin)
         {
-            Console.Write("\nSorry but no spaces are allowed within a word in the English language. Please input a word: ");
-        }
-
-        public static void MustBeignWithALetter()
-        {
-            Console.Write("\nSorry but in the English language a word must begin with a letter. Please input a word: ");
-        }
-
-        public static void DisplayInPigLatin(string input, string inputAsPigLatin)
-        {
-            Console.WriteLine($"\n{input} translated into pig Latin is {inputAsPigLatin}.\nPress enter to close the program.");
+            Console.WriteLine($"\nYour string translated into pig Latin is:\n{inputAsPigLatin}\nPress enter to close the program.");
         }
 
     }
