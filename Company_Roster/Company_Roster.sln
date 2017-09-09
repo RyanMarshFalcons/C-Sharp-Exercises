@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company_Roster_Messages", "Company_Roster_Messages\Company_Roster_Messages.csproj", "{23EC5AEE-CDA9-44A1-8757-AD7C81B9C8EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company_Roster_Tests", "Company_Roster_Tests\Company_Roster_Tests.csproj", "{00C69C3B-DEA3-4482-ABDE-5BAF04DD3D93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{23EC5AEE-CDA9-44A1-8757-AD7C81B9C8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23EC5AEE-CDA9-44A1-8757-AD7C81B9C8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23EC5AEE-CDA9-44A1-8757-AD7C81B9C8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00C69C3B-DEA3-4482-ABDE-5BAF04DD3D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00C69C3B-DEA3-4482-ABDE-5BAF04DD3D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00C69C3B-DEA3-4482-ABDE-5BAF04DD3D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00C69C3B-DEA3-4482-ABDE-5BAF04DD3D93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

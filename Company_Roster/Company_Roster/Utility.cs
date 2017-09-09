@@ -18,7 +18,7 @@ namespace Company_Roster
             while (isValidInput == false)
             {
                 input = Console.ReadLine();
-                if (CheckIfValidSelection(input) == false)
+                if (CheckIfValidPersonSelection(input) == false)
                 {
                     Message.NotAValidPersonTypeSelection(input);
                 }
@@ -30,9 +30,9 @@ namespace Company_Roster
             return input;
         }
 
-        public bool CheckIfValidSelection(string input)
+        public bool CheckIfValidPersonSelection(string input)
         {
-            return input == "A" || input == "B" || input == "C";
+            return input == "A" || input == "B";
         }
         public bool AskToContinue()
         {
@@ -318,7 +318,7 @@ namespace Company_Roster
             return foundLetter;
         }
 
-        public int GetCreditCardNumber(string name)
+        public string GetCreditCardNumber(string name)
         {
             var userInput = "";
             Message.AskCreditCardNumber(name);
@@ -342,7 +342,7 @@ namespace Company_Roster
                     }
                 }
             }
-            return int.Parse(userInput);
+            return userInput;
         }
 
         public bool CheckIfOnlyNums(string input)
@@ -477,8 +477,7 @@ namespace Company_Roster
 
         public bool CheckIfValidSalary(string input)
         {
-            return double.Parse(input) > 15000;
+            return double.Parse(input) >= 15000;
         }
-
     }
 }

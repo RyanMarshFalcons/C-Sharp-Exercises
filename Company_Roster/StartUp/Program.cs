@@ -44,7 +44,7 @@ namespace StartUp
                 Console.WriteLine($"Billing Address: {customer.Billing_Address}");
                 Console.WriteLine($"Shipping Address: {customer.Shipping_Address}");
                 Console.WriteLine($"Home Address: {customer.Home_Address}");
-
+                Console.WriteLine();
             }
             Message.DisplayEmployees();
             foreach (var employee in employeeList)
@@ -56,6 +56,7 @@ namespace StartUp
                 Console.WriteLine($"Job Title: {employee.Job_Title}");
                 Console.WriteLine($"Department: {employee.Department.ToString()}");
                 Console.WriteLine($"Yearly Salary: {employee.Yearly_Salary}");
+                Console.WriteLine();
             }
             Message.ThankYou();
         }

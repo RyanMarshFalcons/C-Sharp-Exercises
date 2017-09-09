@@ -76,12 +76,12 @@ namespace Company_Roster_Messages
 
         public static void AdressNotLongEnough(string name, string homeBillingShipping)
         {
-            Console.Write($"\nYou must input at fifteen characters for {name}'s {homeBillingShipping} address.\nPlease enter {name}'s {homeBillingShipping} address: ");
+            Console.Write($"\nYou must input at fifteen characters for {name}'s {homeBillingShipping}\naddress. Please enter {name}'s {homeBillingShipping} address: ");
         }
 
         public static void AdressLacksNumbers(string name, string homeBillingShipping)
         {
-            Console.Write($"\nYou did not include any numbers for {name}'s {homeBillingShipping} address.\nPlease enter {name}'s {homeBillingShipping} address: ");
+            Console.Write($"\nYou did not include any numbers for {name}'s {homeBillingShipping}\naddress. Please enter {name}'s {homeBillingShipping} address: ");
         }
 
         public static void AskPhoneNumber(string name)
@@ -136,17 +136,17 @@ namespace Company_Roster_Messages
 
         public static void AskSalary(string name, string jobTitle, string department)
         {
-            Console.Write($"\nWhat is {name}'s annual salary as a {jobTitle} in the {department} department: $");
+            Console.Write($"\nWhat is {name}'s annual salary as a {jobTitle} in the\n{department} department: $");
         }
 
         public static void SalaryNotANumber(string input, string name, string jobTitle, string department)
         {
-            Console.Write($"\nSorry but {input} is not a number. What is\n{name}'s annual salary as a {jobTitle} in the {department} department: $");
+            Console.Write($"\nSorry but {input} is not a number. What is\n{name}'s annual\nsalary as a {jobTitle} in the {department} department: $");
         }
 
         public static void SalaryTooLow(string name, string jobTitle, string department)
         {
-            Console.Write($"\nSorry but an annual salary must be at least $15,000. What is\n{name}'s annual salary as a {jobTitle} in the {department} department: ");
+            Console.Write($"\nSorry but an annual salary must be at least $15,000. What is {name}'s\nannual salary as a {jobTitle} in the {department} department: ");
         }
 
         public static void DisplayCustomers()
@@ -165,7 +165,7 @@ namespace Company_Roster_Messages
         {
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
-            Console.WriteLine($"Thank you for using my Company Roster program. I hope that you enjoyed using it. Press enter to close the program.");
+            Console.WriteLine($"Thank you for using my Company Roster program. I hope that you enjoyed using it.Press enter to close the program.");
             Console.ReadLine();
         }
     }
