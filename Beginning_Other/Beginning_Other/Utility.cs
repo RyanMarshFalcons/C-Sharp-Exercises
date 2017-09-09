@@ -46,14 +46,7 @@ namespace Beginning_Other
 
         public bool CheckIfFirstIsLonger(string firstString, string secondString)
         {
-            if (firstString.Length > secondString.Length)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return firstString.Length > secondString.Length;
         }
 
         public bool CheckIfShorterIsBeginningOfLonger(string firstString, string secondString, bool firstIsLonger)
