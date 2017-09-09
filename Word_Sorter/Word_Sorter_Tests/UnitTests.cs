@@ -34,58 +34,49 @@ namespace Word_Sorter_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForCant()
+        public void Removes3AndExclamationPoints()
         {
-            var expected = true;
+            var expected = "Ryan is  times awesome";
 
             var utility = new Utility();
-            var actual = utility.CheckIfWord("can't");
+            var actual = utility.RemoveNumsAndSymbols("Ryan is 3 times awesome!!!");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseForBatMan()
+        public void RemovesCommaExclamationPointAtSymbolAndQuestionMark()
         {
-            var expected = false;
+            var expected = "Hey there you Where's the party ";
 
             var utility = new Utility();
-            var actual = utility.CheckIfWord("Bat Man");
+            var actual = utility.RemoveNumsAndSymbols("Hey, there you! Where's the party @?");
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueFory()
+        public void ExtractsWordsToList()
         {
-            var expected = true;
+            var expected = new List<string>() { "Ryan", "is", "a", "cool", "guy", "Doncha", "know" };
+        
 
             var utility = new Utility();
-            var actual = utility.CheckIfyOrn("y");
+            var actual = utility.ExtractWords("Ryan is a cool guy!!! Doncha know?");
 
-            Assert.AreEqual(expected, actual);
+            CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueForn()
+        public void ExtractsWordsToListAgain()
         {
-            var expected = true;
+            var expected = new List<string>() { "Workin", "to", "what", "a", "way", "to", "make", "a", "livin" };
+
 
             var utility = new Utility();
-            var actual = utility.CheckIfyOrn("n");
+            var actual = utility.ExtractWords("Workin 9 to 5; what a way to make a livin.");
 
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void ReturnsFalseForz()
-        {
-            var expected = false;
-
-            var utility = new Utility();
-            var actual = utility.CheckIfyOrn("z");
-
-            Assert.AreEqual(expected, actual);
+            CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod]

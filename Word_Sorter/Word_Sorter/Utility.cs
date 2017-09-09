@@ -9,9 +9,9 @@ namespace Word_Sorter
 {
     public class Utility
     {
-        public string GetValidEntry()
+        public string GetUserString()
         {
-            Message.EnterWord();
+            Message.EnterString();
             var isValidInput = false;
             var input = "";
             while (isValidInput == false)
@@ -20,10 +20,6 @@ namespace Word_Sorter
                 if (IsTooShort(input))
                 {
                     Message.NotLongEnough();
-                }
-                else if (CheckIfWord(input) == false)
-                {
-                    Message.NotAWord(input);
                 }
                 else
                 {
@@ -38,46 +34,52 @@ namespace Word_Sorter
             return input.Length < 1;
         }
 
-        public bool CheckIfWord(string input)
+        public string RemoveNumsAndSymbols(string userString)
         {
-            var isAWord = true;
-            var inputAsArray = input.ToCharArray();
-            foreach (var character in inputAsArray)
+            for (int i = userString.Length -1; i > -1; i--)
             {
-                if (Char.IsLetter(character) == false)
+                if (Char.IsLetter(userString[i]) == false)
                 {
-                    if (character != '\'')
+                    if (userString[i] != '\'' && userString[i] != ' ')
                     {
-                        isAWord = false;
+                        if (i == userString.Length - 1)
+                        {
+                            userString = userString.Substring(0, i);
+                        }
+                        else
+                        {
+                            userString = userString.Substring(0, i) + userString.Substring(i + 1);
+                        }
                     }
                 }
             }
-            return isAWord;
+            return userString;
         }
 
-        public bool AskToContinue()
+        public List<string> ExtractWords(string modifiedUserString)
         {
-            var IsValidInput = false;
-            var input = "";
-            Message.AddAnotherWord();
-            while (IsValidInput == false)
+            var listOfWords = new List<string>();
+            var word = "";
+            for (int i = 0; i < modifiedUserString.Length; i++)
             {
-                input = Console.ReadLine();
-                if (CheckIfyOrn(input) == false)
+                if (Char.IsLetter(modifiedUserString[i]) || modifiedUserString[i] == '\'')
                 {
-                    Message.NotyOrn();
+                    word += modifiedUserString[i];
                 }
                 else
                 {
-                    IsValidInput = true;
+                    if (word.Length > 0)
+                    {
+                        listOfWords.Add(word);
+                        word = "";
+                    }
                 }
             }
-            return input == "y";
-        }
-
-        public bool CheckIfyOrn(string input)
-        {
-            return input == "y" || input == "n";
+            if (word.Length > 0)
+            {
+                listOfWords.Add(word);
+            }
+            return listOfWords;
         }
 
         public List<string> SortTheWords(List<string> words)

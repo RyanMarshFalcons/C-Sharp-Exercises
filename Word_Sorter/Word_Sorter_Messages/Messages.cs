@@ -10,38 +10,31 @@ namespace Word_Sorter_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my word sorting program where you will enter a series of\nwords and I will sort them for you. Press enter to continue.");
+            Console.WriteLine("Hello and welcome to my Word Sorter program where you will enter a string and I will extract the words from your string and then sort them for you. Press enter to continue.");
             Console.ReadLine();
         }
 
-        public static void EnterWord()
+        public static void EnterString()
         {
-            Console.Write("\nPlease enter a word: ");
+            Console.Write("\nPlease enter a string of characters: ");
         }
 
         public static void NotLongEnough()
         {
-            Console.Write("\nYou must input at least one characters for your word to be valid. Please try\nagain: ");
-        }
-
-        public static void NotAWord(string input)
-        {
-            Console.Write($"\nSorry but {input} is not a word. Please input a word: ");
-        }
-
-        public static void AddAnotherWord()
-        {
-            Console.Write("\nWould you like to enter another word to be sorted? y/n: ");
-        }
-
-        public static void NotyOrn()
-        {
-            Console.Write($"\nSorry but you must input a y or an n. Please input y or n to procede: ");
+            Console.Write("\nYou must input at least one character for your string to be valid. Please try\nagain: ");
         }
 
         public static void WordsSortedBelow(int counter)
         {
-            Console.WriteLine($"\nThe {counter} words that you entered have been sorted as follows: ");
+            Console.WriteLine($"\nThe {counter} words from your string have been sorted as follows:");
+        }
+
+        public static void ThankYou()
+        {
+            Console.WriteLine("\nPress enter to continue.");
+            Console.ReadLine();
+            Console.WriteLine("Thank you for using my Word Sorter program. I hope that you enjoyed using it.\nPress enter to close the progam.");
+            Console.ReadLine();
         }
     }
 }

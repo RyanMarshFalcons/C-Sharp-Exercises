@@ -14,20 +14,13 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var wordList = new List<string>();
-            var word = "";
-            var counter = 0;
-            var continueAsking = true;
-            while (continueAsking == true)
-            {
-                word = utility.GetValidEntry();
-                wordList.Add(word);
-                continueAsking = utility.AskToContinue();
-                counter += 1;
-            }
+            var userString = utility.GetUserString();
+            var modifiedUserString = utility.RemoveNumsAndSymbols(userString);
+            var wordList = utility.ExtractWords(modifiedUserString);
             wordList = utility.SortTheWords(wordList);
+            var counter = wordList.Count;
             utility.DisplaySortedWords(wordList, counter);
-            Console.ReadLine();
+            Message.ThankYou();
         }
     }
 }
