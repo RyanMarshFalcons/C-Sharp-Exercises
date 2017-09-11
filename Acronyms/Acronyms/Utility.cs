@@ -73,5 +73,30 @@ namespace Acronyms
             }
             return acronym.ToString().ToUpper();
         }
+
+        public bool AskToContinue()
+        {
+            var IsValidInput = false;
+            var input = "";
+            Message.AddAnotherAcronym();
+            while (IsValidInput == false)
+            {
+                input = Console.ReadLine();
+                if (CheckIfyOrn(input) == false)
+                {
+                    Message.NotyOrn();
+                }
+                else
+                {
+                    IsValidInput = true;
+                }
+            }
+            return input == "y";
+        }
+
+        public bool CheckIfyOrn(string input)
+        {
+            return input == "y" || input == "n";
+        }
     }
 }

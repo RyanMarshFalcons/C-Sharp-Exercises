@@ -87,5 +87,38 @@ namespace Acronyms_Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ReturnsTrueFory()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfyOrn("y");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForn()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfyOrn("n");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForo()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfyOrn("o");
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

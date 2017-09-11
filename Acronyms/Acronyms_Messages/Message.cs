@@ -16,7 +16,7 @@ namespace Acronyms_Messages
 
         public static void RequestUserInput()
         {
-            Console.Write("Please input a series of words and I will transform them into an acronym for \nyou: ");
+            Console.Write("\nPlease input a series of words and I will transform them into an acronym for \nyou: ");
         }
 
         public static void NotLongEnough()
@@ -29,10 +29,32 @@ namespace Acronyms_Messages
             Console.Write("\nYou must input at least one word for your string to be valid. Please try\nagain: ");
         }
 
-        public static void DisplayResult(string userString, string acronym)
+        public static void DisplayAcronym(string userString, string acronym)
         {
-            Console.WriteLine($"\n{userString} converts into the acronym {acronym}\nPress enter to close the program.");
+            Console.WriteLine($"\n{userString} converts into the acronym {acronym}\nPress enter to continue.");
+            Console.ReadLine();
         }
 
+        public static void AddAnotherAcronym()
+        {
+            Console.Write("Would you me to convert another string into an acronym for you? y/n: ");
+        }
+
+        public static void NotyOrn()
+        {
+            Console.Write($"\nSorry but you must input a y or an n. Please input y or n to procede: ");
+        }
+
+        public static void DisplayAllAcronyms()
+        {
+            Console.WriteLine("\nHere are all of the acronyms that you created this session:");
+        }
+
+        public static void ThankYou()
+        {
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
+            Console.WriteLine("\nThank you for using my Acronyms program. I hope that you enjoyed using it. Pressenter to close the program.");
+        }
     }
 }
