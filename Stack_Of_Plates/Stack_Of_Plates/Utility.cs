@@ -30,7 +30,7 @@ namespace Stack_Of_Plates
 
         public bool CheckIfValidSelection(string input)
         {
-            return (input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G");
+            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
         }
 
         public bool AskToContinue()
@@ -50,26 +50,12 @@ namespace Stack_Of_Plates
                     IsValidInput = true;
                 }
             }
-            if (input == "y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y";
         }
 
         public bool CheckIfyOrn(string input)
         {
-            if ((input == "y") || (input == "n"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y" || input == "n";
         }
 
         public string ConvertLetterToColor(string selection)
