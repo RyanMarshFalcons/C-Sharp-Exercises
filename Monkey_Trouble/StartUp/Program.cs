@@ -14,9 +14,16 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var monkey1Smiling = utility.AskIfSmiling("first");
-            var monkey2Smiling = utility.AskIfSmiling("second");
-            var areInTrouble = utility.AreInTrouble(monkey1Smiling, monkey2Smiling);
+            Message.EnterIfSmiling("first");
+            var monkey1Smiling = utility.AskQuestion();
+            Message.EnterIfSmiling("second");
+            var monkey2Smiling = utility.AskQuestion();
+            Message.EnterIfwearingYellow();
+            var wearingYellow = utility.AskQuestion();
+            Message.EnterIfCaged();
+            var caged = utility.AskQuestion();
+            var monkeysSame = utility.AreMonkeysSame(monkey1Smiling, monkey2Smiling);
+            var areInTrouble = utility.AreInTrouble(monkeysSame, wearingYellow, caged);
             utility.DisplayResults(areInTrouble);
             Console.ReadLine();
         }

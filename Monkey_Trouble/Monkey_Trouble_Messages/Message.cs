@@ -10,7 +10,7 @@ namespace Monkey_Trouble_Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to my Monkey Trouble program. You see two monkeys out in the\nwild, lets find out if you're in trouble. Press enter to continue.");
+            Console.WriteLine("Hello and welcome to my Monkey Trouble program. You see two monkeys staring at\nyou, lets find out if you're in trouble. Press enter to continue.");
             Console.ReadLine();
         }
 
@@ -19,9 +19,19 @@ namespace Monkey_Trouble_Messages
             Console.Write($"\nIs the {firstOrSecond} monkey smiling? y/n: ");
         }
 
-        public static void NotyOrn(string firstOrSecond)
+        public static void EnterIfwearingYellow()
         {
-            Console.Write($"\nSorry but you must input a y or an n. Is the {firstOrSecond} monkey smiling? y/n: ");
+            Console.Write("\nAre you wearing yellow? y/n: ");
+        }
+
+        public static void EnterIfCaged()
+        {
+            Console.Write("\nAre the monkeys in a cage? y/n: ");
+        }
+
+        public static void NotyOrn()
+        {
+            Console.Write($"\nSorry but you must input a y or an n. Please try again: ");
         }
 
         public static void InTrouble()

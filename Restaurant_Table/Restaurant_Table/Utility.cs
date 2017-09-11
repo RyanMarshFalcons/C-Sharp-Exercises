@@ -44,7 +44,7 @@ namespace Restaurant_Table
 
         public bool CheckIfWithinRange(string input)
         {
-            return (int.Parse(input) > 0) && (int.Parse(input) < 11);
+            return int.Parse(input) > 0 && int.Parse(input) < 11;
         }
 
         public bool FashionableEnough(int fashionLevel)
@@ -73,24 +73,17 @@ namespace Restaurant_Table
 
         public bool CheckIfABCDEFG(string input)
         {
-            return ((input == "A") || (input == "B") || (input == "C") || (input == "D") || (input == "E") || (input == "F") || (input == "G"));
+            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
         }
 
         public bool IsWeekEnd(string daySelection)
         {
-            return (daySelection == "E") || (daySelection == "F");
+            return daySelection == "E" || daySelection == "F";
         }
 
         public bool GetTable(bool youFashionable, bool dateFashionable, bool isWeekEnd)
         {
-            if ((youFashionable && dateFashionable) || (youFashionable && !isWeekEnd) || (dateFashionable && !isWeekEnd))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (youFashionable && dateFashionable) || ((youFashionable || dateFashionable) && !isWeekEnd);
         }
 
         public void DisplayResults(bool gotTable)

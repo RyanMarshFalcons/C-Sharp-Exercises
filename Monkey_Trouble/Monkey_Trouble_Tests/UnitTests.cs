@@ -45,45 +45,111 @@ namespace Monkey_Trouble_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForTrueTrue()
+        public void ReturnsTrueIfBothMonkeysSmiling()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.AreInTrouble(true, true);
+            var actual = utility.AreMonkeysSame(true, true);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueForFalseFalse()
+        public void ReturnsTrueIfBothMonkeysNotSmiling()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.AreInTrouble(false, false);
+            var actual = utility.AreMonkeysSame(false, false);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseForTrueFalse()
+        public void ReturnsFalseIfOneMonkeySmiling()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.AreInTrouble(true, false);
+            var actual = utility.AreMonkeysSame(true, false);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFalseForFalseTrue()
+        public void ReturnsTrueForMonkeysSameAreWearingYellowAndNotCaged()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.AreInTrouble(true, true, false);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForMonkeysDifferentAreWearingYellowAndNotCaged()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.AreInTrouble(false, true);
+            var actual = utility.AreInTrouble(false, true, false);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForMonkeysDifferentAreNotWearingYellowAndNotCaged()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.AreInTrouble(false, false, false);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForMonkeysDifferentAreNotWearingYellowAndCaged()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.AreInTrouble(false, false, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForMonkeysDifferentAreWearingYellowAndCaged()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.AreInTrouble(false, true, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForMonkeysSameAreNotWearingYellowAndCaged()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.AreInTrouble(true, false, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForMonkeysSameAreWearingYellowAndCaged()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.AreInTrouble(true, true, true);
 
             Assert.AreEqual(expected, actual);
         }

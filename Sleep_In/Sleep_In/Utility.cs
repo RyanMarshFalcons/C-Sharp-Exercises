@@ -31,12 +31,12 @@ namespace Sleep_In
 
         public bool CheckIfABCDEFG(string input)
         {
-            return ((input == "A") || (input == "B") || (input == "C") || (input == "D") || (input == "E") || (input == "F") || (input == "G"));
+            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
         }
 
         public bool IsWeekEnd(string daySelection)
         {
-            return (daySelection == "F") || (daySelection == "G");
+            return daySelection == "F" || daySelection == "G";
         }
 
         public bool AskIfVacationDay()
@@ -56,26 +56,12 @@ namespace Sleep_In
                     IsValidInput = true;
                 }
             }
-            if (input == "y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y";
         }
 
         public bool CheckIfyOrn(string input)
         {
-            if ((input == "y") || (input == "n"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y" || input == "n";
         }
 
         public bool CanSleepIn(bool isWeekend, bool isVacationDay)

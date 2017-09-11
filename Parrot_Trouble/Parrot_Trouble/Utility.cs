@@ -26,38 +26,17 @@ namespace Parrot_Trouble
                     IsValidInput = true;
                 }
             }
-            if (input == "y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y";
         }
 
         public bool CheckIfyOrn(string input)
         {
-            if ((input == "y") || (input == "n"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y" || input == "n";
         }
 
         public bool CheckIfCausingTrouble(bool isSleeping, bool isStudying, bool isMeditating)
         {
-            if (isSleeping || isStudying || isMeditating)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return isSleeping || isStudying || isMeditating;
         }
 
         public void DisplayResults(bool isCausingTrouble)

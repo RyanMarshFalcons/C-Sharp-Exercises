@@ -9,48 +9,38 @@ namespace Monkey_Trouble
 {
     public class Utility
     {
-        public bool AskIfSmiling(string firstOrSecond)
+        public bool AskQuestion()
         {
             var IsValidInput = false;
             var input = "";
-            Message.EnterIfSmiling(firstOrSecond);
             while (IsValidInput == false)
             {
                 input = Console.ReadLine();
                 if (CheckIfyOrn(input) == false)
                 {
-                    Message.NotyOrn(firstOrSecond);
+                    Message.NotyOrn();
                 }
                 else
                 {
                     IsValidInput = true;
                 }
             }
-            if (input == "y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y";
         }
 
         public bool CheckIfyOrn(string input)
         {
-            if ((input == "y") || (input == "n"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y" || input == "n";
         }
 
-        public bool AreInTrouble(bool monkey1Smiling, bool monkey2Smiling)
+        public bool AreMonkeysSame(bool monkey1Smiling, bool monkey2Smiling)
         {
             return monkey1Smiling == monkey2Smiling;
+        }
+
+        public bool AreInTrouble(bool monkeysSame, bool wearingYellow, bool caged)
+        {
+            return monkeysSame && wearingYellow && !caged;
         }
 
         public void DisplayResults(bool areInTrouble)

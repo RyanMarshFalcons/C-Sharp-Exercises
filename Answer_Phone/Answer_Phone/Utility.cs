@@ -25,38 +25,17 @@ namespace Answer_Phone
                     IsValidInput = true;
                 }
             }
-            if (input == "y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y";
         }
 
         public bool CheckIfyOrn(string input)
         {
-            if ((input == "y") || (input == "n"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input == "y" || input == "n"; 
         }
 
         public bool AnswerPhone(bool familyOrFriend, bool busy, bool asleep)
         {
-            if (asleep || (busy && !familyOrFriend))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return !asleep && (!busy || familyOrFriend);
         }
 
         public void DisplayResults(bool answerPhone)

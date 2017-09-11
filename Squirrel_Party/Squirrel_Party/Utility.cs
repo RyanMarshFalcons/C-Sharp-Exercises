@@ -73,12 +73,12 @@ namespace Squirrel_Party
 
         public bool CheckIfABCDEFG(string input)
         {
-            return ((input == "A") || (input == "B") || (input == "C") || (input == "D") || (input == "E") || (input == "F") || (input == "G"));
+            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
         }
 
         public bool IsWeekEnd(string daySelection)
         {
-            return (daySelection == "F") || (daySelection == "G");
+            return daySelection == "F" || daySelection == "G";
         }
 
         public bool IsSuccessful(bool atLeast50Nuts, bool isWeekEnd)
