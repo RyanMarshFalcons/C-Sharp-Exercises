@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4056852F-2FB5-40E8-A289-8C6749912161}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{7325CB79-CAA3-4518-8AC7-7AED8A2E3C41}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StartUp</RootNamespace>
-    <AssemblyName>StartUp</AssemblyName>
+    <RootNamespace>Substring_Count</RootNamespace>
+    <AssemblyName>Substring Count</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,20 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Utility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Moose_Horse\Moose_Horse.csproj">
-      <Project>{2542a73d-1327-43c6-9132-41421e8e1607}</Project>
-      <Name>Moose_Horse</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Moose_Horse_Messages\Moose_Horse_Messages.csproj">
-      <Project>{775662e3-db3c-4d05-aa64-d37e52ac6615}</Project>
-      <Name>Moose_Horse_Messages</Name>
+    <ProjectReference Include="..\Substring_Count_Messages\Substring_Count_Messages.csproj">
+      <Project>{1eff4563-1bf9-4a3a-a145-ceb0a56bf787}</Project>
+      <Name>Substring_Count_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
