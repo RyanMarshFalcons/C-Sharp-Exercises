@@ -34,45 +34,78 @@ namespace Mix_String_Tests
         }
 
         [TestMethod]
-        public void Returns3Forcarautomobile()
+        public void ReturnsTrueFory()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfyOrn("y");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForn()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfyOrn("n");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForr()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfyOrn("r");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns3ForRyanTheGreat()
         {
             var expected = 3;
 
             var utility = new Utility();
-            var actual = utility.GetShorterStringLength("car", "automobile");
+            var actual = utility.GetShortestStringLength(new List<string>() { "Ryan", "The", "Great" });
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Returns3Forgreyhoundbusses()
+        public void Returns4ForCindyJaneMarsha()
         {
-            var expected = 5;
+            var expected = 4;
 
             var utility = new Utility();
-            var actual = utility.GetShorterStringLength("greyhound", "buses");
+            var actual = utility.GetShortestStringLength(new List<string>() { "Cindy", "Marsha", "Jane" });
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsRMyaarnshallForRyanMarshall()
+        public void ReturnsRTGyhraeeForRyanTheGreat()
         {
-            var expected = "RMyaarnshall";
+            var expected = "RTGyhraee";
 
             var utility = new Utility();
-            var actual = utility.MixStringsTogether("Ryan", "Marshall", 4);
+            var actual = utility.MixStringsTogether(new List<string>() { "Ryan", "The", "Great" }, 3);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnspkoisdterForposterkid()
+        public void ReturnsCMJiaanrndseForCindyMarshaJane()
         {
-            var expected = "pkoisdter";
+            var expected = "CMJiaanrndse";
 
             var utility = new Utility();
-            var actual = utility.MixStringsTogether("poster", "kid", 3);
+            var actual = utility.MixStringsTogether(new List<string>() { "Cindy", "Marsha", "Jane" }, 4);
 
             Assert.AreEqual(expected, actual);
         }

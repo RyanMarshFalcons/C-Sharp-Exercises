@@ -14,10 +14,15 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var firstString = utility.GetValidString("first");
-            var secondString = utility.GetValidString("second");
-            var shorterLength = utility.GetShorterStringLength(firstString, secondString);
-            var newString = utility.MixStringsTogether(firstString, secondString, shorterLength);
+            var userString = "";
+            var listOfUserStrings = new List<string>();
+            do
+            {
+                userString = utility.GetValidString();
+                listOfUserStrings.Add(userString);
+            } while (utility.AskToAddAnotherString());
+            var shortestLength = utility.GetShortestStringLength(listOfUserStrings);
+            var newString = utility.MixStringsTogether(listOfUserStrings, shortestLength);
             Message.DisplayNewString(newString);
             Console.ReadLine();
         }

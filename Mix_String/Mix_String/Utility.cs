@@ -9,10 +9,10 @@ namespace Mix_String
 {
     public class Utility
     {
-        public string GetValidString(string firstSecond)
+        public string GetValidString()
         {
             var userInput = "";
-            Message.RequestUserInput(firstSecond);
+            Message.RequestUserString();
             var validEntry = false;
             while (validEntry == false)
             {
@@ -34,26 +34,53 @@ namespace Mix_String
             return userInput.Length >= 1;
         }
 
-        public int GetShorterStringLength(string userString1, string userString2)
+        public bool AskToAddAnotherString()
         {
-            return Math.Min(userString1.Length, userString2.Length);
+            var IsValidInput = false;
+            var input = "";
+            Message.AddAnotherString();
+            while (IsValidInput == false)
+            {
+                input = Console.ReadLine();
+                if (CheckIfyOrn(input) == false)
+                {
+                    Message.NotyOrn();
+                }
+                else
+                {
+                    IsValidInput = true;
+                }
+            }
+            return input == "y";
         }
 
-        public string MixStringsTogether(string userString1, string userString2, int shorterLength)
+        public bool CheckIfyOrn(string input)
+        {
+            return input == "y" || input == "n";
+        }
+
+        public int GetShortestStringLength(List<string> userStrings)
+        {
+            var shortestLength = userStrings[0].Length;
+            for (int i = 0; i < userStrings.Count; i++)
+            {
+                if (userStrings[i].Length < shortestLength)
+                {
+                    shortestLength = userStrings[i].Length;
+                }
+            }
+            return shortestLength;
+        }
+
+        public string MixStringsTogether(List<string> userStrings, int shortestLength)
         {
             var newString = new StringBuilder();
-            for (int i = 0; i < shorterLength; i++)
+            for (int i = 0; i < shortestLength; i++)
             {
-                newString.Append(userString1.Substring(i, 1));
-                newString.Append(userString2.Substring(i, 1));
-            }
-            if (userString1.Length > shorterLength)
-            {
-                newString.Append(userString1.Substring(userString1.Length - (userString1.Length - shorterLength)));
-            }
-            if (userString2.Length > shorterLength)
-            {
-                newString.Append(userString2.Substring(userString2.Length - (userString2.Length - shorterLength)));
+                for (int j = 0; j < userStrings.Count; j++)
+                {
+                    newString.Append(userStrings[j].Substring(i, 1));
+                }
             }
             return newString.ToString();
         }
