@@ -12,12 +12,12 @@ namespace Perfect_Numbers_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void TIsNotAnInteger()
+        public void UIsNotAnInteger()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfInt("T");
+            var actual = utility.CheckIfInt("U");
 
             Assert.AreEqual(expected, actual);
         }
