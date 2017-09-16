@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collatz_Conjecture", "Collatz_Conjecture\Collatz_Conjecture.csproj", "{ED860C57-7215-4557-83AB-79BE9DDED423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{4E739057-DC25-4BD5-92BF-E7DE1148BF87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collatz_Conjecture_Messages", "Collatz_Conjecture_Messages\Collatz_Conjecture_Messages.csproj", "{D6CC2004-BB94-4C46-9E5F-B017723E4B27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collatz_Conjecture_Tests", "Collatz_Conjecture_Tests\Collatz_Conjecture_Tests.csproj", "{1BC2D545-FDA0-481B-942C-66E08E5B11C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED860C57-7215-4557-83AB-79BE9DDED423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED860C57-7215-4557-83AB-79BE9DDED423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED860C57-7215-4557-83AB-79BE9DDED423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED860C57-7215-4557-83AB-79BE9DDED423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E739057-DC25-4BD5-92BF-E7DE1148BF87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E739057-DC25-4BD5-92BF-E7DE1148BF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E739057-DC25-4BD5-92BF-E7DE1148BF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E739057-DC25-4BD5-92BF-E7DE1148BF87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6CC2004-BB94-4C46-9E5F-B017723E4B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6CC2004-BB94-4C46-9E5F-B017723E4B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6CC2004-BB94-4C46-9E5F-B017723E4B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6CC2004-BB94-4C46-9E5F-B017723E4B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC2D545-FDA0-481B-942C-66E08E5B11C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC2D545-FDA0-481B-942C-66E08E5B11C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC2D545-FDA0-481B-942C-66E08E5B11C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC2D545-FDA0-481B-942C-66E08E5B11C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
