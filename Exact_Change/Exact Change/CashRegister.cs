@@ -25,35 +25,20 @@ namespace Exact_Change
             }
         }
 
-       
-
-        public Dictionary<string, decimal> DenominationDictionary()
+        public decimal GetTotalOfCashInDrawer(Dictionary<string, decimal> cashInDrawer)
         {
-            return new Dictionary<string, decimal>()
-                                                                        {
-                                                                            {"HUNDRED", 100M },
-                                                                            {"TWENTY", 20M },
-                                                                            {"TEN", 10M },
-                                                                            {"FIVE", 5M },
-                                                                            {"ONE", 1M },
-                                                                            {"QUARTER", .25M },
-                                                                            {"DIME", .1M },
-                                                                            {"NICKEL", .05M },
-                                                                            {"PENNY", .01M }
-
-                                                                         };
+            return cashInDrawer.Sum(d => d.Value);
         }
 
         public string GiveProperChange(decimal changeDue, Dictionary<string, decimal> cashInDrawer)
         {
-            var change = GetChange(ref changeDue, cashInDrawer);
-            
+            var changeToGiveToCustomer = GetChange(ref changeDue, cashInDrawer);
             if (changeDue == 0)
             {
                 var changeAsString = "";
-                foreach (var item in change)
+                foreach (var denominationAmount in changeToGiveToCustomer)
                 {
-                    changeAsString += item;
+                    changeAsString += denominationAmount;
                 }
                 return changeAsString;
             }
@@ -63,42 +48,33 @@ namespace Exact_Change
         public Dictionary<string, decimal> GetChange(ref decimal changeDue, Dictionary<string, decimal> cashInDrawer)
         {
             var change = new Dictionary<string, decimal>();
-            var denominationValues = DenominationDictionary();
-            foreach (var denomination in denominationValues)
+            var denominationValueDictionary = new Dictionary<string, decimal>()
+                        {
+                            {"ONE HUNDRED", 100.00M },
+                            {"TWENTY", 20.00M },
+                            {"TEN", 10.00M },
+                            {"FIVE", 5.00M },
+                            {"ONE", 1.00M },
+                            {"QUARTER", 0.25M },
+                            {"DIME", 0.10M },
+                            {"NICKEL", 0.05M },
+                            {"PENNY", 0.01M }
+                        };
+            foreach (var denomination in denominationValueDictionary)
             {
-                var tracker = 0M;
+                var tracker = 0.00M;
                 while ((denomination.Value <= changeDue) && (cashInDrawer[denomination.Key] > 0))
                 {
                     changeDue -= denomination.Value;
                     cashInDrawer[denomination.Key] -= denomination.Value;
                     tracker += denomination.Value;
                 }
-                if (tracker > 0M)
+                if (tracker > 0.00M)
                 {
                     change.Add(denomination.Key, tracker);
                 }
             }
             return change;
-        }
-
-        public decimal GetTotalOfCashInDrawer(Dictionary<string, decimal> cashInDrawer)
-        {
-            var totalOfCashInDrawer = 0M;
-            foreach (KeyValuePair<string, decimal> denomination in cashInDrawer)
-            {
-                totalOfCashInDrawer += denomination.Value;
-            }
-            return totalOfCashInDrawer;
-        }
-
-        public string GetMessageToDisplay(decimal changeDue, Dictionary<string, decimal> cashInDrawer)
-        {
-            var displayMessage = checkCashRegister(changeDue, cashInDrawer);
-            if (displayMessage == "Sufficient Funds")
-            {
-                displayMessage = GiveProperChange(changeDue, cashInDrawer);
-            }
-            return displayMessage;
         }
     }
 }

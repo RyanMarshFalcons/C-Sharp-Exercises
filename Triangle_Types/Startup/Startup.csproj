@@ -54,6 +54,10 @@
       <Project>{706e1415-515e-4520-8115-2fd5eb0603e8}</Project>
       <Name>ShapesUtility</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Triangle_Messages\Triangle_Messages.csproj">
+      <Project>{8996453e-bb34-4d4d-b81f-5f59333c922a}</Project>
+      <Name>Triangle_Messages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

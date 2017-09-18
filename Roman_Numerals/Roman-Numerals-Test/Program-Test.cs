@@ -13,67 +13,100 @@ namespace Roman_Numerals_Test
     public class Program_Test
     {
         [TestMethod]
-        public void IdentifiesInputsOfZero()
+        public void MIsNotAnInt()
         {
-            bool ExpectedType = true;
-            var testVer = new Verification();
+            var expected = false;
 
-            bool ActualType = testVer.Zero(0);
+            var utility = new Utility();
+            var actual = utility.CheckIfInt("M");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void IdentifiesNegativeNumberInputs()
+        public void ElevenIsAnInt()
         {
-            bool ExpectedType = true;
-            var testVer = new Verification();
+            var expected = true;
 
-            bool ActualType = testVer.Negative(-1);
+            var utility = new Utility();
+            var actual = utility.CheckIfInt("11");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void IdentifiesIfInputIsOutOfRange()
+        public void NegativeOneIsNotPositive()
         {
-            bool ExpectedType = true;
-            var testVer = new Verification();
+            var expected = false;
 
-            bool ActualType = testVer.TooHigh(4000);
+            var utility = new Utility();
+            var actual = utility.CheckIfPositive("-1");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void IdentifiesEmptyStringInputs()
+        public void ZeroIsNotPositive()
         {
-            bool ExpectedType = true;
-            var testVer = new Verification();
+            var expected = false;
 
-            bool ActualType = testVer.Empty("");
+            var utility = new Utility();
+            var actual = utility.CheckIfPositive("0");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void IdentifiesIfInputIsNotAnArabicNumber()
+        public void OneIsPositive()
         {
-            bool ExpectedType = true;
-            var testVer = new Verification();
+            var expected = true;
 
-            bool ActualType = testVer.NotANumber("garbage");
+            var utility = new Utility();
+            var actual = utility.CheckIfPositive("1");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TwoIsPositive()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfPositive("2");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void FourThousandIsTooHigh()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfTooHigh("4000");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ThreeThousandNineHundredNinetyNineIsNotTooHigh()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfTooHigh("3999");
+
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void Inputting1RetrunsI()
         {
             var ExpectedType = "I";
-            var testBuild = new Builder(1);
+            var utility = new Utility();
 
-            var ActualType = testBuild.BuildRomanNumeral();
+            var ActualType = utility.BuildRomanNumeral(1);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -82,9 +115,9 @@ namespace Roman_Numerals_Test
         public void Inputting48ReturnsXLVIII()
         {
             var ExpectedType = "XLVIII";
-            var testBuild = new Builder(48);
+            var utility = new Utility();
 
-            var ActualType = testBuild.BuildRomanNumeral();
+            var ActualType = utility.BuildRomanNumeral(48);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -93,9 +126,9 @@ namespace Roman_Numerals_Test
         public void Inputting1682ReturnsMDCLXXXII()
         {
             var ExpectedType = "MDCLXXXII";
-            var testBuild = new Builder(1682);
+            var utility = new Utility();
 
-            var ActualType = testBuild.BuildRomanNumeral();
+            var ActualType = utility.BuildRomanNumeral(1682);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -104,9 +137,9 @@ namespace Roman_Numerals_Test
         public void Inputting2824ReturnsMMDCCCXXIV()
         {
             var ExpectedType = "MMDCCCXXIV";
-            var testBuild = new Builder(2824);
+            var utility = new Utility();
 
-            var ActualType = testBuild.BuildRomanNumeral();
+            var ActualType = utility.BuildRomanNumeral(2824);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }
@@ -115,9 +148,9 @@ namespace Roman_Numerals_Test
         public void Inputting3999ReturnsMMMCMXCIX()
         {
             var ExpectedType = "MMMCMXCIX";
-            var testBuild = new Builder(3999);
+            var utility = new Utility();
 
-            var ActualType = testBuild.BuildRomanNumeral();
+            var ActualType = utility.BuildRomanNumeral(3999);
 
             Assert.AreEqual(ExpectedType, ActualType);
         }

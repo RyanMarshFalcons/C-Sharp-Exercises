@@ -16,163 +16,152 @@ namespace Testing
         [TestMethod]
         public void IdentifiesInputsOfZero()
         {
-            bool ExpectedType = true;
+            var expected = true;
             var evaluation = new Evaluation();
 
-            bool ActualType = evaluation.Zero(0);
+            var actual = evaluation.Zero(0);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesNegativeNumberInputs()
         {
-            bool ExpectedType = true;
+            var expected = true;
             var evaluation = new Evaluation();
 
-            bool ActualType = evaluation.Negative(-1);
+            var actual = evaluation.Negative(-1);
 
-            Assert.AreEqual(ExpectedType, ActualType);
-        }  
+            Assert.AreEqual(expected, actual);
+        }
 
         [TestMethod]
         public void IdentifiesEmptyStringInputs()
         {
-            bool ExpectedType = true;
+            var expected = true;
             var evaluation = new Evaluation();
 
-            bool ActualType = evaluation.Empty("");
+            var actual = evaluation.Empty("");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesIfNotAnInt()
         {
-            bool ExpectedType = true;
+            var expected = true;
             var evaluation = new Evaluation();
 
-            bool ActualType = evaluation.NotAnInt("4.7");
+            var actual = evaluation.NotAnInt("4.7");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesIfNotADecimal()
         {
-            bool ExpectedType = true;
+            var expected = true;
             var evaluation = new Evaluation();
 
-            bool ActualType = evaluation.NotADecimal("notADecimal");
+            var actual = evaluation.NotADecimal("notADecimal");
 
-            Assert.AreEqual(ExpectedType, ActualType);
-        }
-
-        [TestMethod]
-        public void IdentifiesIfMoreThanTwoTrailingDigits()
-        {
-            bool ExpectedType = true;
-            var evaluation = new Evaluation();
-
-            bool ActualType = evaluation.TooManyTrailingDigits(4.789M);
-
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ReturnsQUARTER25DIME10PENNY03()
         {
-            string ExpectedType = "[QUARTER, 0.25][DIME, 0.1][PENNY, 0.03]";
+            var expected = "[QUARTER, 0.25][DIME, 0.10][PENNY, 0.03]";
 
-            CashRegister cashRegister = new CashRegister();
-            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 300.00M }, { "TWENTY", 60.00M }, { "TEN", 30.00M }, { "FIVE", 15.00M }, { "ONE", 3.00M }, { "QUARTER", 0.75M }, { "DIME", 0.30M }, { "NICKEL", 0.15M }, { "PENNY", 0.03M } };
-            string ActualType = cashRegister.GiveProperChange(0.38M, testDictionary);
+            var cashRegister = new CashRegister();
+            var testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 300.00M }, { "TWENTY", 60.00M }, { "TEN", 30.00M }, { "FIVE", 15.00M }, { "ONE", 3.00M }, { "QUARTER", 0.75M }, { "DIME", 0.30M }, { "NICKEL", 0.15M }, { "PENNY", 0.03M } };
+            var actual = cashRegister.GiveProperChange(0.38M, testDictionary);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ReturnsTEN10FIVE5QUARTER75PENNY01()
         {
-            string ExpectedType = "[TEN, 10][FIVE, 5][QUARTER, 0.75][PENNY, 0.01]";
+            var expected = "[TEN, 10.00][FIVE, 5.00][QUARTER, 0.75][PENNY, 0.01]";
 
-            CashRegister cashRegister = new CashRegister();
-            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 300.00M }, { "TWENTY", 60.00M }, { "TEN", 30.00M }, { "FIVE", 15.00M }, { "ONE", 3.00M }, { "QUARTER", 0.75M }, { "DIME", 0.30M }, { "NICKEL", 0.15M }, { "PENNY", 0.03M } };
-            string ActualType = cashRegister.GiveProperChange(15.76M, testDictionary);
+            var cashRegister = new CashRegister();
+            var testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 300.00M }, { "TWENTY", 60.00M }, { "TEN", 30.00M }, { "FIVE", 15.00M }, { "ONE", 3.00M }, { "QUARTER", 0.75M }, { "DIME", 0.30M }, { "NICKEL", 0.15M }, { "PENNY", 0.03M } };
+            var actual = cashRegister.GiveProperChange(15.76M, testDictionary);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ReturnsQUARTER50()
         {
-            string ExpectedType = "[QUARTER, 0.50]";
+            string expected = "[QUARTER, 0.50]";
 
-            CashRegister cashRegister = new CashRegister();
-            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 100.00M }, { "TWENTY", 60.00M }, { "TEN", 20.00M }, { "FIVE", 55.00M }, { "ONE", 90.00M }, { "QUARTER", 4.25M }, { "DIME", 3.10M }, { "NICKEL", 2.05M }, { "PENNY", 1.01M }};
-            string ActualType = cashRegister.GiveProperChange(0.50M, testDictionary);
+            var cashRegister = new CashRegister();
+            var testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 100.00M }, { "TWENTY", 60.00M }, { "TEN", 20.00M }, { "FIVE", 55.00M }, { "ONE", 90.00M }, { "QUARTER", 4.25M }, { "DIME", 3.10M }, { "NICKEL", 2.05M }, { "PENNY", 1.01M } };
+            var actual = cashRegister.GiveProperChange(0.50M, testDictionary);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ReturnsInsufficientFunds()
         {
-            string ExpectedType = "Insufficient Funds";
+            string expected = "Insufficient Funds";
 
-            CashRegister cashRegister = new CashRegister();
-            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
-            string ActualType = cashRegister.checkCashRegister(0.50M, testDictionary);
+            var cashRegister = new CashRegister();
+            var testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
+            var actual = cashRegister.checkCashRegister(0.50M, testDictionary);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ReturnsSufficientFunds()
         {
-            string ExpectedType = "Sufficient Funds";
+            var expected = "Sufficient Funds";
 
-            CashRegister cashRegister = new CashRegister();
-            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 3M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
-            string ActualType = cashRegister.checkCashRegister(0.50M, testDictionary);
+            var cashRegister = new CashRegister();
+            var testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 3M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
+            var actual = cashRegister.checkCashRegister(0.50M, testDictionary);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ReturnsPENNY50()
         {
-            string ExpectedType = "Closed";
+            var expected = "Closed";
 
-            CashRegister cashRegister = new CashRegister();
-            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.50M } };
-            string ActualType = cashRegister.checkCashRegister(0.50M, testDictionary);
+            var cashRegister = new CashRegister();
+            var testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 0M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.50M } };
+            var actual = cashRegister.checkCashRegister(0.50M, testDictionary);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ReturnsTWENTY60TEN20FIVE15ONE1QUARTER50DIME20PENNY04()
         {
-            string ExpectedType = "[TWENTY, 60][TEN, 20][FIVE, 15][ONE, 1][QUARTER, 0.50][DIME, 0.2][PENNY, 0.04]";
+            var expected = "[TWENTY, 60.00][TEN, 20.00][FIVE, 15.00][ONE, 1.00][QUARTER, 0.50][DIME, 0.20][PENNY, 0.04]";
 
-            CashRegister cashRegister = new CashRegister();
-            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 100.00M }, { "TWENTY", 60.00M }, { "TEN", 20.00M }, { "FIVE", 55.00M }, { "ONE", 90.00M }, { "QUARTER", 4.25M }, { "DIME", 3.10M }, { "NICKEL", 2.05M }, { "PENNY", 1.01M } };
-            string ActualType = cashRegister.GiveProperChange(96.74M, testDictionary);
+            var cashRegister = new CashRegister();
+            var testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 100.00M }, { "TWENTY", 60.00M }, { "TEN", 20.00M }, { "FIVE", 55.00M }, { "ONE", 90.00M }, { "QUARTER", 4.25M }, { "DIME", 3.10M }, { "NICKEL", 2.05M }, { "PENNY", 1.01M } };
+            var actual = cashRegister.GiveProperChange(96.74M, testDictionary);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ReturnInsufficientFundsDueToWrongDenominations()
         {
-            string ExpectedType = "Insufficient Funds";
+            var expected = "Insufficient Funds";
 
-            CashRegister cashRegister = new CashRegister();
-            Dictionary<string, decimal> testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 1.00M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
-            string ActualType = cashRegister.GiveProperChange(0.50M, testDictionary);
+            var cashRegister = new CashRegister();
+            var testDictionary = new Dictionary<string, decimal>() { { "ONE HUNDRED", 0M }, { "TWENTY", 0M }, { "TEN", 0M }, { "FIVE", 0M }, { "ONE", 1.00M }, { "QUARTER", 0M }, { "DIME", 0M }, { "NICKEL", 0M }, { "PENNY", 0.01M } };
+            var actual = cashRegister.GiveProperChange(0.50M, testDictionary);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -200,78 +189,78 @@ namespace Testing
         [TestMethod]
         public void IdentifiesAValidDecimal()
         {
-            var ExpectedType = InputType.Valid;
+            var expected = InputType.Valid;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.GetInputTypeForDecimal("74.51");
+            var actual = evaluation.GetInputTypeForDecimal("74.51");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesNotDecimal()
         {
-            var ExpectedType = InputType.NotADecimal;
+            var expected = InputType.NotADecimal;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.GetInputTypeForDecimal("kablamajam");
+            var actual = evaluation.GetInputTypeForDecimal("kablamajam");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesEmptyNotDecimal()
         {
-            var ExpectedType = InputType.Empty;
+            var expected = InputType.Empty;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.GetInputTypeForDecimal("");
+            var actual = evaluation.GetInputTypeForDecimal("");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesAcceptableDecimal()
         {
-            var ExpectedType = InputType.Valid;
+            var expected = InputType.Valid;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.HaveValidDecimal("12.95");
+            var actual = evaluation.HaveValidDecimal("12.95");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesAZeroDecimal()
         {
-            var ExpectedType = InputType.Zero;
+            var expected = InputType.Zero;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.HaveValidDecimal("0.00");
+            var actual = evaluation.HaveValidDecimal("0.00");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesANegativeDecimal()
         {
-            var ExpectedType = InputType.Negative;
+            var expected = InputType.Negative;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.HaveValidDecimal("-12.95");
+            var actual = evaluation.HaveValidDecimal("-12.95");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesADecimalWithTrailing()
         {
-            var ExpectedType = InputType.TooManyTrailingDigits;
+            var expected = InputType.TooManyTrailingDigits;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.HaveValidDecimal("12.955");
+            var actual = evaluation.HaveValidDecimal("12.955");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -299,34 +288,34 @@ namespace Testing
         [TestMethod]
         public void IdentifiesValidInt()
         {
-            var ExpectedType = InputType.Valid;
+            var expected = InputType.Valid;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.GetInputTypeForInt("4");
+            var actual = evaluation.GetInputTypeForInt("4");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesEmptyInt()
         {
-            var ExpectedType = InputType.Empty;
+            var expected = InputType.Empty;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.GetInputTypeForInt("");
+            var actual = evaluation.GetInputTypeForInt("");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IdentifiesNotAnInt()
         {
-            var ExpectedType = InputType.NotAnInt;
+            var expected = InputType.NotAnInt;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.GetInputTypeForInt("Kaibeau");
+            var actual = evaluation.GetInputTypeForInt("Kaibeau");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -335,9 +324,9 @@ namespace Testing
             var ExpecectedType = InputType.Valid;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.HaveValidInt("3");
+            var actual = evaluation.HaveValidInt("3");
 
-            Assert.AreEqual(ExpecectedType, ActualType);
+            Assert.AreEqual(ExpecectedType, actual);
         }
 
         [TestMethod]
@@ -346,9 +335,64 @@ namespace Testing
             var ExpecectedType = InputType.Negative;
 
             var evaluation = new Evaluation();
-            var ActualType = evaluation.HaveValidInt("-3");
+            var actual = evaluation.HaveValidInt("-3");
 
-            Assert.AreEqual(ExpecectedType, ActualType);
+            Assert.AreEqual(ExpecectedType, actual);
+        }
+
+        [TestMethod]
+        public void IdentifiesIfMoreThanTwoTrailingDigits()
+        {
+            var expected = true;
+            var evaluation = new Evaluation();
+
+            var actual = evaluation.TooManyTrailingDigits(4.789M);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns1CentForAPenny()
+        {
+            var expected = 0.01m;
+
+            var cashRegister = new CashRegister();
+            var actual = cashRegister.GetTotalOfCashInDrawer(new Dictionary<string, decimal>() { { "ONE HUNDRED", 0.00M }, { "TWENTY", 0.00M }, { "TEN", 0.00M }, { "FIVE", 0.00M }, { "ONE", 0.00M }, { "QUARTER", 0.00M }, { "DIME", 0.00M }, { "NICKEL", 0.00M }, { "PENNY", 0.01M } });
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns41CentsForAPennyANickelADimeAndAQuarter()
+        {
+            var expected = 0.41m;
+
+            var cashRegister = new CashRegister();
+            var actual = cashRegister.GetTotalOfCashInDrawer(new Dictionary<string, decimal>() { { "ONE HUNDRED", 0.00M }, { "TWENTY", 0.00M }, { "TEN", 0.00M }, { "FIVE", 0.00M }, { "ONE", 0.00M }, { "QUARTER", 0.25M }, { "DIME", 0.10M }, { "NICKEL", 0.05M }, { "PENNY", 0.01M } });
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns136Dollars41CentsForAPennyANickelADimeAQuarterAOneAFiveATenATwentyAndAHundred()
+        {
+            var expected = 136.41m;
+
+            var cashRegister = new CashRegister();
+            var actual = cashRegister.GetTotalOfCashInDrawer(new Dictionary<string, decimal>() { { "ONE HUNDRED", 100.00M }, { "TWENTY", 20.00M }, { "TEN", 10.00M }, { "FIVE", 5.00M }, { "ONE", 1.00M }, { "QUARTER", 0.25M }, { "DIME", 0.10M }, { "NICKEL", 0.05M }, { "PENNY", 0.01M } });
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns409Dollars23CentsFor3Pennies3Nickels3Dimes3Quarters3Ones3Fives3Tens3TwentiesAnd3Hundreds()
+        {
+            var expected = 409.23m;
+
+            var cashRegister = new CashRegister();
+            var actual = cashRegister.GetTotalOfCashInDrawer(new Dictionary<string, decimal>() { { "ONE HUNDRED", 300.00M }, { "TWENTY", 60.00M }, { "TEN", 30.00M }, { "FIVE", 15.00M }, { "ONE", 3.00M }, { "QUARTER", 0.75M }, { "DIME", 0.30M }, { "NICKEL", 0.15M }, { "PENNY", 0.03M } });
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }

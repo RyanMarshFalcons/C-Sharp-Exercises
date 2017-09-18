@@ -39,7 +39,7 @@ namespace StartUp
             Message.AskWhatsInDrawer();
             var cashInDrawer = evaluation.LogOfDenominationsInDrawer();
             var cashRegister = new CashRegister();
-            var displayMessage = cashRegister.GetMessageToDisplay(changeDue, cashInDrawer);
+            var displayMessage = cashRegister.GiveProperChange(changeDue, cashInDrawer);
             Message.GiveChange(displayMessage);
             Console.ReadLine();
         }

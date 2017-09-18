@@ -17,7 +17,7 @@ namespace Exact_Change
 
         public decimal ConvertToADecimal(string userInput)
         {
-            return Decimal.Parse(userInput);
+            return decimal.Parse(userInput);
         }
 
         public void InvalidDecimal(string userInput)
@@ -77,7 +77,7 @@ namespace Exact_Change
         public InputType HaveValidDecimal(string userInput)
         {
             var typeOfInput = InputType.Valid;
-            var userInputAsDecimal = Decimal.Parse(userInput);
+            var userInputAsDecimal = decimal.Parse(userInput);
             if (Zero(userInputAsDecimal))
             {
                 typeOfInput = InputType.Zero;
@@ -100,7 +100,7 @@ namespace Exact_Change
 
         public int ConvertToInt(string userInput)
         {
-            return Int32.Parse(userInput);
+            return int.Parse(userInput);
         }
 
         public void InvalidInt(string userInput)
@@ -190,13 +190,13 @@ namespace Exact_Change
 
         public bool NotADecimal(string userEntry)
         {
-            decimal result;
-            return !Decimal.TryParse(userEntry, out result);
+            var result = 0M;
+            return !decimal.TryParse(userEntry, out result);
         }
         public bool NotAnInt(string userEntry)
         {
-            int result;
-            return !Int32.TryParse(userEntry, out result);
+            var result = 0;
+            return !int.TryParse(userEntry, out result);
         }
 
         public bool Zero(decimal userEntryAsDecimal)

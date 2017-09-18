@@ -9,87 +9,146 @@ namespace ShapeUtility.Test
     public class UnitTest
     {
         [TestMethod]
-        public void EquilateralCalculatedProperly()
+        public void JIsNotAnInt()
         {
-            TriangleType ExpectedType = TriangleType.Equilateral;
-            var testTriangle = new Triangle();
+            var expected = false;
 
-            TriangleType ActualType = testTriangle.typeOfTriangle(5, 5, 5);
+            var utility = new Utility();
+            var actual = utility.CheckIfInt("J");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void IsoscelesCalculatedProperly()
+        public void NineIsAnInt()
         {
-            TriangleType ExpectedType = TriangleType.Isosceles;
-            var testTriangle = new Triangle();
+            var expected = true;
 
-            TriangleType ActualType = testTriangle.typeOfTriangle(5, 5, 7);
+            var utility = new Utility();
+            var actual = utility.CheckIfInt("9");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ScaleneCalculatedProperly()
+        public void NegativeOneIsNotPositive()
         {
-            TriangleType ExpectedType = TriangleType.Scalene;
-            var testTriangle = new Triangle();
+            var expected = false;
 
-            TriangleType ActualType = testTriangle.typeOfTriangle(5, 6, 7);
+            var utility = new Utility();
+            var actual = utility.CheckIfPositive("-1");
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TriangleInequalityError()
+        public void ZeroIsNotPositive()
         {
-            var testTriangle = new Triangle();
+            var expected = false;
 
-            TriangleType ActualType = testTriangle.typeOfTriangle(5, 6, 77);
+            var utility = new Utility();
+            var actual = utility.CheckIfPositive("0");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void OneIsPositive()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfPositive("1");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TwoIsPositive()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfPositive("2");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void InvalidTriangleCalculatedProperly()
+        {
+            var expected = TriangleType.Invalid;
+
+            var testTriangle = new Utility();
+            var actual = testTriangle.typeOfTriangle(7, 5, 75);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void EquilateralTriangleCalculatedProperly()
+        {
+            var expected = TriangleType.Equilateral;
+
+            var testTriangle = new Utility();
+            var actual = testTriangle.typeOfTriangle(5, 5, 5);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IsoscelesTriangleCalculatedProperly()
+        {
+            var expected = TriangleType.Isosceles;
+
+            var testTriangle = new Utility();
+            var actual = testTriangle.typeOfTriangle(5, 5, 7);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ScaleneTriangleCalculatedProperly()
+        {
+            var expected = TriangleType.Scalene;
+
+            var testTriangle = new Utility();
+            var actual = testTriangle.typeOfTriangle(5, 6, 7);
+
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void EquilateralEdgeCase()
         {
-            TriangleType ExpectedType = TriangleType.Equilateral;
-            var testTriangle = new Triangle();
+            var expected = TriangleType.Equilateral;
 
-            TriangleType ActualType = testTriangle.typeOfTriangle(2147483647, 2147483647, 2147483647);
+            var testTriangle = new Utility();
+            var actual = testTriangle.typeOfTriangle(2147483647, 2147483647, 2147483647);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void IsoscelesEdgeCase()
         {
-            TriangleType ExpectedType = TriangleType.Isosceles;
-            var testTriangle = new Triangle();
+            var expected = TriangleType.Isosceles;
 
-            TriangleType ActualType = testTriangle.typeOfTriangle(2147483647, 2147483647, 2147483646);
+            var testTriangle = new Utility();
+            var actual = testTriangle.typeOfTriangle(2147483647, 2147483647, 2147483646);
 
-            Assert.AreEqual(ExpectedType, ActualType);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void ScaleneEdgeCase()
         {
-            TriangleType ExpectedType = TriangleType.Scalene;
-            var testTriangle = new Triangle();
+            var expected = TriangleType.Scalene;
 
-            TriangleType ActualType = testTriangle.typeOfTriangle(2147483647, 2147483646, 2147483645);
+            var testTriangle = new Utility();
+            var actual = testTriangle.typeOfTriangle(2147483647, 2147483646, 2147483645);
 
-            Assert.AreEqual(ExpectedType, ActualType);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void NegativeBoundaryCase()
-        {
-            var testTriangle = new Triangle();
-
-            TriangleType ActualType = testTriangle.typeOfTriangle(-1, 5, 5);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
