@@ -15,17 +15,23 @@ namespace StartUp
             Message.Welcome();
             var utility = new Utility();
             var balance = 0.0;
+            var amount = 0.0;
+            var selectionLetter = "";
             var selection = new Selection();
             while (selection != Selection.CloseAccount)
             {
-                selection = utility.GetSelection();
+                selectionLetter = utility.GetSelectionLetter();
+                selection = utility.ConvertLetterToSelection(selectionLetter);
                 switch (selection)
                 {
                     case Selection.Deposit:
-                        balance += utility.MakeADeposit();
+                        amount = utility.MakeADeposit();
+                        balance = utility.GetNewBalance(balance, amount, selection);
+                        Message.ThankYou("deposit");
                         break;
                     case Selection.Withdrawal:
-                        balance -= utility.MakeAWithdrawal(balance);
+                        amount = utility.MakeAWithdrawal(balance);
+                        balance = utility.GetNewBalance(balance, amount, selection);
                         break;
                     case Selection.CheckBalance:
                         Message.ShowCurrentBalance(balance);
@@ -36,6 +42,7 @@ namespace StartUp
                     default:
                         break;
                 }
+
             }
             Console.ReadLine();
         }

@@ -4,44 +4,77 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bank_Account_Messages;
+using System.Text.RegularExpressions;
 
 namespace Bank_Account
 {
     public enum Selection { Deposit, Withdrawal, CheckBalance, CloseAccount};
     public class Utility
     {
-        public Selection GetSelection()
+        public string GetSelectionLetter()
         {
             var isValidSelection = false;
-            var input = "";
             Message.Selections();
+            var input = "";
             while (isValidSelection == false)
             {
                 input = Console.ReadLine();
-                if ((input != "1") && (input != "2") && (input != "3") && (input != "4"))
+                if (!CheckIfValidSelection(input))
                 {
-                    Message.Not123or4(input);
+                    Message.InvalidSelection(input);
                 }
                 else
                 {
                     isValidSelection = true;
                 }
             }
-            switch (input)
+            return input;
+        }
+
+        public bool CheckIfValidSelection(string input)
+        {
+            return Regex.IsMatch(input, "^[A-D() ]+$") && input.Length == 1;
+        }
+
+        public Selection ConvertLetterToSelection(string letterSelection)
+        {
+            switch (letterSelection)
             {
-                case "1":
+                case "A":
                     return Selection.Deposit;
                     break;
-                case "2":
+                case "B":
                     return Selection.Withdrawal;
                     break;
-                case "3":
+                case "C":
                     return Selection.CheckBalance;
                     break;
-                case "4":
+                case "D":
                 default:
                     return Selection.CloseAccount;
                     break;
+            }
+        }
+
+        public double MakeADeposit()
+        {
+            Message.MakeADeposit();
+            return GetAmount("deposit");
+        }
+
+        public double MakeAWithdrawal(double balance)
+        {
+            Message.MakeAWithdrawal();
+            var amount = GetAmount("withdrawal");
+            if (amount > balance)
+            {
+                Message.InsufficientFunds(amount, balance);
+                return 0;
+            }
+            else
+            {
+                Message.ThankYou("withdrawal");
+                return amount;
             }
         }
 
@@ -66,43 +99,32 @@ namespace Bank_Account
                     {
                         isValidInput = true;
                     }
-                    
+
                 }
             }
-            return Math.Round(Double.Parse(input), 2);
+            return Math.Round(double.Parse(input), 2);
         }
 
         public bool CheckIfDouble(string input)
         {
             var num = 0.0;
-            return Double.TryParse(input, out num);
+            return double.TryParse(input, out num);
         }
 
         public bool CheckIfPositive(string input)
         {
-            return Double.Parse(input) > 0;
+            return double.Parse(input) > 0;
         }
 
-        public double MakeADeposit()
+        public double GetNewBalance(double originalBalance, double amount, Selection selection)
         {
-            Message.MakeADeposit();
-            var utility = new Utility();
-            return utility.GetAmount("deposit");
-        }
-
-        public double MakeAWithdrawal(double balance)
-        {
-            Message.MakeAWithdrawal();
-            var utility = new Utility();
-            var amount = utility.GetAmount("withdrawal");
-            if (amount > balance)
+            if (selection == Selection.Deposit)
             {
-                Message.InsufficientFunds(amount, balance);
-                return 0;
+                return originalBalance + amount;
             }
             else
             {
-                return amount;
+                return originalBalance - amount;
             }
         }
     }
