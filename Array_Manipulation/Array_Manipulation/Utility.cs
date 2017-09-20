@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Array_Manipulation_Messages;
+using System.Text.RegularExpressions;
 
 namespace Array_Manipulation
 {
@@ -68,7 +69,7 @@ namespace Array_Manipulation
 
         public bool CheckIfValidSelection(string input)
         {
-            return (input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G" || input == "H" || input == "I" || input == "J" || input == "K" || input == "L");
+            return Regex.IsMatch(input, "^[A-L() ]+$") && input.Length == 1;
         }
 
         public Manipulation ConvertLetterToManipulation(string letterSelected)
