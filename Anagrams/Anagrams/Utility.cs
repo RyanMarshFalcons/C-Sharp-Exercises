@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Anagrams_Messages;
+using System.Text.RegularExpressions;
 
 namespace Anagrams
 {
@@ -31,18 +32,9 @@ namespace Anagrams
             return new string(userInputAsArray);
         }
 
-        public string AdjustString(string original)
+        public string AdjustString(string userString)
         {
-            var adjusted = original.Replace(" ", "");
-            adjusted = adjusted.Replace(",", "");
-            adjusted = adjusted.Replace(".", "");
-            adjusted = adjusted.Replace("'", "");
-            adjusted = adjusted.Replace("\"", "");
-            adjusted = adjusted.Replace(":", "");
-            adjusted = adjusted.Replace(";", "");
-            adjusted = adjusted.Replace("!", "");
-            adjusted = adjusted.Replace("?", "");
-            return adjusted.ToLower();
+            return Regex.Replace(userString, "[^A-Za-z0-9]", "").ToLower();
         }
 
         public bool FindOutIfAnagram(string sortedFirstInput, string sortedSecondInput)
