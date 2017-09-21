@@ -23,15 +23,15 @@ namespace BlackJack
             }
             if (handValue > 21)
             {
-                if ((handValue > 52) && (aceCounter == 4))
+                if (handValue > 52 && aceCounter == 4)
                 {
                     handValue -= 40;
                 }
-                else if ((handValue > 42) && (aceCounter >= 3))
+                else if (handValue > 42 && aceCounter >= 3)
                 {
                     handValue -= 30;
                 }
-                else if ((handValue > 32) && (aceCounter >= 2))
+                else if (handValue > 32 && aceCounter >= 2)
                 {
                     handValue -= 20;
                 }
@@ -95,7 +95,7 @@ namespace BlackJack
 
         public bool CheckIfThereWasABlackJack(Hand playerHand, Hand dealerHand, List<Card> playerCards, List<Card> dealerCards)
         {
-            return ((playerHand.Points(playerCards) == 21) || (dealerHand.Points(dealerCards) == 21));
+            return (playerHand.Points(playerCards) == 21 || dealerHand.Points(dealerCards) == 21);
         }
 
         public bool Insurance()
