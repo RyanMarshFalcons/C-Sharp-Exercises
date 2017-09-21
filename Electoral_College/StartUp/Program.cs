@@ -10,18 +10,20 @@ namespace StartUp
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Message.Welcome();
             var utility = new Utility();
             var myVotes = new List<int>();
             var userVotes = new List<int>();
-            var winner = 0;
+            var winnerOfStateAsNum = 0;
+            var winnerOfState = new WinnerOfState();
             var statesAndVotes = utility.VotesPerState();
             foreach (var entry in statesAndVotes)
             {
-                winner = utility.GetValidEntry(entry.Key, entry.Value);
-                if (winner == 1)
+                winnerOfStateAsNum = utility.GetValidEntry(entry.Key, entry.Value);
+                winnerOfState = utility.NumSelectionToEnum(winnerOfStateAsNum);
+                if (winnerOfState == WinnerOfState.User)
                 {
                     userVotes.Add(entry.Value);
                 }
@@ -32,7 +34,8 @@ namespace StartUp
             }
             var myTotalVotes = utility.SumOfVotes(myVotes);
             var userTotalVotes = utility.SumOfVotes(userVotes);
-            utility.DisplayResults(myTotalVotes, userTotalVotes, myVotes.Count, userVotes.Count);
+            var electionResult = utility.DetermineResultOfElection(myTotalVotes, userTotalVotes);
+            utility.DisplayResults(electionResult, myVotes.Count, userVotes.Count, myTotalVotes, userTotalVotes);
             Console.ReadLine();
         }
     }
