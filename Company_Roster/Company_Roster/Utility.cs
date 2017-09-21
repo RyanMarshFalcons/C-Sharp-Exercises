@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Company_Roster_Messages;
+using System.Text.RegularExpressions;
 
 namespace Company_Roster
 {
@@ -410,7 +411,7 @@ namespace Company_Roster
 
         public bool IsValidDepartmentSelection(string input)
         {
-            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
+            return Regex.IsMatch(input, "^[A-G() ]+$") && input.Length == 1;
         }
 
         public Department ConvertLetterToDepartment(string departmentSelection)
