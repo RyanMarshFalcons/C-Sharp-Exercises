@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Counting_Sheep_Messages;
+using System.Text.RegularExpressions;
 
 namespace Counting_Sheep
 {
@@ -32,7 +33,7 @@ namespace Counting_Sheep
 
         public bool CheckIfValidSelection(string input)
         {
-            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G" || input == "H" || input == "I" || input == "J";
+            return Regex.IsMatch(input, "^[A-J() ]+$") && input.Length == 1;
         }
 
         public Delay ConvertLetterToDelay(string delayLetterSelection)
