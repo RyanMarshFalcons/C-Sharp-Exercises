@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Calculator;
 using Calculator_Messages;
+using System.Text.RegularExpressions;
 
 namespace StartUp
 {
@@ -17,7 +18,7 @@ namespace StartUp
             var num1 = utility.GetValidNumber();
             var operatorSelection = utility.GetValidOperatorSelection();
             var num2 = 0.0;
-            if ((operatorSelection == "A") || (operatorSelection == "B") || (operatorSelection == "C") || (operatorSelection == "D"))
+            if (Regex.IsMatch(operatorSelection, "^[A-D() ]+$") && operatorSelection.Length == 1)
             {
                 num2 = utility.GetValidNumber();
             }

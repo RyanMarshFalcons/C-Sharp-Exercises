@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculator_Messages;
+using System.Text.RegularExpressions;
 
 namespace Calculator
 {
@@ -26,13 +27,13 @@ namespace Calculator
                     isValidInput = true;
                 }
             }
-            return Double.Parse(input);
+            return double.Parse(input);
         }
 
         public bool CheckIfDouble(string input)
         {
             var num = 0.0;
-            return Double.TryParse(input, out num);
+            return double.TryParse(input, out num);
         }
 
         public string GetValidOperatorSelection()
@@ -57,7 +58,7 @@ namespace Calculator
 
         public bool CheckIfValidSelection(string input)
         {
-            return (input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G" || input == "H" || input == "I" || input == "J" || input == "K");
+            return (Regex.IsMatch(input, "^[A-K() ]+$") && input.Length == 1);
         }
 
         public double GetSum(double num1, double num2)
