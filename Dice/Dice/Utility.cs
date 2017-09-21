@@ -33,18 +33,18 @@ namespace Dice
                     }
                 }
             }
-            return Int32.Parse(input);
+            return int.Parse(input);
         }
 
         public bool CheckIfInt(string input)
         {
             var num = 0;
-            return Int32.TryParse(input, out num);
+            return int.TryParse(input, out num);
         }
 
         public bool CheckIfPositive(string input)
         {
-            return Int32.Parse(input) > 0;
+            return int.Parse(input) > 0;
         }
 
         public List<int> GetDiceRolls(int numRolls)
@@ -60,13 +60,7 @@ namespace Dice
 
         public int GetSum(List<int> rollsOfDice)
         {
-            var sum = 0;
-            foreach (var roll in rollsOfDice)
-            {
-                Console.WriteLine(roll);
-                sum += roll;
-            }
-            return sum;
+            return rollsOfDice.Sum();
         }
     }
 }

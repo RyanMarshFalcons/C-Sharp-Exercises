@@ -16,7 +16,7 @@ namespace StartUp
             var utility = new Utility();
             var numRolls = utility.GetValidEntry();
             var rollResults = utility.GetDiceRolls(numRolls);
-            Message.ShowRolls();
+            Message.ShowRolls(rollResults);
             var sumRolls = utility.GetSum(rollResults);
             Message.DisplaySum(numRolls, sumRolls);
             Console.ReadLine();

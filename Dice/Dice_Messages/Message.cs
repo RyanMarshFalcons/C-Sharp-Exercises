@@ -29,14 +29,20 @@ namespace Dice_Messages
             Console.Write("\nSorry but the number of dice must be poitive. Please input the number of dice\nthat you would like to roll: ");
         }
 
-        public static void ShowRolls()
+        public static void ShowRolls(List<int> rollResults)
         {
             Console.WriteLine("\nThe results of your rolls are listed below: ");
+            foreach (var roll in rollResults)
+            {
+                Console.WriteLine(roll);
+            }
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
         }
 
         public static void DisplaySum(int numDice, int sum)
         {
-            Console.WriteLine($"\nThe sum of the {numDice} dice that you rolled was {sum}.");
+            Console.WriteLine($"The sum of the {numDice} dice that you rolled was {sum}. Press enter to close the\nprogram.");
         }
     }
 }
