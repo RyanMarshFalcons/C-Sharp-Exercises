@@ -39,25 +39,16 @@ namespace Evenly_Spaced
         {
             Array.Sort(nums);
             var numsDiffs = new int[4];
-            numsDiffs[0] = nums[1] - nums[0];
-            numsDiffs[1] = nums[2] - nums[1];
-            numsDiffs[2] = nums[3] - nums[2];
-            numsDiffs[3] = nums[4] - nums[3];
+            for (int i = 0; i < 4; i++)
+            {
+                numsDiffs[i] = nums[i + 1] - nums[i];
+            }
             return numsDiffs;
         }
 
         public bool CheckIfEvenlySpaced(int[] differences)
         {
-            var firstDifference = differences[0];
-            var evenlySpaced = true;
-            for (int i = 1; i < differences.Length; i++)
-            {
-                if (differences[i] != firstDifference)
-                {
-                    evenlySpaced = false;
-                }
-            }
-            return evenlySpaced;
+            return differences.Select(s => s.ToString()).Distinct().Count() == 1;
         }
 
         public void DisplayResults(bool areEvenlySpaced)
