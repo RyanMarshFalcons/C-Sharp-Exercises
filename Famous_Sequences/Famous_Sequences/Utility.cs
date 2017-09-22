@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Famous_Sequences_Messages;
+using System.Text.RegularExpressions;
 
 namespace Famous_Sequences
 {
@@ -32,7 +33,7 @@ namespace Famous_Sequences
 
         public bool CheckIfValidSelection(string input)
         {
-            return (input == "A" || input == "B" || input == "C" || input == "D");
+            return Regex.IsMatch(input, "^[A-D() ]+$") && input.Length == 1;
         }
 
         public Sequence ConvertToSequence(string selection)
@@ -55,6 +56,51 @@ namespace Famous_Sequences
             }
         }
 
+        public List<int> ConstructSequence(Sequence sequence)
+        {
+            var num = 0;
+            var listOfNums = new List<int>();
+            switch (sequence)
+            {
+                case Sequence.Fibonacci:
+                    Message.FibonacciDescription();
+                    listOfNums = new List<int>() { 0, 1 };
+                    for (int i = 0; i < 40; i++)
+                    {
+                        num = FibonacciNextNumber(listOfNums);
+                        listOfNums.Add(num);
+                    }
+                    break;
+                case Sequence.LazyCaterer:
+                    Message.LazyCatererDescription();
+                    for (int i = 0; i < 40; i++)
+                    {
+                        num = LazyCatererNextNumber(i);
+                        listOfNums.Add(num);
+                    }
+                    break;
+                case Sequence.Rectangular:
+                    Message.RectangularDescription();
+                    for (int i = 0; i < 40; i++)
+                    {
+                        num = RectangularNextNumber(i);
+                        listOfNums.Add(num);
+                    }
+                    break;
+                case Sequence.Triangular:
+                    Message.TriangularDescription();
+                    for (int i = 0; i < 40; i++)
+                    {
+                        num = TriangularNextNumber(i);
+                        listOfNums.Add(num);
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return listOfNums;
+        }
+        
         public int FibonacciNextNumber(List<int> listOfNums)
         {
             return listOfNums[listOfNums.Count - 1] + listOfNums[listOfNums.Count - 2];
