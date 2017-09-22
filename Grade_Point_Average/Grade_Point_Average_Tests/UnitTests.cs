@@ -12,7 +12,29 @@ namespace Grade_Point_Average_Tests
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueForBPlus()
+        public void AIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("A");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void AMinusIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("A-");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void BPlusIsAValidGrade()
         {
             var expected = true;
 
@@ -23,7 +45,84 @@ namespace Grade_Point_Average_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForDMinus()
+        public void BIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("B");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void BMinusIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("B-");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CPlusIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("C+");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("C");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CMinusIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("C-");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DPlusIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("D+");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("D");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DMinusIsAValidGrade()
         {
             var expected = true;
 
@@ -34,7 +133,18 @@ namespace Grade_Point_Average_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForG()
+        public void FIsAValidGrade()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGrade("F");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GIsNotAValidGrade()
         {
             var expected = false;
 

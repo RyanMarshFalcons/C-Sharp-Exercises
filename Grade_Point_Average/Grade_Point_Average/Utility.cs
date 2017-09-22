@@ -9,11 +9,6 @@ namespace Grade_Point_Average
 {
     public class Utility
     {
-        public List<string> CourseSchedule()
-        {
-            return new List<string>() { "English", "World History", "Algebra", "Physical Science", "French", "Health", "Art" };
-        }
-
         public string GetValidEntry(string className)
         {
             Message.EnterGrade(className);
@@ -36,7 +31,7 @@ namespace Grade_Point_Average
 
         public bool CheckIfValidGrade(string input)
         {
-            return ((input == "F") || (input == "D-") || (input == "D") || (input == "D+") || (input == "C-") || (input == "C") || (input == "C+") || (input == "B-") || (input == "B") || (input == "B+") || (input == "A-") || (input == "A"));
+            return (input == "F" || input == "D-" || input == "D" || input == "D+" || input == "C-" || input == "C" || input == "C+" || input == "B-" || input == "B" || input == "B+" || input == "A-" || input == "A");
         }
 
         public double CalculateGPA(Dictionary<string, string> courseGrades)

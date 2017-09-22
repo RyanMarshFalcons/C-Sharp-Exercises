@@ -14,7 +14,7 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var courseSchedule = utility.CourseSchedule();
+            var courseSchedule = new List<string>() { "English", "World History", "Algebra", "Physical Science", "French", "Health", "Art" };
             var courseGrades = new Dictionary<string, string>();
             foreach (var course in courseSchedule)
             {
