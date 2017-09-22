@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D91A45E-A20B-4264-8C5C-97D3AF2B9F5C}</ProjectGuid>
+    <ProjectGuid>{3945A719-9A9D-4111-9C62-C3A1091C0D13}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FizzBuzzPop_Tests</RootNamespace>
-    <AssemblyName>FizzBuzzPop_Tests</AssemblyName>
+    <RootNamespace>FizzBuzzPopCrackle_Tests</RootNamespace>
+    <AssemblyName>FizzBuzzPopCrackle_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FizzBuzzPop\FizzBuzzPop.csproj">
-      <Project>{8ab8212d-c557-4c9f-9399-db11b03b2e96}</Project>
-      <Name>FizzBuzzPop</Name>
+    <ProjectReference Include="..\FizzBuzzPopCrackle\FizzBuzzPopCrackle.csproj">
+      <Project>{5ddbb55f-5ceb-49be-aadc-bfe696cc8f41}</Project>
+      <Name>FizzBuzzPopCrackle</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

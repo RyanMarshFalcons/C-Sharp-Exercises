@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FizzBuzzPop;
+using FizzBuzzPopCrackle;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FizzBuzzPop_Tests
+namespace FizzBuzzPopCrackle_Tests
 {
     [TestClass]
     public class UnitTests
     {
         [TestMethod]
-        public void ReturnsTrueForA()
+        public void AIsAValidGuess()
         {
             var expected = true;
 
@@ -23,7 +23,7 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForB()
+        public void BIsAValidGuess()
         {
             var expected = true;
 
@@ -34,7 +34,7 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForC()
+        public void CIsAValidGuess()
         {
             var expected = true;
 
@@ -45,7 +45,7 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForD()
+        public void DIsAValidGuess()
         {
             var expected = true;
 
@@ -56,7 +56,7 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForE()
+        public void EIsAValidGuess()
         {
             var expected = true;
 
@@ -67,7 +67,7 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForF()
+        public void FIsAValidGuess()
         {
             var expected = true;
 
@@ -78,7 +78,7 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForG()
+        public void GIsAValidGuess()
         {
             var expected = true;
 
@@ -89,7 +89,7 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForH()
+        public void HIsAValidGuess()
         {
             var expected = true;
 
@@ -100,12 +100,89 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseForI()
+        public void IIsAValidGuess()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGuess("I");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void JIsAValidGuess()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGuess("J");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void KIsAValidGuess()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGuess("K");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LIsAValidGuess()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGuess("L");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MIsAValidGuess()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGuess("M");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void NIsAValidGuess()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGuess("N");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void OIsAValidGuess()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidGuess("O");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void PIsNotAValidGuess()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CheckIfValidGuess("I");
+            var actual = utility.CheckIfValidGuess("P");
 
             Assert.AreEqual(expected, actual);
         }
@@ -155,45 +232,89 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
-        public void ReturnsFizzBuzzForE15()
+        public void ReturnsCrackleForE11()
+        {
+            var expected = "Crackle";
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToGuess("E", 11);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFizzBuzzForF15()
         {
             var expected = "FizzBuzz";
 
             var utility = new Utility();
-            var actual = utility.ConvertLetterToGuess("E", 15);
+            var actual = utility.ConvertLetterToGuess("F", 15);
 
             Assert.AreEqual(expected, actual);
         }
-
+        
         [TestMethod]
-        public void ReturnsFizzPopForF21()
+        public void ReturnsFizzPopForG21()
         {
             var expected = "FizzPop";
 
             var utility = new Utility();
-            var actual = utility.ConvertLetterToGuess("F", 21);
+            var actual = utility.ConvertLetterToGuess("G", 21);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsBuzzPopForG35()
+        public void ReturnsFizzCrackleForH33()
+        {
+            var expected = "FizzCrackle";
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToGuess("H", 33);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsBuzzPopForI35()
         {
             var expected = "BuzzPop";
 
             var utility = new Utility();
-            var actual = utility.ConvertLetterToGuess("G", 35);
+            var actual = utility.ConvertLetterToGuess("I", 35);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsFizzBuzzPopForH105()
+        public void ReturnsBuzzCrackleForJ55()
+        {
+            var expected = "BuzzCrackle";
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToGuess("J", 55);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsPopCrackleForK77()
+        {
+            var expected = "PopCrackle";
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToGuess("K", 77);
+
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [TestMethod]
+        public void ReturnsFizzBuzzPopForL105()
         {
             var expected = "FizzBuzzPop";
 
             var utility = new Utility();
-            var actual = utility.ConvertLetterToGuess("H", 105);
+            var actual = utility.ConvertLetterToGuess("L", 105);
 
             Assert.AreEqual(expected, actual);
         }
@@ -205,6 +326,28 @@ namespace FizzBuzzPop_Tests
 
             var utility = new Utility();
             var actual = utility.CalculateCorrectAnswer(6);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns1For1()
+        {
+            var expected = "1";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(1);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Returns2For2()
+        {
+            var expected = "2";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(2);
 
             Assert.AreEqual(expected, actual);
         }
@@ -232,6 +375,17 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
+        public void ReturnsCrackleFor22()
+        {
+            var expected = "Crackle";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(22);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsFizzBuzzFor30()
         {
             var expected = "FizzBuzz";
@@ -254,6 +408,17 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
+        public void ReturnsFizzCrackleFor66()
+        {
+            var expected = "FizzCrackle";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(66);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsBuzzPopFor70()
         {
             var expected = "BuzzPop";
@@ -265,12 +430,67 @@ namespace FizzBuzzPop_Tests
         }
 
         [TestMethod]
+        public void ReturnsBuzzCrackleFor110()
+        {
+            var expected = "BuzzCrackle";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(110);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsPopCrackleFor154()
+        {
+            var expected = "PopCrackle";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(154);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsFizzBuzzPopFor210()
         {
             var expected = "FizzBuzzPop";
 
             var utility = new Utility();
             var actual = utility.CalculateCorrectAnswer(210);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFizzBuzzCrackleFor330()
+        {
+            var expected = "FizzBuzzCrackle";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(330);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsBuzzPopCrackleFor770()
+        {
+            var expected = "BuzzPopCrackle";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(770);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFizzBuzzPopCrackleFor2310()
+        {
+            var expected = "FizzBuzzPopCrackle";
+
+            var utility = new Utility();
+            var actual = utility.CalculateCorrectAnswer(2310);
 
             Assert.AreEqual(expected, actual);
         }
@@ -337,6 +557,28 @@ namespace FizzBuzzPop_Tests
 
             var utility = new Utility();
             var actual = utility.IsPop(8);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueFor11()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsCrackle(11);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseFor12()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsCrackle(12);
 
             Assert.AreEqual(expected, actual);
         }

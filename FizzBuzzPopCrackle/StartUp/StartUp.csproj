@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8AB8212D-C557-4C9F-9399-DB11B03B2E96}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{52130089-0897-45EA-8996-82E9E4424FA7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FizzBuzzPop</RootNamespace>
-    <AssemblyName>FizzBuzzPop</AssemblyName>
+    <RootNamespace>StartUp</RootNamespace>
+    <AssemblyName>StartUp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,13 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utility.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FizzBuzzPop_Messages\FizzBuzzPop_Messages.csproj">
-      <Project>{36285fec-e595-404c-9d04-a0d96d65c5ac}</Project>
-      <Name>FizzBuzzPop_Messages</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FizzBuzzPopCrackle\FizzBuzzPopCrackle.csproj">
+      <Project>{5ddbb55f-5ceb-49be-aadc-bfe696cc8f41}</Project>
+      <Name>FizzBuzzPopCrackle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FizzBuzzPopCrackle_Messages\FizzBuzzPopCrackle_Messages.csproj">
+      <Project>{1739cd31-d321-4b1c-b988-8bd63db2df71}</Project>
+      <Name>FizzBuzzPopCrackle_Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

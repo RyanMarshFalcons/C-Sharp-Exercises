@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FizzBuzzPop_Messages")]
+[assembly: AssemblyTitle("FizzBuzzPopCrackleCrackle_Messages")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FizzBuzzPop_Messages")]
+[assembly: AssemblyProduct("FizzBuzzPopCrackleCrackle_Messages")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("36285fec-e595-404c-9d04-a0d96d65c5ac")]
+[assembly: Guid("1739cd31-d321-4b1c-b988-8bd63db2df71")]
 
 // Version information for an assembly consists of the following four values:
 //
