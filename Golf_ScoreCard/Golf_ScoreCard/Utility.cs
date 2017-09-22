@@ -49,28 +49,23 @@ namespace Golf_ScoreCard
 
         public int GetParForHole(int holeNum)
         {
-            if ((holeNum == 2) || (holeNum == 6) || (holeNum == 11) || (holeNum == 15))
+            if (holeNum == 2 || holeNum == 6 || holeNum == 11 || holeNum == 15)
             {
                 return 3;
             }
-            else if ((holeNum == 4) || (holeNum == 8) || (holeNum == 13) || (holeNum == 17))
+            else if (holeNum == 4 || holeNum == 8 || holeNum == 13 || holeNum == 17)
             {
                 return 5;
             }
             else
             {
-                return 4;
+                return 4; 
             }
         }
 
         public int GetTotalScore(List<int> scorecard)
         {
-            var totalScore = 0;
-            foreach (var score in scorecard)
-            {
-                totalScore += score;
-            }
-            return totalScore;
+            return scorecard.Sum();
         }
 
         public void DisplayResults(int totalScore)
