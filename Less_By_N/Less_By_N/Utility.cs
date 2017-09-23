@@ -26,13 +26,13 @@ namespace Less_By_N
                     isValidInput = true;
                 }
             }
-            return Int32.Parse(input);
+            return int.Parse(input);
         }
 
         public bool CheckIfInt(string input)
         {
             var num = 0;
-            return Int32.TryParse(input, out num);
+            return int.TryParse(input, out num);
         }
 
         public int[] GetDiffs(int[] nums)
@@ -48,15 +48,7 @@ namespace Less_By_N
 
         public int IsLessByN(int[] numsDiffs, int N)
         {
-            var counter = 0;
-            foreach (var diff in numsDiffs)
-            {
-                if (diff >= N)
-                {
-                    counter += 1;
-                }
-            }
-            return counter;
+            return numsDiffs.Where(d => d >= N).Count();
         }
     }
 }
