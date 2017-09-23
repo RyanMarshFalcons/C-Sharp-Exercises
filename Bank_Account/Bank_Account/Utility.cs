@@ -33,7 +33,7 @@ namespace Bank_Account
 
         public bool CheckIfValidSelection(string input)
         {
-            return Regex.IsMatch(input, "^[A-D() ]+$") && input.Length == 1;
+            return Regex.IsMatch(input, "[A-D]") && input.Length == 1;
         }
 
         public Selection ConvertLetterToSelection(string letterSelection)
