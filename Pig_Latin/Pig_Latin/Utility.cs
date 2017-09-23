@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pig_Latin_Messages;
+using System.Text.RegularExpressions;
 
 namespace Pig_Latin
 {
@@ -46,7 +47,7 @@ namespace Pig_Latin
 
         public bool CheckIfVowel(char character)
         {
-            return ((character == 'a') || (character == 'e') || (character == 'i') || (character == 'o') || (character == 'u') || (character == 'y') || (character == 'A') || (character == 'E') || (character == 'I') || (character == 'O') || (character == 'U') || (character == 'Y'));
+            return Regex.IsMatch(character.ToString(), "[aeiouyAEIOUY]");
         }
 
         public string AddYayToTheEnd(string word)

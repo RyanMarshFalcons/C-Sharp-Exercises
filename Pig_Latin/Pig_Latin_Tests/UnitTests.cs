@@ -78,7 +78,18 @@ namespace Pig_Latin_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueIfVowel()
+        public void aIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('a');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void eIsAVowel()
         {
             var expected = true;
 
@@ -89,12 +100,133 @@ namespace Pig_Latin_Tests
         }
 
         [TestMethod]
-        public void ReturnsFalseIfNotVowel()
+        public void iIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('i');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void oIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('o');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void uIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('u');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void yIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('y');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void AIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('A');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void EIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('E');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('I');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void OIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('O');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void UIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('U');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void YIsAVowel()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('Y');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void tIsNotAVowel()
         {
             var expected = false;
 
             var utility = new Utility();
             var actual = utility.CheckIfVowel('t');
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TIsNotAVowel()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfVowel('T');
 
             Assert.AreEqual(expected, actual);
         }
