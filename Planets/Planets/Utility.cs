@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Planets_Messages;
+using System.Text.RegularExpressions;
 
 namespace Planets
 {
@@ -49,7 +50,7 @@ namespace Planets
 
         public bool IsABCDEFGH(string input)
         {
-            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G" || input == "H";
+            return Regex.IsMatch(input, "[A-H]") && input.Length == 1;
         }
 
         public string GetValidMeasureSelection(string planet)
@@ -74,7 +75,7 @@ namespace Planets
 
         public bool IsABC(string input)
         {
-            return input == "A" || input == "B" || input == "C";
+            return Regex.IsMatch(input, "[A-C]") && input.Length == 1;
         }
 
         public double GetValidMeasurement(string unitOfMeasurement, string action, string typeOfMeasurement)
@@ -101,18 +102,18 @@ namespace Planets
                     }
                 }
             }
-            return Double.Parse(input);
+            return double.Parse(input);
         }
 
         public bool CheckIfDouble(string input)
         {
             var num = 0.0;
-            return Double.TryParse(input, out num);
+            return double.TryParse(input, out num);
         }
 
         public bool CheckIfPositive(string input)
         {
-            return Double.Parse(input) > 0;
+            return double.Parse(input) > 0;
         }
 
         public Planet ConvertLetterToPlanet(string planetSelection)
