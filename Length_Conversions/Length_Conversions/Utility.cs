@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Length_Conversions_Messages;
+using System.Text.RegularExpressions;
 
 namespace Length_Conversions
 {
@@ -36,7 +37,7 @@ namespace Length_Conversions
 
         public bool CheckIfABCD(string input)
         {
-            return ((input == "A") || (input == "B") || (input == "C") || (input == "D"));
+            return Regex.IsMatch(input, "[A-D]") && input.Length == 1;
         }
 
         public double GetValidNumber(string lengthType)
@@ -63,7 +64,7 @@ namespace Length_Conversions
                     }
                 }
             }
-            return Double.Parse(input);
+            return double.Parse(input);
         }
 
         public bool CheckIfDouble(string input)

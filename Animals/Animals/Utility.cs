@@ -33,7 +33,7 @@ namespace Animals
 
         public bool CheckIfValidSelection(string input)
         {
-            return Regex.IsMatch(input, "^[A-I() ]+$") && input.Length == 1;
+            return Regex.IsMatch(input, "[A-I()]") && input.Length == 1;
         }
         public bool AskToContinue()
         {
