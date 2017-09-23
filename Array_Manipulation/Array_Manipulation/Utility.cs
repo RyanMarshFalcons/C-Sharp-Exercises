@@ -69,7 +69,7 @@ namespace Array_Manipulation
 
         public bool CheckIfValidSelection(string input)
         {
-            return Regex.IsMatch(input, "^[A-L() ]+$") && input.Length == 1;
+            return Regex.IsMatch(input, "[A-L]") && input.Length == 1;
         }
 
         public Manipulation ConvertLetterToManipulation(string letterSelected)
