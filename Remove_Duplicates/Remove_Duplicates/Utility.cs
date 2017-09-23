@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Remove_Duplicates_Messages;
+using System.Text.RegularExpressions;
 
 namespace Remove_Duplicates
 {
@@ -57,7 +58,7 @@ namespace Remove_Duplicates
 
         public bool CheckIfValidSelection(string input)
         {
-            return (input == "A" || input == "B" || input == "C");
+            return Regex.IsMatch(input, "[A-C]") && input.Length == 1;
         }
 
         public RemoveDuplicate ConvertLetterToRemoveDupicate(string selectionLetter)
