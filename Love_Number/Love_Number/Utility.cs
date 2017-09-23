@@ -37,7 +37,7 @@ namespace Love_Number
 
         public bool CheckIfLoveNum(int num1, int num2, int loveNum)
         {
-            return ((num1 == loveNum) || (num2 == loveNum));
+            return num1 == loveNum || num2 == loveNum;
         }
 
         public bool CheckIfSumIsLoveNum(int num1, int num2, int loveNum)
@@ -57,7 +57,7 @@ namespace Love_Number
 
         public bool CheckIfQuotientIsLoveNum(int num1, int num2, int loveNum)
         {
-            return ((num1 / num2 == loveNum) || (num2 / num1 == loveNum));
+            return num1 / num2 == loveNum || num2 / num1 == loveNum;
         }
 
         public void DisplayResults(bool doLoveNum, int loveNum)
