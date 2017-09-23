@@ -156,7 +156,7 @@ namespace Company_Roster
 
         public bool IsValidPrefixSelection(string input)
         {
-            return input == "A" || input == "B" || input == "C" || input == "D";
+            return Regex.IsMatch(input, "[A-D]") && input.Length == 1;
         } 
 
         public Prefix ConvertLetterToPrefix(string prefixSelection)
@@ -411,7 +411,7 @@ namespace Company_Roster
 
         public bool IsValidDepartmentSelection(string input)
         {
-            return Regex.IsMatch(input, "^[A-G() ]+$") && input.Length == 1;
+            return Regex.IsMatch(input, "[A-G]") && input.Length == 1;
         }
 
         public Department ConvertLetterToDepartment(string departmentSelection)
