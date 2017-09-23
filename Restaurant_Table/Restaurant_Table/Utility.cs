@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Restaurant_Table_Messages;
+using System.Text.RegularExpressions;
 
 namespace Restaurant_Table
 {
@@ -73,7 +74,7 @@ namespace Restaurant_Table
 
         public bool CheckIfABCDEFG(string input)
         {
-            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
+            return Regex.IsMatch(input, "[A-G]") && input.Length == 1;
         }
 
         public bool IsWeekEnd(string daySelection)
