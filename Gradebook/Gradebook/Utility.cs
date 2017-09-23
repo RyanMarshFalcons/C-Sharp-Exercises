@@ -33,18 +33,18 @@ namespace Gradebook
                     }
                 }
             }
-            return Double.Parse(input);
+            return double.Parse(input);
         }
 
         public bool CheckIfDouble(string input)
         {
             var num = 0.0;
-            return Double.TryParse(input, out num);
+            return double.TryParse(input, out num);
         }
 
         public bool CheckIfWithinRange(string input)
         {
-            return ((Double.Parse(input) >= 0) && (Double.Parse(input) <= 100));
+            return double.Parse(input) >= 0 && double.Parse(input) <= 100;
         }
 
         public bool AskToContinue()
