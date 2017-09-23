@@ -33,7 +33,7 @@ namespace Guessing_Games
             {
                 return GameResult.Tied;
             }
-            else if (((userThrow == Throw.Paper) && (houseThrow == Throw.Rock)) || ((userThrow == Throw.Rock) && (houseThrow == Throw.Scissors)) || ((userThrow == Throw.Scissors) && (houseThrow == Throw.Paper)))
+            else if ((userThrow == Throw.Paper && houseThrow == Throw.Rock) || (userThrow == Throw.Rock && houseThrow == Throw.Scissors) || (userThrow == Throw.Scissors && houseThrow == Throw.Paper))
             {
                 return GameResult.Won;
             }

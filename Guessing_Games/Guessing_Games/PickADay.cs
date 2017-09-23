@@ -59,10 +59,11 @@ namespace Guessing_Games
 
         public Day MakeAGuess(string attempt)
         {
+            var utility = new Utility();
             Message.SelectDay(attempt);
             var validNums = new int[] { 1, 2, 3, 4, 5, 6, 7};
-            var userGuessAsString = Universal.GetUserInput(validNums);
-            var userGuessAsInt = Universal.ConvertToNum(userGuessAsString);
+            var userGuessAsString = utility.GetUserInput(validNums);
+            var userGuessAsInt = utility.ConvertToNum(userGuessAsString);
             return ConvertToDay(userGuessAsInt);
         }
 

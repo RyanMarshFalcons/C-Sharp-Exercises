@@ -10,13 +10,13 @@ namespace Messages
     {
         public static void Welcome()
         {
-            Console.WriteLine("Hello and welcome to Ryan's Guessing Games. Please select which game that you \nwould like to play today:");
-            Console.WriteLine("1: Flip A Coin \n2: Rock Paper Scissors \n3: Pick A Number \n4: Skittles Colors \n5: Days Of The Week");
+            Console.WriteLine("Hello and welcome to Ryan's Guessing Games. Please select which game that you \nwould like to play:");
+            Console.WriteLine("A) Flip A Coin\nB) Rock Paper Scissors \nC) Pick A Number \nD) Skittles Colors \nE) Days Of The Week");
         }
 
-        public static void InvalidInput()
+        public static void InvalidGameSelection(string input)
         {
-            Console.WriteLine("I'm sorry the selection that you've made is invalid. Please try again.");
+            Console.WriteLine($"\nI'm sorry but {input} is an invalid selection.\nPlease select which game that you would like to play:\nA) Flip A Coin\nB) Rock Paper Scissors \nC) Pick A Number \nD) Skittles Colors \nE) Days Of The Week");
         }
 
         public static void SelectCoinSide()
@@ -29,39 +29,53 @@ namespace Messages
             Console.WriteLine("\nOn three rock paper scissors go!!! What would you like to throw: \n1: Rock \n2: Paper \n3: Scissors");
         }
 
+        public static void InvalidGuess(string input)
+        {
+            Console.Write($"Sorry but {input} is an invalid guess. Please try again: ");
+        }
+
         public static void WonGame(string userSelection, string houseSelection, string explanation)
         {
-            Console.WriteLine($"\nCongragulations you are a winner!!!!! \nYou chose {userSelection} {explanation} {houseSelection}.");
+            Console.WriteLine($"\nCongragulations you are a winner!!!!! \nYou chose {userSelection} {explanation} {houseSelection}.\nPress enter to close the program.");
         }
 
         public static void LostGame(string userSelection, string houseSelection, string explanation)
         {
-            Console.WriteLine($"\nThe house wins. You chose {userSelection} {explanation} {houseSelection}.");
+            Console.WriteLine($"\nThe house wins. You guessed {userSelection} {explanation} {houseSelection}.\nPress enter to close the program.");
         }
 
         public static void TiedGame(string userSelection, string houseSelection, string explanation)
         {
-            Console.WriteLine($"\nThe match is a draw. You chose {userSelection} {explanation} {houseSelection}.");
+            Console.WriteLine($"\nThe match is a draw. You chose {userSelection} {explanation} {houseSelection}.\nPress enter to close the program.");
         }
+
+        public static void GuessNumberIntro()
+        {
+            Console.WriteLine($"\nI'm thinking of a number between 1 and 10. Can you guess what number it is in\nthreee guesses? Press enter to continue.");
+            Console.ReadLine();
+        }
+
 
         public static void SelectNumber(string guessNumber)
         {
-            Console.WriteLine($"\nI'm thinking of a number between 1 and 10. Can you guess what the number is in \nthree guesses? What is your {guessNumber} guess: \n1: 1 \n2: 2 \n3: 3 \n4: 4 \n5: 5 \n6: 6 \n7: 7 \n8: 8 \n9: 9 \n10: 10");
-        }
-        
-        public static void Higher(string userGuess)
-        {
-            Console.WriteLine($"\nNope too high. The number I'm thinking of is lower than {userGuess}.");
+            Console.Write($"\nWhat is your {guessNumber} guess: ");
         }
 
-        public static void Lower(string userGuess)
+        public static void NumberIsHigherOrLower(string higherLower, string userGuess)
         {
-            Console.WriteLine($"\nNope too low. The number I'm thinking of is higher than {userGuess}.");
+            Console.WriteLine($"\nSorry but the number I'm thinking of is {higherLower} than {userGuess}. Press enter to\ncontinue.");
+            Console.ReadLine();
+        }
+
+        public static void SkittlesIntro()
+        {
+            Console.WriteLine($"\nI pick out a piece of Skittles candy from a bag. Can you guess what color it is in threee guesses? Press enter to continue.");
+            Console.ReadLine();
         }
 
         public static void SelectColor(string guessNumber)
         {
-            Console.WriteLine($"\nI pick out a piece of Skittles candy from a bag. Can you guess what color it is in threee guesses? What is your {guessNumber} guess: \n1: red \n2: green \n3: orange \n4: yellow \n5: purple \n6: pink");
+            Console.WriteLine($"\nWhat is your {guessNumber} guess: \n1: red \n2: green \n3: orange \n4: yellow \n5: purple \n6: pink");
         }
 
         public static void IncorrectColor(string userGuess)
@@ -76,12 +90,14 @@ namespace Messages
 
         public static void WayOff(string userGuess)
         {
-            Console.WriteLine($"\nNope you're way off. The day that I'm thinking of isn't {userGuess} or directly\nbefore or after {userGuess}.");
+            Console.WriteLine($"\nNope you're way off. The day that I'm thinking of isn't {userGuess} or directly\nbefore or after {userGuess}. Press enter to continue.");
+            Console.ReadLine();
         }
 
         public static void WithinADay(string userGuess)
         {
-            Console.WriteLine($"\nYou're so close. The day that I'm thiking of isn't {userGuess} but it does come\neither directly before or after {userGuess}.");
+            Console.WriteLine($"\nYou're so close. The day that I'm thiking of isn't {userGuess} but it does come\neither directly before or after {userGuess}. Press enter to continue.");
+            Console.ReadLine();
         }
     }
 }

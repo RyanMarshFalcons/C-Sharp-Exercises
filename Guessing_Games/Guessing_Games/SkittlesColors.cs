@@ -38,10 +38,11 @@ namespace Guessing_Games
 
         public Color MakeAGuess(string attempt)
         {
+            var utility = new Utility();
             Message.SelectColor(attempt);
             var validNums = new int[] { 1, 2, 3, 4, 5, 6 };
-            var userGuessAsString = Universal.GetUserInput(validNums);
-            var guessAsNum = Universal.ConvertToNum(userGuessAsString);
+            var userGuessAsString = utility.GetUserInput(validNums);
+            var guessAsNum = utility.ConvertToNum(userGuessAsString);
             return ConvertToSkittlesColor(guessAsNum);
         }
 

@@ -14,12 +14,12 @@ namespace Guessing_Games
         {
             if (userGuess < actualNumber)
             {
-                Message.Lower(userGuess.ToString());
+                Message.NumberIsHigherOrLower("higher", userGuess.ToString());
                 return Guess.TooLow;
             }
             else if (userGuess > actualNumber)
             {
-                Message.Higher(userGuess.ToString());
+                Message.NumberIsHigherOrLower("lower", userGuess.ToString());
                 return Guess.TooHigh;
             }
             else
@@ -30,10 +30,11 @@ namespace Guessing_Games
 
         public int MakeAGuess(string attempt)
         {
+            var utility = new Utility();
             Message.SelectNumber(attempt);
             var validNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            var userGuessAsString = Universal.GetUserInput(validNums);
-            return Universal.ConvertToNum(userGuessAsString);
+            var userGuessAsString = utility.GetUserInput(validNums);
+            return utility.ConvertToNum(userGuessAsString);
         }
 
         public void DisplayResults(Guess guessResult, int userGuess, int actualNumber)
