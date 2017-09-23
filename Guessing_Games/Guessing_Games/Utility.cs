@@ -34,7 +34,7 @@ namespace Guessing_Games
 
         public bool CheckIfValidSelection(string input)
         {
-            return (Regex.IsMatch(input, "^[A-E() ]+$") && input.Length == 1);
+            return Regex.IsMatch(input, "[A-E]") && input.Length == 1;
         }
 
         public GameType ConvertLetterToGameType(string gameSelectionLetter)
