@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Rearrange_Sentence_Messages;
+using System.Text.RegularExpressions;
 
 namespace Rearrange_Sentence
 {
@@ -36,24 +37,8 @@ namespace Rearrange_Sentence
 
         public string RemovePunctuation(string userString)
         {
-            for (int i = userString.Length - 1; i > -1; i--)
-            {
-                if (Char.IsLetter(userString[i]) == false)
-                {
-                    if (userString[i] != '\'' && userString[i] != ' ' && userString[i] != '-')
-                    {
-                        if (i == userString.Length - 1)
-                        {
-                            userString = userString.Substring(0, i);
-                        }
-                        else
-                        {
-                            userString = userString.Substring(0, i) + userString.Substring(i + 1);
-                        }
-                    }
-                }
-            }
-            return userString;
+            Regex rgx = new Regex("[^a-zA-Z0-9' -]");
+            return rgx.Replace(userString, "");
         }
 
         public List<string> MakeListOfWords(string userString)
