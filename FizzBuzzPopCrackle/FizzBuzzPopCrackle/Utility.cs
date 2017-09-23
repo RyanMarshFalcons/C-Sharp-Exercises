@@ -32,7 +32,7 @@ namespace FizzBuzzPopCrackle
 
         public bool CheckIfValidGuess(string input)
         {
-            return Regex.IsMatch(input, "^[A-O() ]+$") && input.Length == 1;
+            return Regex.IsMatch(input, "[A-O]") && input.Length == 1;
         }
 
         public string ConvertLetterToGuess(string guessLetter, int num)
