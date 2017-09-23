@@ -45,6 +45,17 @@ namespace Name_Meaning_Tests
         }
 
         [TestMethod]
+        public void ReturnsTrueForR1()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.ContainsALetter("R1");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsFalseFor12Jibberish()
         {
             var expected = false;

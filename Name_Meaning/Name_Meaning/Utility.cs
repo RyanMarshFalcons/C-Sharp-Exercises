@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Name_Meaning_Messages;
+using System.Text.RegularExpressions;
 
 namespace Name_Meaning
 {
@@ -43,28 +44,12 @@ namespace Name_Meaning
 
         public bool ContainsALetter(string input)
         {
-            var containsLetter = false;
-            foreach (var character in input)
-            {
-                if (Char.IsLetter(character))
-                {
-                    containsLetter = true;
-                }
-            }
-            return containsLetter;
+            return Regex.Matches(input, "[a-zA-Z]").Count > 0;
         }
 
         public string GetJustLetters(string userName)
         {
-            var newString = "";
-            foreach (var character in userName)
-            {
-                if (Char.IsLetter(character))
-                {
-                    newString += character;
-                }
-            }
-            return newString.ToUpper();
+            return new String(userName.Where(Char.IsLetter).ToArray()).ToUpper();
         }
 
         public Dictionary<char, string> GetAdjectiveDictionary()
