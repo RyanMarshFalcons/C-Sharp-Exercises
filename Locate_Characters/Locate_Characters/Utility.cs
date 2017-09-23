@@ -61,15 +61,7 @@ namespace Locate_Characters
 
         public int SearchForCharacter(string text, char character)
         {
-            var count = 0;
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (text[i] == character)
-                {
-                    count += 1;
-                }
-            }
-            return count;
+            return text.Where(c => c == character).Count();
         }
 
         public bool AskToContinue()
