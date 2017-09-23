@@ -26,7 +26,7 @@ namespace Mean_Median_Mode
                     isValidInput = true;
                 }
             }
-            return Double.Parse(input);
+            return double.Parse(input);
         }
 
         public bool CheckIfDouble(string input)
@@ -62,12 +62,8 @@ namespace Mean_Median_Mode
 
         public double FindTheMean(List<double> numbers)
         {
-            var sumOfNums = 0.0;
-            foreach (var num in numbers)
-            {
-                sumOfNums += num;
-            }
-            return Math.Round((sumOfNums / numbers.Count), 2);
+            var sumOfNums = numbers.Sum();
+            return Math.Round(sumOfNums / numbers.Count, 2);
         }
 
         public bool CheckIfEven(int count)
