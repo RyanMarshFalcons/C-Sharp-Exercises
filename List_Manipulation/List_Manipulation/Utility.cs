@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using List_Manipulation_Messages;
+using System.Text.RegularExpressions;
 
 namespace List_Manipulation
 {
@@ -57,7 +58,7 @@ namespace List_Manipulation
 
         public bool CheckIfValidSelection(string input)
         {
-            return (input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G" || input == "H" || input == "I");
+            return Regex.IsMatch(input, "[A-I]") && input.Length == 1;
         }
 
         public Manipulation ConvertLetterToManipulation(string letterSelected)
@@ -142,14 +143,7 @@ namespace List_Manipulation
 
         public bool CheckIfLetter(string input)
         {
-            if (input.Length != 1)
-            {
-                return false;
-            }
-            else
-            {
-                return Char.IsLetter(Char.Parse(input));
-            }
+            return input.Length == 1 && Char.IsLetter(Char.Parse(input));
         }
 
         public int GetNumber(string beginningEnd)
@@ -202,14 +196,7 @@ namespace List_Manipulation
         {
             var result = 0;
             var isNum = int.TryParse(input, out result);
-            if (isNum == false)
-            {
-                return false;
-            }
-            else
-            {
-                return int.Parse(input) > 0;
-            }
+            return isNum && int.Parse(input) > 0;
         }
 
         public List<string> AddToBeginning(List<string> listOfUserStrings, string addOn)
