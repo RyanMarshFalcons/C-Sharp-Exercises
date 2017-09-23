@@ -58,7 +58,7 @@ namespace Calculator
 
         public bool CheckIfValidSelection(string input)
         {
-            return (Regex.IsMatch(input, "^[A-K() ]+$") && input.Length == 1);
+            return (Regex.IsMatch(input, "[A-K]") && input.Length == 1);
         }
 
         public double GetSum(double num1, double num2)
