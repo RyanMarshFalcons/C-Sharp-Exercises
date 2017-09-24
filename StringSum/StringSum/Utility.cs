@@ -26,26 +26,18 @@ namespace StringSum
 
         public List<int> ExtractNumberCharacters(string input)
         {
-            var arrInput = input.ToCharArray();
+            var justNums = input.Where(c => Char.IsDigit(c)).ToArray();
             var numList = new List<int>();
-            for (int i = 0; i < arrInput.Count(); i++)
+            for (int i = 0; i < justNums.Count(); i++)
             {
-                if (Char.IsNumber(arrInput[i]))
-                {
-                    numList.Add(Int32.Parse(arrInput[i].ToString()));
-                }
+                    numList.Add(int.Parse(justNums[i].ToString()));
             }
             return numList;
         }
 
         public int GetSum(List<int> numList)
         {
-            var sum = 0;
-            foreach (var num in numList)
-            {
-                sum += num;
-            }
-            return sum;
+            return numList.Sum();
         }
     }
 }
