@@ -47,6 +47,13 @@
     <Compile Include="Square.cs" />
     <Compile Include="Trapezoid.cs" />
     <Compile Include="Triangle.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Messages\Messages.csproj">
+      <Project>{d321d2e2-1919-4b25-9981-ece689aa0c97}</Project>
+      <Name>Messages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

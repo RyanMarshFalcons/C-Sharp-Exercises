@@ -13,6 +13,160 @@ namespace Testing
     public class UnitTests
     {
         [TestMethod]
+        public void AIsAValidSelection()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("A");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void BIsAValidSelection()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("B");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CIsAValidSelection()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("C");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DIsAValidSelection()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("D");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void EIsAValidSelection()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("E");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void FIsNotAValidSelection()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CheckIfValidSelection("F");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ARepresentsSquare()
+        {
+            var expected = TypeOfShape.Square;
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToTypeOfShape("A");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void BRepresentsRectangle()
+        {
+            var expected = TypeOfShape.Rectangle;
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToTypeOfShape("B");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CRepresentsTriangle()
+        {
+            var expected = TypeOfShape.Triangle;
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToTypeOfShape("C");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DRepresentsTrapezoid()
+        {
+            var expected = TypeOfShape.Trapezoid;
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToTypeOfShape("D");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ERepresentsCircle()
+        {
+            var expected = TypeOfShape.Circle;
+
+            var utility = new Utility();
+            var actual = utility.ConvertLetterToTypeOfShape("E");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void NegativeZeroPointZeroOneIsNotPositive()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsPositive("-.01");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ZeroPointZeroZeroIsNotPositive()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsPositive("0.00");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ZeroPointZeroOneIsPositive()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsPositive(".01");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void CalculatesTriangleArea ()
         {
             var expectedArea = 2.04;
