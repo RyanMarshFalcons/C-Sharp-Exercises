@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Stack_Of_Plates_Messages;
+using System.Text.RegularExpressions;
 
 namespace Stack_Of_Plates
 {
@@ -30,7 +31,7 @@ namespace Stack_Of_Plates
 
         public bool CheckIfValidSelection(string input)
         {
-            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
+            return Regex.IsMatch(input, "[A-G]") && input.Length == 1; 
         }
 
         public bool AskToContinue()
