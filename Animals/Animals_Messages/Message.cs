@@ -79,5 +79,6 @@ namespace Animals_Messages
         {
             Console.WriteLine($"Thank you for using my Animals program. I hope that you enjoyed using it. Press enter to close the program.");
         }
+
     }
 }
