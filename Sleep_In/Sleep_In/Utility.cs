@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sleep_In_Messages;
+using System.Text.RegularExpressions;
 
 namespace Sleep_In
 {
@@ -31,7 +32,7 @@ namespace Sleep_In
 
         public bool CheckIfABCDEFG(string input)
         {
-            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
+            return Regex.IsMatch(input, "[A-G]") && input.Length == 1;
         }
 
         public bool IsWeekEnd(string daySelection)
@@ -39,11 +40,11 @@ namespace Sleep_In
             return daySelection == "F" || daySelection == "G";
         }
 
-        public bool AskIfVacationDay()
+        public bool AskYesOrNo()
         {
             var IsValidInput = false;
             var input = "";
-            Message.AskIfVacationDay();
+            
             while (IsValidInput == false)
             {
                 input = Console.ReadLine();
@@ -64,9 +65,9 @@ namespace Sleep_In
             return input == "y" || input == "n";
         }
 
-        public bool CanSleepIn(bool isWeekend, bool isVacationDay)
+        public bool CanSleepIn(bool isWeekend, bool isVacationDay, bool havePlans)
         {
-            return isWeekend || isVacationDay;
+            return (isWeekend || isVacationDay) && !havePlans;
         }
 
         public void DisplayResults(bool canSleepIn)

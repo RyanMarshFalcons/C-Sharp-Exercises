@@ -29,6 +29,11 @@ namespace Sleep_In_Messages
             Console.Write("\nAre you going to be on vacation tomorrow? y/n: ");
         }
 
+        public static void AskIfHaveBigPlans()
+        {
+            Console.Write("\nDid you make plans to spend time with your kids tomorrow morning? y/n: ");
+        }
+
         public static void NotyOrn()
         {
             Console.Write($"\nSorry but you must input a y or an n. Please input y or n to procede: ");
@@ -36,12 +41,12 @@ namespace Sleep_In_Messages
 
         public static void YesCanSleepIn()
         {
-            Console.WriteLine("\nCongratulations you can sleep in tomorrow!!!");
+            Console.WriteLine("\nCongratulations you can sleep in tomorrow!!! Press enter to close the program.");
         }
 
         public static void NoCannotSleepIn()
         {
-            Console.WriteLine("\nSorry but you can't sleep in tomorrow.");
+            Console.WriteLine("\nSorry but you can't sleep in tomorrow. Press enter to close the program.");
         }
     }
 }

@@ -166,45 +166,89 @@ namespace Sleep_In_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueForIsWeekendIsVacation()
-        {
-            var expected = true;
-
-            var utility = new Utility();
-            var actual = utility.CanSleepIn(true, true);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void ReturnsTrueForIsWeekendIsNotVacation()
-        {
-            var expected = true;
-
-            var utility = new Utility();
-            var actual = utility.CanSleepIn(true, false);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void ReturnsTrueForIsNotWeekendIsVacation()
-        {
-            var expected = true;
-
-            var utility = new Utility();
-            var actual = utility.CanSleepIn(false, true);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void ReturnsFalseForIsNotWeekendIsNotVacation()
+        public void ReturnsTrueForIsWeekendIsVacationHavePlans()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.CanSleepIn(false, false);
+            var actual = utility.CanSleepIn(true, true, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForIsWeekendIsVacationNoPlans()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CanSleepIn(true, true, false);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForIsWeekendIsNotVacationHavePlans()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CanSleepIn(true, false, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForIsWeekendIsNotVacationNoPlans()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CanSleepIn(true, false, false);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForIsNotWeekendIsVacationHavePlans()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CanSleepIn(false, true, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsTrueForIsNotWeekendIsVacationNoPlans()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.CanSleepIn(false, true, false);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForIsNotWeekendIsNotVacationHavePlans()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CanSleepIn(false, false, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsFalseForIsNotWeekendIsNotVacationNoPlans()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.CanSleepIn(false, false, false);
 
             Assert.AreEqual(expected, actual);
         }

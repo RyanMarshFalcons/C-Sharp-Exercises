@@ -16,8 +16,11 @@ namespace StartUp
             var utility = new Utility();
             var dayOfWeek = utility.GetValidEntry();
             var isWeekend = utility.IsWeekEnd(dayOfWeek);
-            var isVacation = utility.AskIfVacationDay();
-            var canSleepIn = utility.CanSleepIn(isWeekend, isVacation);
+            Message.AskIfVacationDay();
+            var isVacation = utility.AskYesOrNo();
+            Message.AskIfHaveBigPlans();
+            var havePlans = utility.AskYesOrNo();
+            var canSleepIn = utility.CanSleepIn(isWeekend, isVacation, havePlans);
             utility.DisplayResults(canSleepIn);
             Console.ReadLine();
         }
