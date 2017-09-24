@@ -14,11 +14,13 @@ namespace StartUp
         {
             Message.Welcome();
             var utility = new Utility();
-            var numNuts = utility.GetValidNumber();
-            var isAtLeast50 = utility.AtLeast50Nuts(numNuts);
+            var numNuts = utility.GetValidNumber("nuts");
+            var numSodas = utility.GetValidNumber("sodas");
+            var enoughNuts = utility.EnoughNuts(numNuts);
+            var enoughSodas = utility.EnoughSodas(numSodas);
             var dayOfWeek = utility.GetValidDay();
             var isWeekend = utility.IsWeekEnd(dayOfWeek);
-            var isSuccesful = utility.IsSuccessful(isAtLeast50, isWeekend);
+            var isSuccesful = utility.IsSuccessful(enoughNuts, enoughSodas, isWeekend);
             utility.DisplayResults(isSuccesful);
             Console.ReadLine();
         }

@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Squirrel_Party_Messages;
+using System.Text.RegularExpressions;
 
 namespace Squirrel_Party
 {
     public class Utility
     {
-        public int GetValidNumber()
+        public int GetValidNumber(string sodasNuts)
         {
-            Message.HowManyNuts();
+            Message.HowManySodasNuts(sodasNuts);
             var isValidInput = false;
             var input = "";
             while (isValidInput == false)
@@ -25,7 +26,7 @@ namespace Squirrel_Party
                 {
                     if (CheckIfNegative(input))
                     {
-                        Message.CantBeNegative();
+                        Message.CantBeNegative(sodasNuts);
                     }
                     else
                     {
@@ -47,10 +48,16 @@ namespace Squirrel_Party
             return int.Parse(input) < 0;
         }
 
-        public bool AtLeast50Nuts(int numNuts)
+        public bool EnoughNuts(int numNuts)
         {
             return numNuts >= 50;
         }
+
+        public bool EnoughSodas(int numSodas)
+        {
+            return numSodas >= 30;
+        }
+
         public string GetValidDay()
         {
             Message.SelectDayOfWeek();
@@ -73,7 +80,7 @@ namespace Squirrel_Party
 
         public bool CheckIfABCDEFG(string input)
         {
-            return input == "A" || input == "B" || input == "C" || input == "D" || input == "E" || input == "F" || input == "G";
+            return Regex.IsMatch(input, "[A-G]") && input.Length == 1;
         }
 
         public bool IsWeekEnd(string daySelection)
@@ -81,9 +88,9 @@ namespace Squirrel_Party
             return daySelection == "F" || daySelection == "G";
         }
 
-        public bool IsSuccessful(bool atLeast50Nuts, bool isWeekEnd)
+        public bool IsSuccessful(bool enoughNuts, bool enoughSodas, bool isWeekEnd)
         {
-            return atLeast50Nuts || isWeekEnd;
+            return (enoughNuts && enoughSodas) || isWeekEnd;
         }
 
         public void DisplayResults(bool isSuccesful)

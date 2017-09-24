@@ -14,14 +14,14 @@ namespace Squirrel_Party_Messages
             Console.ReadLine();
         }
 
-        public static void HowManyNuts()
+        public static void HowManySodasNuts(string sodasNuts)
         {
-            Console.Write("How many nuts do the squirrels have gathered for the party: ");
+            Console.Write($"\nHow many {sodasNuts} do the squirrels have for the party: ");
         }
 
-        public static void CantBeNegative()
+        public static void CantBeNegative(string sodasNuts)
         {
-            Console.Write("\nSorry but the number of nuts cannot be negative. How many nuts do the squirrels\nhave gathered for the party: ");
+            Console.Write($"\nSorry but the number of {sodasNuts} cannot be negative. How many {sodasNuts} do the squirrels\nhave for the party: ");
         }
 
         public static void NotANumber(string input)

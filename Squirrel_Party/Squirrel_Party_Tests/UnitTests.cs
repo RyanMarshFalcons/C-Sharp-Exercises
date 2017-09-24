@@ -61,7 +61,7 @@ namespace Squirrel_Party_Tests
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.AtLeast50Nuts(65);
+            var actual = utility.EnoughNuts(65);
 
             Assert.AreEqual(expected, actual);
         }
@@ -72,7 +72,7 @@ namespace Squirrel_Party_Tests
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.AtLeast50Nuts(45);
+            var actual = utility.EnoughNuts(45);
 
             Assert.AreEqual(expected, actual);
         }
@@ -199,45 +199,89 @@ namespace Squirrel_Party_Tests
         }
 
         [TestMethod]
-        public void ReturnsTrueAtLeast50AndIsWeekend()
+        public void SuccessForEnoughNutsEnoughSodasAndIsWeekend()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.IsSuccessful(true, true);
+            var actual = utility.IsSuccessful(true, true, true);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueAtLeast50AndIsNotWeekend()
+        public void SuccessForEnoughNutsNotEnoughSodasAndIsWeekend()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.IsSuccessful(true, false);
+            var actual = utility.IsSuccessful(true, false, true);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueLessThan50AndIsWeekend()
+        public void SuccessForEnoughNutsEnoughSodasAndIsNotWeekend()
         {
             var expected = true;
 
             var utility = new Utility();
-            var actual = utility.IsSuccessful(false, true);
+            var actual = utility.IsSuccessful(true, true, false);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsTrueLessThan50AndIsNotWeekend()
+        public void FailureForEnoughNutsNotEnoughSodasAndIsNotWeekend()
         {
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsSuccessful(false, false);
+            var actual = utility.IsSuccessful(true, false, false);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SuccessForNotEnoughNutsEnoughSodasAndIsWeekend()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsSuccessful(false, true, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SuccessForNotEnoughNutsNotEnoughSodasAndIsWeekend()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.IsSuccessful(false, false, true);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void FailureForNotEnoughNutsEnoughSodasAndIsNotWeekend()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsSuccessful(false, true, false);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void FailureForNotEnoughNutsNotEnoughSodasAndIsNotWeekend()
+        {
+            var expected = false;
+
+            var utility = new Utility();
+            var actual = utility.IsSuccessful(false, false, false);
 
             Assert.AreEqual(expected, actual);
         }
