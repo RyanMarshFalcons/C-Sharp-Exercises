@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Word_Sorter_Messages;
 
@@ -36,24 +37,7 @@ namespace Word_Sorter
 
         public string RemoveNumsAndSymbols(string userString)
         {
-            for (int i = userString.Length -1; i > -1; i--)
-            {
-                if (Char.IsLetter(userString[i]) == false)
-                {
-                    if (userString[i] != '\'' && userString[i] != ' ')
-                    {
-                        if (i == userString.Length - 1)
-                        {
-                            userString = userString.Substring(0, i);
-                        }
-                        else
-                        {
-                            userString = userString.Substring(0, i) + userString.Substring(i + 1);
-                        }
-                    }
-                }
-            }
-            return userString;
+            return Regex.Replace(userString, "[^a-zA-Z' ]", "");
         }
 
         public List<string> ExtractWords(string modifiedUserString)
