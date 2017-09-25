@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Temperature_Conversions_Messages;
 
@@ -38,7 +39,7 @@ namespace Temperature_Conversions
 
         public bool CheckIfABCD(string input)
         {
-            return ((input == "A") || (input == "B") || (input == "C") || (input == "D"));
+            return Regex.IsMatch(input, "[A-D]") && input.Length == 1;
         }
 
         public double GetValidNumber(string temperatureType)
@@ -58,13 +59,13 @@ namespace Temperature_Conversions
                     isValidInput = true;
                 }
             }
-            return Double.Parse(input);
+            return double.Parse(input);
         }
 
         public bool CheckIfDouble(string input)
         {
             var num = 0.0;
-            return Double.TryParse(input, out num);
+            return double.TryParse(input, out num);
         }
 
         public double GetFahrenheit(double celsius)
