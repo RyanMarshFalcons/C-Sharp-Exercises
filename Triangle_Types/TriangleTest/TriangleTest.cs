@@ -79,8 +79,8 @@ namespace ShapeUtility.Test
         {
             var expected = TriangleType.Invalid;
 
-            var testTriangle = new Utility();
-            var actual = testTriangle.typeOfTriangle(7, 5, 75);
+            var utility = new Utility();
+            var actual = utility.typeOfTriangle(7, 5, 75);
 
             Assert.AreEqual(expected, actual);
         }
@@ -90,8 +90,8 @@ namespace ShapeUtility.Test
         {
             var expected = TriangleType.Equilateral;
 
-            var testTriangle = new Utility();
-            var actual = testTriangle.typeOfTriangle(5, 5, 5);
+            var utility = new Utility();
+            var actual = utility.typeOfTriangle(5, 5, 5);
 
             Assert.AreEqual(expected, actual);
         }
@@ -101,8 +101,8 @@ namespace ShapeUtility.Test
         {
             var expected = TriangleType.Isosceles;
 
-            var testTriangle = new Utility();
-            var actual = testTriangle.typeOfTriangle(5, 5, 7);
+            var utility = new Utility();
+            var actual = utility.typeOfTriangle(5, 5, 7);
 
             Assert.AreEqual(expected, actual);
         }
@@ -112,8 +112,8 @@ namespace ShapeUtility.Test
         {
             var expected = TriangleType.Scalene;
 
-            var testTriangle = new Utility();
-            var actual = testTriangle.typeOfTriangle(5, 6, 7);
+            var utility = new Utility();
+            var actual = utility.typeOfTriangle(5, 6, 7);
 
             Assert.AreEqual(expected, actual);
         }
@@ -123,8 +123,8 @@ namespace ShapeUtility.Test
         {
             var expected = TriangleType.Equilateral;
 
-            var testTriangle = new Utility();
-            var actual = testTriangle.typeOfTriangle(2147483647, 2147483647, 2147483647);
+            var utility = new Utility();
+            var actual = utility.typeOfTriangle(2147483647, 2147483647, 2147483647);
 
             Assert.AreEqual(expected, actual);
         }
@@ -134,8 +134,8 @@ namespace ShapeUtility.Test
         {
             var expected = TriangleType.Isosceles;
 
-            var testTriangle = new Utility();
-            var actual = testTriangle.typeOfTriangle(2147483647, 2147483647, 2147483646);
+            var utility = new Utility();
+            var actual = utility.typeOfTriangle(2147483647, 2147483647, 2147483646);
 
             Assert.AreEqual(expected, actual);
         }
@@ -145,8 +145,41 @@ namespace ShapeUtility.Test
         {
             var expected = TriangleType.Scalene;
 
-            var testTriangle = new Utility();
-            var actual = testTriangle.typeOfTriangle(2147483647, 2147483646, 2147483645);
+            var utility = new Utility();
+            var actual = utility.typeOfTriangle(2147483647, 2147483646, 2147483645);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SidesOf7And5And75AreInvalid()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.InvalidTraingle(7, 5, 75);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SidesOf7And7And7AreEquilateral()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.Equilateral(7, 7, 7);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SidesOf7And7And5AreIsosceles()
+        {
+            var expected = true;
+
+            var utility = new Utility();
+            var actual = utility.Isosceles(7, 7, 5);
 
             Assert.AreEqual(expected, actual);
         }

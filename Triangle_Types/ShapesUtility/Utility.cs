@@ -67,7 +67,7 @@ namespace ShapesUtility
 
         public bool InvalidTraingle(double side1, double side2, double side3)
         {
-            return (side1 > (side2 + side3) || side2 > (side1 + side3) || side3 > (side1 + side2) || side1 == 0 || side2 == 0 || side3 == 0);
+            return side1 > (side2 + side3) || side2 > (side1 + side3) || side3 > (side1 + side2) || side1 == 0 || side2 == 0 || side3 == 0;
         }
 
         public bool Equilateral(double side1, double side2, double side3)
@@ -75,9 +75,9 @@ namespace ShapesUtility
             return side1 == side2 && side1 == side3;  
         }
 
-        private bool Isosceles(double side1, double side2, double side3)
+        public bool Isosceles(double side1, double side2, double side3)
         {
-            return ((side1 == side2 && side1 != side3) || (side2 == side3 && side2 != side1) || (side1 == side3 && side1 != side2));
+            return (side1 == side2 && side1 != side3) || (side2 == side3 && side2 != side1) || (side1 == side3 && side1 != side2);
         }
     }
 }
