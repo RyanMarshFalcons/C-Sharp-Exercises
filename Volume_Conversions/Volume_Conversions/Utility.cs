@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Volume_Conversions_Messages;
 
@@ -36,7 +37,7 @@ namespace Volume_Conversions
 
         public bool CheckIfABCD(string input)
         {
-            return ((input == "A") || (input == "B") || (input == "C") || (input == "D"));
+            return Regex.IsMatch(input, "[A-D]") && input.Length == 1;
         }
 
         public double GetValidNumber(string volumeType)
@@ -63,18 +64,18 @@ namespace Volume_Conversions
                     }
                 }
             }
-            return Double.Parse(input);
+            return double.Parse(input);
         }
 
         public bool CheckIfDouble(string input)
         {
             var num = 0.0;
-            return Double.TryParse(input, out num);
+            return double.TryParse(input, out num);
         }
 
         public bool CheckIfNegative(string input)
         {
-            return Double.Parse(input) < 0;
+            return double.Parse(input) < 0;
         }
 
         public double GetLiters(double gallons)
