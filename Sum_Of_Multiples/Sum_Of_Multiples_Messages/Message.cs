@@ -39,8 +39,13 @@ namespace Sum_Of_Multiples_Messages
             Console.Write($"\nSorry but you must input a y or an n. Please input y or n to procede: ");
         }
 
-        public static void DisplaySum(int ceilingNum, int sum)
+        public static void DisplaySum(int ceilingNum, int sum, List<int>completeMultiples)
         {
+            Console.WriteLine($"\nThe multiples of the numbers that you inputted that are less than\n{ceilingNum} are: ");
+            foreach (var multiple in completeMultiples)
+            {
+                Console.WriteLine(multiple);
+            }
             Console.WriteLine($"\nThe sum of the multilples of the numbers that you inputted that are less than\n{ceilingNum} is {sum}. Press enter to close the program.");
         }
     }

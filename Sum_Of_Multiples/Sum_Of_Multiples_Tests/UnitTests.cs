@@ -100,6 +100,28 @@ namespace Sum_Of_Multiples_Tests
         }
 
         [TestMethod]
+        public void ReturnsAllMultiplesOf2And3ThatAreLessThan10()
+        {
+            var expected = new List<int>() { 2, 4, 6, 8, 3, 6, 9 };
+
+            var utility = new Utility();
+            var actual = utility.GetAllMultiples(new List<int> { 2, 3}, 10);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsAllMultiplesOf58And11ThatAreLessThan30()
+        {
+            var expected = new List<int>() { 5, 10, 15, 20, 25, 8, 16, 24, 11, 22 };
+
+            var utility = new Utility();
+            var actual = utility.GetAllMultiples(new List<int> { 5, 8, 11 }, 30);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ReturnsCorrectMultiplesOf1LessThan5()
         {
             var expected = new List<int>() { 1, 2, 3, 4 };
@@ -139,6 +161,28 @@ namespace Sum_Of_Multiples_Tests
 
             var utility = new Utility();
             var actual = utility.GetMultiples(7, 7);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsAllUniqueMultiplesOf2And3ThatAreLessThan10()
+        {
+            var expected = new List<int>() { 2, 4, 6, 8, 3, 9 };
+
+            var utility = new Utility();
+            var actual = utility.GetUniqueMultiples(new List<int> { 2, 4, 6, 8, 3, 6, 9 });
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReturnsAllUniqueMultiplesOf48And13ThatAreLessThan21()
+        {
+            var expected = new List<int>() { 4, 8, 12, 16, 20, 13 };
+
+            var utility = new Utility();
+            var actual = utility.GetUniqueMultiples(new List<int> { 4, 8, 12, 16, 20, 8, 16, 13 });
 
             CollectionAssert.AreEqual(expected, actual);
         }

@@ -72,6 +72,21 @@ namespace Sum_Of_Multiples
             return input == "y" || input == "n";
         }
 
+        public List<int> GetAllMultiples(List<int> listOfNums, int ceilingNumber)
+        {
+            var individualListOfMultiples = new List<int>();
+            var allMultiples = new List<int>();
+            foreach (var userNumber in listOfNums)
+            {
+                individualListOfMultiples = GetMultiples(userNumber, ceilingNumber);
+                foreach (var multiple in individualListOfMultiples)
+                {
+                    allMultiples.Add(multiple);
+                }
+            }
+            return allMultiples;
+        }
+
         public List<int> GetMultiples(int num, int ceilingNum)
         {
             var listOfMultiples = new List<int>();
@@ -84,15 +99,15 @@ namespace Sum_Of_Multiples
             return listOfMultiples;
         }
 
+        public List<int> GetUniqueMultiples(List<int> allMultiples)
+        {
+            return (from m in allMultiples select m).Distinct().ToList();
+        }
+
         public int CalculateSumOfMultiples(List<int> completeListOfMultiples, int ceilingNum)
         {
             var distinctMultiples = completeListOfMultiples.Distinct().ToList();
-            var sum = 0;
-            foreach (var multiple in distinctMultiples)
-            {
-                sum += multiple;
-            }
-            return sum;
+            return distinctMultiples.Sum();
         }
     }
 }

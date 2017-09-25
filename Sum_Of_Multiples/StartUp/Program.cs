@@ -22,15 +22,11 @@ namespace StartUp
                 num = utility.GetValidNumber("a");
                 listOfNums.Add(num);
             } while (utility.AskToAddAnotherNumber());
-            var completeListOfMultiples = new List<int>();
-            var individualListOfMultiples = new List<int>();
-            foreach (var userNumber in listOfNums)
-            {
-                individualListOfMultiples = utility.GetMultiples(userNumber, ceilingNumber);
-                completeListOfMultiples = completeListOfMultiples.Concat(individualListOfMultiples).ToList();
-            }
-            var sum = utility.CalculateSumOfMultiples(completeListOfMultiples, ceilingNumber);
-            Message.DisplaySum(ceilingNumber, sum);
+            var allMultiples = utility.GetAllMultiples(listOfNums, ceilingNumber);
+            var uniqueMultiples = utility.GetUniqueMultiples(allMultiples);
+            uniqueMultiples.Sort();
+            var sum = utility.CalculateSumOfMultiples(uniqueMultiples, ceilingNumber);
+            Message.DisplaySum(ceilingNumber, sum, uniqueMultiples);
             Console.ReadLine();
         }
     }
