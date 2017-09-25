@@ -15,8 +15,9 @@ namespace StartUp
             Message.Welcome();
             var utility = new Utility();
             var numTeaCups = utility.GetValidNumber("tea cups");
+            var numBiscuits = utility.GetValidNumber("biscuits");
             var numCandyBars = utility.GetValidNumber("candy bars");
-            var outcome = utility.CalculatePartyOutcome(numTeaCups, numCandyBars);
+            var outcome = utility.CalculatePartyOutcome(numTeaCups, numBiscuits, numCandyBars);
             Message.DisplayResults(outcome);
             Console.ReadLine();
         }

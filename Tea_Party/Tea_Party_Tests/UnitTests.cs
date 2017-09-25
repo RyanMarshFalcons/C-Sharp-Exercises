@@ -56,78 +56,78 @@ namespace Tea_Party_Tests
         }
 
         [TestMethod]
-        public void ReturnsBadFor3TeaCups3CandyBars()
+        public void BadOutcomeFor3TeaCups3Biscuits3CandyBars()
         {
             var expected = "bad";
 
             var utility = new Utility();
-            var actual = utility.CalculatePartyOutcome(3, 3);
+            var actual = utility.CalculatePartyOutcome(3, 3, 3);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsBadFor3TeaCups6CandyBars()
+        public void BadOutcomeFor3TeaCups6Biscuits7CandyBars()
         {
             var expected = "bad";
 
             var utility = new Utility();
-            var actual = utility.CalculatePartyOutcome(3, 6);
+            var actual = utility.CalculatePartyOutcome(3, 6, 7);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsBadFor6TeaCups3CandyBars()
+        public void BadOutcomeFor11TeaCups7Biscuits3CandyBars()
         {
             var expected = "bad";
 
             var utility = new Utility();
-            var actual = utility.CalculatePartyOutcome(6, 3);
+            var actual = utility.CalculatePartyOutcome(11, 7, 3);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsGooddFor5TeaCups5CandyBars()
+        public void GoodOutcomtFor10TeaCups5Biscuits5CandyBars()
         {
             var expected = "good";
 
             var utility = new Utility();
-            var actual = utility.CalculatePartyOutcome(5, 5);
+            var actual = utility.CalculatePartyOutcome(10, 5, 5);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsGooddFor6TeaCups8CandyBars()
+        public void GoodOutcomeFor20TeaCups5Biscuits5CandyBars()
         {
             var expected = "good";
 
             var utility = new Utility();
-            var actual = utility.CalculatePartyOutcome(6, 8);
+            var actual = utility.CalculatePartyOutcome(20, 5, 5);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsGreatFor10TeaCups5CandyBars()
+        public void GreatOutcomeFor10TeaCups7Biscuits15CandyBars()
         {
             var expected = "great";
 
             var utility = new Utility();
-            var actual = utility.CalculatePartyOutcome(10, 5);
+            var actual = utility.CalculatePartyOutcome(10, 7, 15);
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReturnsGreatFor6TeaCups60CandyBars()
+        public void GreatOutcomeFor12TeaCups10Biscuits50CandyBars()
         {
             var expected = "great";
 
             var utility = new Utility();
-            var actual = utility.CalculatePartyOutcome(6, 60);
+            var actual = utility.CalculatePartyOutcome(12, 10, 50);
 
             Assert.AreEqual(expected, actual);
         }

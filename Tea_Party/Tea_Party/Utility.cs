@@ -47,13 +47,13 @@ namespace Tea_Party
             return int.Parse(input) < 0;
         }
 
-        public string CalculatePartyOutcome(int numTeaCups, int numCandyBars)
+        public string CalculatePartyOutcome(int numTeaCups, int numBiscuits, int numCandyBars)
         {
-            if ((numTeaCups < 5) || (numCandyBars < 5))
+            if (numTeaCups < 10 || numBiscuits < 5 || numCandyBars < 5)
             {
                 return "bad";
             }
-            else if ((numTeaCups >= numCandyBars * 2) || (numCandyBars >= numTeaCups * 2))
+            else if (numCandyBars + numBiscuits > numTeaCups && numCandyBars > numBiscuits * 2)
             {
                 return "great";
             }
