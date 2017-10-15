@@ -28,7 +28,7 @@ namespace List_Manipulation_Tests
             var expected = false;
 
             var utility = new Utility();
-            var actual = utility.IsTooShort("w");
+            var actual = utility.IsTooShort("X");
 
             Assert.AreEqual(expected, actual);
         }
